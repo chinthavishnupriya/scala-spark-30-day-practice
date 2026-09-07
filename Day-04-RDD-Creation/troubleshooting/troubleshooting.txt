@@ -1,0 +1,37 @@
+DAY 04 - TROUBLESHOOTING NOTES
+
+1. Spark execution
+The Day 04 Spark application compiled and executed successfully using local[4].
+
+2. Partition configuration
+The Numbers RDD, Customers RDD, and Sales RDD were created with 4 partitions.
+
+3. Customer partition distribution
+The 12 customer records were distributed across 4 partitions:
+Partition 0: 3 records
+Partition 1: 4 records
+Partition 2: 2 records
+Partition 3: 3 records
+
+4. flatMap result
+The customer dataset contains 12 records with 4 fields each.
+flatMap therefore produced 48 fields.
+
+5. Sales calculation
+The total sales calculated by the Spark program was:
+Rs. 215700.00
+
+6. Transformations
+map, filter, and flatMap were used as RDD transformations.
+They are evaluated lazily.
+
+7. Actions
+count, collect, and reduce were used as actions.
+Actions trigger Spark computation.
+
+8. collect() caution
+collect() was used only with the small demonstration datasets.
+For large datasets, collect() should be avoided because it brings all data to the driver.
+
+9. Final execution status
+SparkContext stopped successfully with exit code 0.

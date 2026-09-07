@@ -1,0 +1,12 @@
+C001,Aarav,Chennai,Electronics
+C002,Diya,Bangalore,Clothing
+C003,Rohan,Hyderabad,Electronics
+C004,Ananya,Coimbatore,Grocery
+C005,Vikram,Madurai,Clothing
+C006,Meera,Chennai,Electronics
+C007,Arjun,Bangalore,Grocery
+C008,Ishita,Hyderabad,Clothing
+C009,Karthik,Coimbatore,Electronics
+C010,Sneha,Madurai,Grocery
+C011,Rahul,Chennai,Clothing
+C012,Priya,Bangalore,Electronics

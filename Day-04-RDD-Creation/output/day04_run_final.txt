@@ -1,0 +1,498 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to day04-rdd-creation (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/)
+[info] running Day04 
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/09/07 19:14:57 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/09/07 19:14:57 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/09/07 19:14:57 INFO SparkContext: Running Spark version 4.2.0
+26/09/07 19:14:57 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/07 19:14:57 INFO SparkContext: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/07 19:14:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/09/07 19:14:57 INFO ResourceUtils: ==============================================================
+26/09/07 19:14:57 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/09/07 19:14:57 INFO ResourceUtils: ==============================================================
+26/09/07 19:14:57 INFO SparkContext: Submitted application: Day 4 - RDD Creation and Operations
+26/09/07 19:14:57 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/07 19:14:57 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/07 19:14:57 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/07 19:14:57 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/07 19:14:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/07 19:14:58 INFO Utils: Successfully started service 'sparkDriver' on port 42631.
+26/09/07 19:14:58 INFO SparkEnv: Registering MapOutputTracker
+26/09/07 19:14:58 INFO SparkEnv: Registering BlockManagerMaster
+26/09/07 19:14:58 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/09/07 19:14:58 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/09/07 19:14:58 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/09/07 19:14:58 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-854aae8d-6ecc-4488-bf6d-e09466aed15f
+26/09/07 19:14:58 INFO SparkEnv: Registering OutputCommitCoordinator
+26/09/07 19:14:58 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/09/07 19:14:58 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/09/07 19:14:58 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/09/07 19:14:58 INFO ResourceProfile: Limiting resource is cpu
+26/09/07 19:14:58 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/09/07 19:14:59 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/07 19:14:59 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/07 19:14:59 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/07 19:14:59 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/07 19:14:59 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/07 19:14:59 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/09/07 19:14:59 INFO Executor: Running Spark version 4.2.0
+26/09/07 19:14:59 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/07 19:14:59 INFO Executor: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/07 19:14:59 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/09/07 19:14:59 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@30d2258b for default.
+26/09/07 19:14:59 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44415.
+26/09/07 19:14:59 INFO NettyBlockTransferService: Server created on 10.255.255.254:44415
+26/09/07 19:14:59 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/09/07 19:14:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 44415, None)
+26/09/07 19:14:59 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:44415 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 44415, None)
+26/09/07 19:14:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 44415, None)
+26/09/07 19:14:59 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 44415, None)
+========================================
+DAY 04 - RDD CREATION AND OPERATIONS
+========================================
+Spark version      : 4.2.0
+Master             : local[4]
+Default parallelism: 4
+
+--- 1. RDD FROM SCALA COLLECTION ---
+26/09/07 19:15:00 INFO SparkContext: Starting job: count at Day04.scala:30
+26/09/07 19:15:00 INFO DAGScheduler: Got job 0 (count at Day04.scala:30) with 4 output partitions
+26/09/07 19:15:00 INFO DAGScheduler: Final stage: ResultStage 0 (count at Day04.scala:30)
+26/09/07 19:15:00 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:00 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:00 INFO DAGScheduler: Missing parents found for ResultStage 0: List()
+26/09/07 19:15:00 INFO DAGScheduler: Submitting ResultStage 0 (ParallelCollectionRDD[0] at parallelize at Day04.scala:28), which has no missing parents
+26/09/07 19:15:00 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/09/07 19:15:00 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 2.8 KiB, free 434.4 MiB)
+26/09/07 19:15:00 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1709.0 B, free 434.4 MiB)
+26/09/07 19:15:00 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:00 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (ParallelCollectionRDD[0] at parallelize at Day04.scala:28) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks resource profile 0
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+26/09/07 19:15:00 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+26/09/07 19:15:00 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+26/09/07 19:15:00 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+26/09/07 19:15:00 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1078 bytes result sent to driver
+26/09/07 19:15:00 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1078 bytes result sent to driver
+26/09/07 19:15:00 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1078 bytes result sent to driver
+26/09/07 19:15:00 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 1078 bytes result sent to driver
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 218 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 217 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 266 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 220 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Removed TaskSet 0.0 whose tasks have all completed, from pool 
+26/09/07 19:15:00 INFO DAGScheduler: ResultStage 0 (count at Day04.scala:30) finished in 498 ms
+26/09/07 19:15:00 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Canceling stage 0
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+26/09/07 19:15:00 INFO DAGScheduler: Job 0 finished: count at Day04.scala:30, took 582.266022 ms
+Number of elements : 10
+Number of partitions: 4
+Squared values:
+26/09/07 19:15:00 INFO SparkContext: Starting job: collect at Day04.scala:34
+26/09/07 19:15:00 INFO DAGScheduler: Got job 1 (collect at Day04.scala:34) with 4 output partitions
+26/09/07 19:15:00 INFO DAGScheduler: Final stage: ResultStage 1 (collect at Day04.scala:34)
+26/09/07 19:15:00 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:00 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:00 INFO DAGScheduler: Missing parents found for ResultStage 1: List()
+26/09/07 19:15:00 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[1] at map at Day04.scala:34), which has no missing parents
+26/09/07 19:15:00 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.8 KiB, free 434.4 MiB)
+26/09/07 19:15:00 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.2 KiB, free 434.4 MiB)
+26/09/07 19:15:00 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:00 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 1 (MapPartitionsRDD[1] at map at Day04.scala:34) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Adding task set 1.0 with 4 tasks resource profile 0
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 4) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 5) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 6) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 7) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9766 bytes) 
+26/09/07 19:15:00 INFO Executor: Running task 2.0 in stage 1.0 (TID 6)
+26/09/07 19:15:00 INFO Executor: Running task 0.0 in stage 1.0 (TID 4)
+26/09/07 19:15:00 INFO Executor: Running task 1.0 in stage 1.0 (TID 5)
+26/09/07 19:15:00 INFO Executor: Running task 3.0 in stage 1.0 (TID 7)
+26/09/07 19:15:00 INFO Executor: Finished task 1.0 in stage 1.0 (TID 5). 949 bytes result sent to driver
+26/09/07 19:15:00 INFO Executor: Finished task 2.0 in stage 1.0 (TID 6). 945 bytes result sent to driver
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 6) in 19 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 5) in 21 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:00 INFO Executor: Finished task 0.0 in stage 1.0 (TID 4). 988 bytes result sent to driver
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 4) in 26 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:00 INFO Executor: Finished task 3.0 in stage 1.0 (TID 7). 992 bytes result sent to driver
+26/09/07 19:15:00 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 7) in 26 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Removed TaskSet 1.0 whose tasks have all completed, from pool 
+26/09/07 19:15:00 INFO DAGScheduler: ResultStage 1 (collect at Day04.scala:34) finished in 56 ms
+26/09/07 19:15:00 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Canceling stage 1
+26/09/07 19:15:00 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+26/09/07 19:15:00 INFO DAGScheduler: Job 1 finished: collect at Day04.scala:34, took 64.382079 ms
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+
+--- 2. RDD FROM TEXT FILE ---
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 376.0 B, free 434.4 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 37.9 KiB, free 434.4 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 2 from textFile at Day04.scala:42
+26/09/07 19:15:01 INFO FileInputFormat: Total input files to process : 1
+26/09/07 19:15:01 INFO SparkContext: Starting job: count at Day04.scala:44
+26/09/07 19:15:01 INFO DAGScheduler: Got job 2 (count at Day04.scala:44) with 4 output partitions
+26/09/07 19:15:01 INFO DAGScheduler: Final stage: ResultStage 2 (count at Day04.scala:44)
+26/09/07 19:15:01 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents found for ResultStage 2: List()
+26/09/07 19:15:01 INFO DAGScheduler: Submitting ResultStage 2 (input/customers.txt MapPartitionsRDD[3] at textFile at Day04.scala:42), which has no missing parents
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 4.9 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.8 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:01 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 2 (input/customers.txt MapPartitionsRDD[3] at textFile at Day04.scala:42) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Adding task set 2.0 with 4 tasks resource profile 0
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 8) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 9) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 10) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 11) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO Executor: Running task 1.0 in stage 2.0 (TID 9)
+26/09/07 19:15:01 INFO Executor: Running task 3.0 in stage 2.0 (TID 11)
+26/09/07 19:15:01 INFO Executor: Running task 2.0 in stage 2.0 (TID 10)
+26/09/07 19:15:01 INFO Executor: Running task 0.0 in stage 2.0 (TID 8)
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 8) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:0+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 11) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:276+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 10) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:184+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 9) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:92+92
+26/09/07 19:15:01 INFO Executor: Finished task 3.0 in stage 2.0 (TID 11). 1078 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 0.0 in stage 2.0 (TID 8). 1078 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 2.0 in stage 2.0 (TID 10). 1078 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 11) in 99 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:01 INFO Executor: Finished task 1.0 in stage 2.0 (TID 9). 1078 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 8) in 111 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 10) in 102 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 9) in 105 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Removed TaskSet 2.0 whose tasks have all completed, from pool 
+26/09/07 19:15:01 INFO DAGScheduler: ResultStage 2 (count at Day04.scala:44) finished in 141 ms
+26/09/07 19:15:01 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Canceling stage 2
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+26/09/07 19:15:01 INFO DAGScheduler: Job 2 finished: count at Day04.scala:44, took 149.719636 ms
+Customer records   : 12
+Customer partitions: 4
+
+--- 3. MAP ---
+26/09/07 19:15:01 INFO SparkContext: Starting job: collect at Day04.scala:56
+26/09/07 19:15:01 INFO DAGScheduler: Got job 3 (collect at Day04.scala:56) with 4 output partitions
+26/09/07 19:15:01 INFO DAGScheduler: Final stage: ResultStage 3 (collect at Day04.scala:56)
+26/09/07 19:15:01 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents found for ResultStage 3: List()
+26/09/07 19:15:01 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[4] at map at Day04.scala:54), which has no missing parents
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 5.2 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2.9 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:01 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 3 (MapPartitionsRDD[4] at map at Day04.scala:54) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Adding task set 3.0 with 4 tasks resource profile 0
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 12) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 13) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 14) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 15) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO Executor: Running task 1.0 in stage 3.0 (TID 13)
+26/09/07 19:15:01 INFO Executor: Running task 3.0 in stage 3.0 (TID 15)
+26/09/07 19:15:01 INFO Executor: Running task 0.0 in stage 3.0 (TID 12)
+26/09/07 19:15:01 INFO Executor: Running task 2.0 in stage 3.0 (TID 14)
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 14) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:184+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 13) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:92+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 15) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:276+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 12) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:0+92
+26/09/07 19:15:01 INFO Executor: Finished task 1.0 in stage 3.0 (TID 13). 1074 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 2.0 in stage 3.0 (TID 14). 1059 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 13) in 17 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 14) in 18 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:01 INFO Executor: Finished task 3.0 in stage 3.0 (TID 15). 1107 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 15) in 31 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:01 INFO Executor: Finished task 0.0 in stage 3.0 (TID 12). 1106 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 12) in 48 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Removed TaskSet 3.0 whose tasks have all completed, from pool 
+26/09/07 19:15:01 INFO DAGScheduler: ResultStage 3 (collect at Day04.scala:56) finished in 61 ms
+26/09/07 19:15:01 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Canceling stage 3
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+26/09/07 19:15:01 INFO DAGScheduler: Job 3 finished: collect at Day04.scala:56, took 65.946685 ms
+Aarav
+Diya
+Rohan
+Ananya
+Vikram
+Meera
+Arjun
+Ishita
+Karthik
+Sneha
+Rahul
+Priya
+
+--- 4. FILTER ---
+Customers from Chennai:
+26/09/07 19:15:01 INFO SparkContext: Starting job: collect at Day04.scala:68
+26/09/07 19:15:01 INFO DAGScheduler: Got job 4 (collect at Day04.scala:68) with 4 output partitions
+26/09/07 19:15:01 INFO DAGScheduler: Final stage: ResultStage 4 (collect at Day04.scala:68)
+26/09/07 19:15:01 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents found for ResultStage 4: List()
+26/09/07 19:15:01 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[5] at filter at Day04.scala:65), which has no missing parents
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 5.2 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.9 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:01 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 4 (MapPartitionsRDD[5] at filter at Day04.scala:65) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Adding task set 4.0 with 4 tasks resource profile 0
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 16) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 17) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 18) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 19) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO Executor: Running task 2.0 in stage 4.0 (TID 18)
+26/09/07 19:15:01 INFO Executor: Running task 0.0 in stage 4.0 (TID 16)
+26/09/07 19:15:01 INFO Executor: Running task 3.0 in stage 4.0 (TID 19)
+26/09/07 19:15:01 INFO Executor: Running task 1.0 in stage 4.0 (TID 17)
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 19) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:276+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 17) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:92+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 18) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:184+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 16) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:0+92
+26/09/07 19:15:01 INFO Executor: Finished task 3.0 in stage 4.0 (TID 19). 1070 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 0.0 in stage 4.0 (TID 16). 1073 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 2.0 in stage 4.0 (TID 18). 1040 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 1.0 in stage 4.0 (TID 17). 1073 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 19) in 16 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 16) in 18 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 18) in 17 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 17) in 19 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Removed TaskSet 4.0 whose tasks have all completed, from pool 
+26/09/07 19:15:01 INFO DAGScheduler: ResultStage 4 (collect at Day04.scala:68) finished in 40 ms
+26/09/07 19:15:01 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Canceling stage 4
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+26/09/07 19:15:01 INFO DAGScheduler: Job 4 finished: collect at Day04.scala:68, took 44.606322 ms
+C001,Aarav,Chennai,Electronics
+C006,Meera,Chennai,Electronics
+C011,Rahul,Chennai,Clothing
+
+--- 5. FLATMAP ---
+26/09/07 19:15:01 INFO SparkContext: Starting job: count at Day04.scala:79
+26/09/07 19:15:01 INFO DAGScheduler: Got job 5 (count at Day04.scala:79) with 4 output partitions
+26/09/07 19:15:01 INFO DAGScheduler: Final stage: ResultStage 5 (count at Day04.scala:79)
+26/09/07 19:15:01 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents found for ResultStage 5: List()
+26/09/07 19:15:01 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[6] at flatMap at Day04.scala:77), which has no missing parents
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 5.2 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 2.9 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:01 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 5 (MapPartitionsRDD[6] at flatMap at Day04.scala:77) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Adding task set 5.0 with 4 tasks resource profile 0
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 20) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 21) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 2.0 in stage 5.0 (TID 22) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 3.0 in stage 5.0 (TID 23) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO Executor: Running task 2.0 in stage 5.0 (TID 22)
+26/09/07 19:15:01 INFO Executor: Running task 1.0 in stage 5.0 (TID 21)
+26/09/07 19:15:01 INFO Executor: Running task 0.0 in stage 5.0 (TID 20)
+26/09/07 19:15:01 INFO Executor: Running task 3.0 in stage 5.0 (TID 23)
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 22) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:184+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 20) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:0+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 21) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:92+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 23) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:276+92
+26/09/07 19:15:01 INFO Executor: Finished task 2.0 in stage 5.0 (TID 22). 1078 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 3.0 in stage 5.0 (TID 23). 1078 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 1.0 in stage 5.0 (TID 21). 1078 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 2.0 in stage 5.0 (TID 22) in 19 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 21) in 23 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 3.0 in stage 5.0 (TID 23) in 24 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:01 INFO Executor: Finished task 0.0 in stage 5.0 (TID 20). 1121 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 20) in 46 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Removed TaskSet 5.0 whose tasks have all completed, from pool 
+26/09/07 19:15:01 INFO DAGScheduler: ResultStage 5 (count at Day04.scala:79) finished in 79 ms
+26/09/07 19:15:01 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Canceling stage 5
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+26/09/07 19:15:01 INFO DAGScheduler: Job 5 finished: count at Day04.scala:79, took 85.385486 ms
+Total fields produced by flatMap: 48
+
+--- 6. TOTAL SALES ---
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 376.0 B, free 434.3 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 37.9 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 7 from textFile at Day04.scala:87
+26/09/07 19:15:01 INFO FileInputFormat: Total input files to process : 1
+26/09/07 19:15:01 INFO SparkContext: Starting job: reduce at Day04.scala:96
+26/09/07 19:15:01 INFO DAGScheduler: Got job 6 (reduce at Day04.scala:96) with 4 output partitions
+26/09/07 19:15:01 INFO DAGScheduler: Final stage: ResultStage 6 (reduce at Day04.scala:96)
+26/09/07 19:15:01 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents found for ResultStage 6: List()
+26/09/07 19:15:01 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[9] at map at Day04.scala:90), which has no missing parents
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 5.4 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 3.0 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:01 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 6 (MapPartitionsRDD[9] at map at Day04.scala:90) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Adding task set 6.0 with 4 tasks resource profile 0
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 24) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 25) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 26) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 27) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 19:15:01 INFO Executor: Running task 3.0 in stage 6.0 (TID 27)
+26/09/07 19:15:01 INFO Executor: Running task 0.0 in stage 6.0 (TID 24)
+26/09/07 19:15:01 INFO Executor: Running task 2.0 in stage 6.0 (TID 26)
+26/09/07 19:15:01 INFO Executor: Running task 1.0 in stage 6.0 (TID 25)
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 24) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/sales.txt:0+29
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 25) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/sales.txt:29+29
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 27) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/sales.txt:87+29
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 26) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/sales.txt:58+29
+26/09/07 19:15:01 INFO Executor: Finished task 3.0 in stage 6.0 (TID 27). 1163 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 2.0 in stage 6.0 (TID 26). 1163 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 26) in 15 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 27) in 16 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:01 INFO Executor: Finished task 1.0 in stage 6.0 (TID 25). 1206 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 25) in 22 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:01 INFO Executor: Finished task 0.0 in stage 6.0 (TID 24). 1206 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 24) in 27 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Removed TaskSet 6.0 whose tasks have all completed, from pool 
+26/09/07 19:15:01 INFO DAGScheduler: ResultStage 6 (reduce at Day04.scala:96) finished in 55 ms
+26/09/07 19:15:01 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Canceling stage 6
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+26/09/07 19:15:01 INFO DAGScheduler: Job 6 finished: reduce at Day04.scala:96, took 60.545584 ms
+Total sales: Rs. 215700.00
+
+--- 7. PARTITION INSPECTION ---
+Numbers RDD partitions  : 4
+Customers RDD partitions: 4
+Sales RDD partitions    : 4
+26/09/07 19:15:01 INFO SparkContext: Starting job: collect at Day04.scala:111
+26/09/07 19:15:01 INFO DAGScheduler: Got job 7 (collect at Day04.scala:111) with 4 output partitions
+26/09/07 19:15:01 INFO DAGScheduler: Final stage: ResultStage 7 (collect at Day04.scala:111)
+26/09/07 19:15:01 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents: List()
+26/09/07 19:15:01 INFO DAGScheduler: Missing parents found for ResultStage 7: List()
+26/09/07 19:15:01 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[10] at mapPartitionsWithIndex at Day04.scala:111), which has no missing parents
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 5.4 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 2.9 KiB, free 434.3 MiB)
+26/09/07 19:15:01 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1760
+26/09/07 19:15:01 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 7 (MapPartitionsRDD[10] at mapPartitionsWithIndex at Day04.scala:111) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Adding task set 7.0 with 4 tasks resource profile 0
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 28) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 29) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 30) (10.255.255.254,executor driver, partition 2, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 31) (10.255.255.254,executor driver, partition 3, PROCESS_LOCAL, 9737 bytes) 
+26/09/07 19:15:01 INFO Executor: Running task 2.0 in stage 7.0 (TID 30)
+26/09/07 19:15:01 INFO Executor: Running task 1.0 in stage 7.0 (TID 29)
+26/09/07 19:15:01 INFO Executor: Running task 3.0 in stage 7.0 (TID 31)
+26/09/07 19:15:01 INFO Executor: Running task 0.0 in stage 7.0 (TID 28)
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 28) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:0+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 29) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:92+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 31) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:276+92
+26/09/07 19:15:01 INFO HadoopRDD: Task (TID 30) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/input/customers.txt:184+92
+26/09/07 19:15:01 INFO Executor: Finished task 2.0 in stage 7.0 (TID 30). 1073 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 0.0 in stage 7.0 (TID 28). 1073 bytes result sent to driver
+26/09/07 19:15:01 INFO Executor: Finished task 3.0 in stage 7.0 (TID 31). 1073 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 30) in 15 ms on 10.255.255.254 (executor driver) (1/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 31) in 16 ms on 10.255.255.254 (executor driver) (2/4)
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 28) in 20 ms on 10.255.255.254 (executor driver) (3/4)
+26/09/07 19:15:01 INFO Executor: Finished task 1.0 in stage 7.0 (TID 29). 1116 bytes result sent to driver
+26/09/07 19:15:01 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 29) in 24 ms on 10.255.255.254 (executor driver) (4/4)
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Removed TaskSet 7.0 whose tasks have all completed, from pool 
+26/09/07 19:15:01 INFO DAGScheduler: ResultStage 7 (collect at Day04.scala:111) finished in 35 ms
+26/09/07 19:15:01 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Canceling stage 7
+26/09/07 19:15:01 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+26/09/07 19:15:01 INFO DAGScheduler: Job 7 finished: collect at Day04.scala:111, took 40.335535 ms
+Partition 0 contains 3 records
+Partition 1 contains 4 records
+Partition 2 contains 2 records
+Partition 3 contains 3 records
+
+========================================
+DAY 04 APPLICATION COMPLETED
+========================================
+26/09/07 19:15:01 INFO SparkContext: SparkContext is stopping with exitCode 0 from stop at Day04.scala:124.
+26/09/07 19:15:01 INFO SparkUI: Stopped Spark web UI at http://10.255.255.254:4040
+26/09/07 19:15:01 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/09/07 19:15:01 INFO MemoryStore: MemoryStore cleared
+26/09/07 19:15:01 INFO BlockManager: BlockManager stopped
+26/09/07 19:15:01 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/09/07 19:15:01 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/09/07 19:15:01 INFO SparkContext: Successfully stopped SparkContext (Uptime: 4687 ms)
+[success] Total time: 12 s, completed Sep 7, 2026, 7:15:01 PM
+26/09/07 19:15:01 ERROR Configuration: error parsing conf core-default.xml
+java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/target/bg-jobs/sbt_593a2f1f/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:148)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1432)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:168)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.getOrCreate(JarFileFactory.java:91)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:117)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:160)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3049)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3145)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3103)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3076)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2954)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2936)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1258)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1892)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:146)
+	at org.apache.hadoop.util.ShutdownHookManager$1.work(ShutdownHookManager.java:103)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+Exception in thread "Thread-3" java.lang.RuntimeException: java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/target/bg-jobs/sbt_593a2f1f/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3129)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3076)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2954)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2936)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1258)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1892)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:146)
+	at org.apache.hadoop.util.ShutdownHookManager$1.work(ShutdownHookManager.java:103)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+Caused by: java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-04-RDD-Creation/target/bg-jobs/sbt_593a2f1f/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:148)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1432)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:168)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.getOrCreate(JarFileFactory.java:91)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:117)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:160)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3049)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3145)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3103)
+	... 10 more

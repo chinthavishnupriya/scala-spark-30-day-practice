@@ -1,0 +1,6 @@
+T001,Laptop,2,60000
+T002,Mouse,5,800
+T003,Keyboard,3,1500
+T004,Monitor,2,12000
+T005,Laptop,1,60000
+T006,Mouse,4,800
