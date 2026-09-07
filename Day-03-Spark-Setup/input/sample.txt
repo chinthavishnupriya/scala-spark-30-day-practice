@@ -1,0 +1,5 @@
+Apache Spark is a distributed data processing engine.
+Spark supports batch processing and streaming.
+Scala is commonly used for Spark applications.
+Spark can process large datasets efficiently.
+This is Day 3 of the Scala and Spark practice.

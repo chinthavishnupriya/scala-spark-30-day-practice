@@ -1,0 +1,209 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to day03-spark-setup (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/)
+[info] running Day03 2
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/09/07 18:22:13 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/09/07 18:22:13 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/09/07 18:22:13 INFO SparkContext: Running Spark version 4.2.0
+26/09/07 18:22:13 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/07 18:22:13 INFO SparkContext: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/07 18:22:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/09/07 18:22:13 INFO ResourceUtils: ==============================================================
+26/09/07 18:22:13 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/09/07 18:22:13 INFO ResourceUtils: ==============================================================
+26/09/07 18:22:13 INFO SparkContext: Submitted application: Day 3 - Spark Setup
+26/09/07 18:22:14 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/07 18:22:14 INFO Utils: Successfully started service 'sparkDriver' on port 36155.
+26/09/07 18:22:14 INFO SparkEnv: Registering MapOutputTracker
+26/09/07 18:22:14 INFO SparkEnv: Registering BlockManagerMaster
+26/09/07 18:22:14 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/09/07 18:22:14 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/09/07 18:22:14 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/09/07 18:22:14 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-c5ad58bb-b416-490c-b460-1fe9f1ef8059
+26/09/07 18:22:14 INFO SparkEnv: Registering OutputCommitCoordinator
+26/09/07 18:22:14 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/09/07 18:22:14 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/09/07 18:22:14 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/09/07 18:22:14 INFO ResourceProfile: Limiting resource is cpu
+26/09/07 18:22:14 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/09/07 18:22:14 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/07 18:22:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/07 18:22:15 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/09/07 18:22:15 INFO Executor: Running Spark version 4.2.0
+26/09/07 18:22:15 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/07 18:22:15 INFO Executor: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/07 18:22:15 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/09/07 18:22:15 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@65e752d3 for default.
+26/09/07 18:22:15 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33617.
+26/09/07 18:22:15 INFO NettyBlockTransferService: Server created on 10.255.255.254:33617
+26/09/07 18:22:15 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/09/07 18:22:15 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 33617, None)
+26/09/07 18:22:15 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:33617 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 33617, None)
+26/09/07 18:22:15 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 33617, None)
+26/09/07 18:22:15 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 33617, None)
+========================================
+DAY 03 - SPARK SETUP
+========================================
+Spark version    : 4.2.0
+Application name : Day 3 - Spark Setup
+Master           : local[2]
+Default parallelism : 2
+
+--- Reading input/sample.txt ---
+26/09/07 18:22:15 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/09/07 18:22:15 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 376.0 B, free 434.4 MiB)
+26/09/07 18:22:15 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 37.9 KiB, free 434.4 MiB)
+26/09/07 18:22:15 INFO SparkContext: Created broadcast 0 from textFile at Day03.scala:26
+26/09/07 18:22:16 INFO FileInputFormat: Total input files to process : 1
+26/09/07 18:22:16 INFO SparkContext: Starting job: count at Day03.scala:28
+26/09/07 18:22:16 INFO DAGScheduler: Got job 0 (count at Day03.scala:28) with 2 output partitions
+26/09/07 18:22:16 INFO DAGScheduler: Final stage: ResultStage 0 (count at Day03.scala:28)
+26/09/07 18:22:16 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 18:22:16 INFO DAGScheduler: Missing parents: List()
+26/09/07 18:22:16 INFO DAGScheduler: Missing parents found for ResultStage 0: List()
+26/09/07 18:22:16 INFO DAGScheduler: Submitting ResultStage 0 (input/sample.txt MapPartitionsRDD[1] at textFile at Day03.scala:26), which has no missing parents
+26/09/07 18:22:16 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.8 KiB, free 434.4 MiB)
+26/09/07 18:22:16 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.8 KiB, free 434.4 MiB)
+26/09/07 18:22:16 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1760
+26/09/07 18:22:16 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (input/sample.txt MapPartitionsRDD[1] at textFile at Day03.scala:26) (first 15 tasks are for partitions Vector(0, 1))
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0
+26/09/07 18:22:16 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 18:22:16 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 18:22:16 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+26/09/07 18:22:16 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+26/09/07 18:22:16 INFO HadoopRDD: Task (TID 1) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/input/sample.txt:120+121
+26/09/07 18:22:16 INFO HadoopRDD: Task (TID 0) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/input/sample.txt:0+120
+26/09/07 18:22:16 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1121 bytes result sent to driver
+26/09/07 18:22:16 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1121 bytes result sent to driver
+26/09/07 18:22:16 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 195 ms on 10.255.255.254 (executor driver) (1/2)
+26/09/07 18:22:16 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 230 ms on 10.255.255.254 (executor driver) (2/2)
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Removed TaskSet 0.0 whose tasks have all completed, from pool 
+26/09/07 18:22:16 INFO DAGScheduler: ResultStage 0 (count at Day03.scala:28) finished in 328 ms
+26/09/07 18:22:16 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Canceling stage 0
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+26/09/07 18:22:16 INFO DAGScheduler: Job 0 finished: count at Day03.scala:28, took 402.439763 ms
+Number of lines : 5
+26/09/07 18:22:16 INFO SparkContext: Starting job: collect at Day03.scala:30
+26/09/07 18:22:16 INFO DAGScheduler: Got job 1 (collect at Day03.scala:30) with 2 output partitions
+26/09/07 18:22:16 INFO DAGScheduler: Final stage: ResultStage 1 (collect at Day03.scala:30)
+26/09/07 18:22:16 INFO DAGScheduler: Parents of final stage: List()
+26/09/07 18:22:16 INFO DAGScheduler: Missing parents: List()
+26/09/07 18:22:16 INFO DAGScheduler: Missing parents found for ResultStage 1: List()
+26/09/07 18:22:16 INFO DAGScheduler: Submitting ResultStage 1 (input/sample.txt MapPartitionsRDD[1] at textFile at Day03.scala:26), which has no missing parents
+26/09/07 18:22:16 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.9 KiB, free 434.4 MiB)
+26/09/07 18:22:16 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.8 KiB, free 434.3 MiB)
+26/09/07 18:22:16 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1760
+26/09/07 18:22:16 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (input/sample.txt MapPartitionsRDD[1] at textFile at Day03.scala:26) (first 15 tasks are for partitions Vector(0, 1))
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+26/09/07 18:22:16 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2) (10.255.255.254,executor driver, partition 0, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 18:22:16 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3) (10.255.255.254,executor driver, partition 1, PROCESS_LOCAL, 9733 bytes) 
+26/09/07 18:22:16 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+26/09/07 18:22:16 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+26/09/07 18:22:16 INFO HadoopRDD: Task (TID 3) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/input/sample.txt:120+121
+26/09/07 18:22:16 INFO HadoopRDD: Task (TID 2) input split: file:/home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/input/sample.txt:0+120
+26/09/07 18:22:16 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 1137 bytes result sent to driver
+26/09/07 18:22:16 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 1194 bytes result sent to driver
+26/09/07 18:22:16 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 18 ms on 10.255.255.254 (executor driver) (1/2)
+26/09/07 18:22:16 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 21 ms on 10.255.255.254 (executor driver) (2/2)
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Removed TaskSet 1.0 whose tasks have all completed, from pool 
+26/09/07 18:22:16 INFO DAGScheduler: ResultStage 1 (collect at Day03.scala:30) finished in 33 ms
+26/09/07 18:22:16 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Canceling stage 1
+26/09/07 18:22:16 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+26/09/07 18:22:16 INFO DAGScheduler: Job 1 finished: collect at Day03.scala:30, took 43.961536 ms
+Apache Spark is a distributed data processing engine.
+Spark supports batch processing and streaming.
+Scala is commonly used for Spark applications.
+Spark can process large datasets efficiently.
+This is Day 3 of the Scala and Spark practice.
+
+========================================
+DAY 03 APPLICATION COMPLETED
+========================================
+26/09/07 18:22:16 INFO SparkContext: SparkContext is stopping with exitCode 0 from stop at Day03.scala:39.
+26/09/07 18:22:16 INFO SparkUI: Stopped Spark web UI at http://10.255.255.254:4040
+26/09/07 18:22:16 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/09/07 18:22:16 INFO MemoryStore: MemoryStore cleared
+26/09/07 18:22:16 INFO BlockManager: BlockManager stopped
+26/09/07 18:22:16 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/09/07 18:22:16 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/09/07 18:22:16 INFO SparkContext: Successfully stopped SparkContext (Uptime: 3015 ms)
+[success] Total time: 8 s, completed Sep 7, 2026, 6:22:16 PM
+26/09/07 18:22:16 ERROR Configuration: error parsing conf core-default.xml
+java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/target/bg-jobs/sbt_7e2b3ad0/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:148)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1432)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:168)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.getOrCreate(JarFileFactory.java:91)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:117)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:160)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3049)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3145)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3103)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3076)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2954)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2936)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1258)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1892)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:146)
+	at org.apache.hadoop.util.ShutdownHookManager$1.work(ShutdownHookManager.java:103)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+Exception in thread "Thread-3" java.lang.RuntimeException: java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/target/bg-jobs/sbt_7e2b3ad0/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3129)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3076)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2954)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2936)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1258)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1892)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:146)
+	at org.apache.hadoop.util.ShutdownHookManager$1.work(ShutdownHookManager.java:103)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+Caused by: java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-03-Spark-Setup/target/bg-jobs/sbt_7e2b3ad0/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:148)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1432)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:168)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.getOrCreate(JarFileFactory.java:91)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:117)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:160)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3049)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3145)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3103)
+	... 10 more

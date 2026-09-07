@@ -1,0 +1,67 @@
+DAY 03 TROUBLESHOOTING
+
+1. WSL HOSTNAME WARNING
+-----------------------
+Warning:
+Your hostname resolves to a loopback address:
+127.0.1.1
+
+Spark automatically selected another local interface address.
+
+Result:
+The application still executed successfully.
+
+Evidence:
+SparkContext stopped with exitCode 0 and SBT reported [success].
+
+
+2. NATIVE HADOOP LIBRARY WARNING
+--------------------------------
+Warning:
+Unable to load native-hadoop library for your platform.
+
+Result:
+Spark continued using the available Java implementation and the application completed successfully.
+
+
+3. HADOOP SHUTDOWN CLEANUP WARNING
+-----------------------------------
+Warning:
+NoSuchFileException for a temporary hadoop-client-api-3.5.0.jar
+inside the SBT target/bg-jobs directory.
+
+Important:
+This appeared after:
+- SparkContext stopped with exitCode 0
+- SparkContext successfully stopped
+- SBT reported [success]
+
+Therefore, the warning occurred during shutdown/cleanup rather than during the Spark application's main processing.
+
+
+4. LOCAL[2] VS LOCAL[4]
+-----------------------
+local[2]:
+Default parallelism = 2
+
+local[4]:
+Default parallelism = 4
+
+The small input file was still processed using 2 input partitions in both executions.
+
+Increasing the number of local cores does not automatically increase the number of partitions of an existing small input file.
+
+
+5. COLLECT() SAFETY
+-------------------
+The application uses collect() only because input/sample.txt contains 5 lines.
+
+collect() transfers all records to the driver, so it should not be used on large datasets without careful consideration.
+
+
+FINAL STATUS
+------------
+Day 03 Spark application:
+SUCCESSFUL
+
+Both local[2] and local[4] executions completed successfully.
