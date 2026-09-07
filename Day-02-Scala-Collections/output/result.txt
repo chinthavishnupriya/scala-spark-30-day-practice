@@ -1,0 +1,97 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-02-Scala-Collections/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to day02-scala-collections (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-02-Scala-Collections/)
+[info] running Day02 
+========================================
+DAY 02 - SCALA COLLECTIONS
+========================================
+
+--- 1. map ---
+Original numbers : List(1, 2, 3, 4, 5)
+Squared numbers  : List(1, 4, 9, 16, 25)
+
+--- 2. filter ---
+Numbers          : List(1, 2, 3, 4, 5)
+Even numbers     : List(2, 4)
+
+--- 3. flatMap ---
+Nested List      : List(List(1, 2), List(3, 4), List(5, 6))
+After flatMap    : List(1, 2, 3, 4, 5, 6)
+
+--- 4. reduce ---
+Numbers          : List(1, 2, 3, 4, 5)
+Sum using reduce : 15
+
+--- 5. Vector ---
+Products         : Vector(Laptop, Mouse, Keyboard, Monitor)
+First product    : Laptop
+Third product    : Keyboard
+
+--- 6. Map ---
+Product prices   : Map(Laptop -> 60000.0, Mouse -> 800.0, Keyboard -> 1500.0, Monitor -> 12000.0)
+Laptop price     : 60000.0
+
+--- 7. For-Comprehension ---
+Students scoring 70 or above:
+(Anu,85)
+(Bala,72)
+(Charan,95)
+
+--- 8. Daily Sales Dataset ---
+Sales records:
+Sale(Monday,Laptop,2,60000.0)
+Sale(Monday,Mouse,5,800.0)
+Sale(Monday,Keyboard,3,1500.0)
+Sale(Tuesday,Laptop,1,60000.0)
+Sale(Tuesday,Monitor,2,12000.0)
+Sale(Tuesday,Mouse,4,800.0)
+Sale(Wednesday,Keyboard,5,1500.0)
+Sale(Wednesday,Monitor,1,12000.0)
+Sale(Wednesday,Laptop,1,60000.0)
+
+--- 9. Revenue Calculation using map ---
+Day       Product     Quantity   Revenue
+------------------------------------------
+Monday   Laptop      2          ₹120000.00
+Monday   Mouse       5          ₹4000.00
+Monday   Keyboard    3          ₹4500.00
+Tuesday  Laptop      1          ₹60000.00
+Tuesday  Monitor     2          ₹24000.00
+Tuesday  Mouse       4          ₹3200.00
+WednesdayKeyboard    5          ₹7500.00
+WednesdayMonitor     1          ₹12000.00
+WednesdayLaptop      1          ₹60000.00
+
+--- 10. filter - High Value Sales ---
+Monday   Laptop      2          ₹120000.00
+Tuesday  Laptop      1          ₹60000.00
+Tuesday  Monitor     2          ₹24000.00
+WednesdayMonitor     1          ₹12000.00
+WednesdayLaptop      1          ₹60000.00
+
+--- 11. Daily Sales Summary ---
+Day        Total Revenue
+-----------------------
+Monday    ₹128500.00
+Tuesday   ₹87200.00
+Wednesday ₹79500.00
+
+--- 12. Total Revenue using reduce ---
+Total revenue: ₹295200.00
+
+--- 13. flatMap - Product Characters ---
+Products          : Vector(Laptop, Mouse, Keyboard, Monitor)
+Flattened letters : Vector(L, a, p, t, o, p, M, o, u, s, e, K, e, y, b, o, a, r, d, M, o, n, i, t, o, r)
+
+--- 14. Day 2 Summary ---
+Number of sales records : 9
+Number of products      : 4
+Total revenue           : ₹295200.00
+map, filter, flatMap, reduce, Vector, Map and
+for-comprehension were successfully demonstrated.
+
+========================================
+DAY 02 COMPLETED SUCCESSFULLY
+========================================
+[success] Total time: 1 s, completed Sep 7, 2026, 5:35:40 PM
