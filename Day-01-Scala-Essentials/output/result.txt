@@ -1,0 +1,73 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-01-Scala-Essentials/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to day01-scala-essentials (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-01-Scala-Essentials/)
+[info] running Day01 
+========================================
+DAY 01 - SCALA ESSENTIALS
+========================================
+
+--- 1. val, var and lazy val ---
+val courseName = Scala Essentials
+var practiceCount after update = 2
+lazy val declared but not accessed yet
+lazy val is being initialized now
+First access: Lazy computation completed
+Second access: Lazy computation completed
+
+--- 2. Immutable Collections ---
+Original immutable List : List(10, 20, 30, 40, 50)
+New List after map      : List(20, 40, 60, 80, 100)
+
+--- 3. For-Comprehension with yield ---
+Student and individual marks:
+(Anu,85)
+(Anu,90)
+(Anu,88)
+(Bala,72)
+(Bala,75)
+(Bala,70)
+(Charan,95)
+(Charan,92)
+(Charan,96)
+(Divya,60)
+(Divya,65)
+(Divya,62)
+
+--- 4. List, Vector, Set and Map ---
+List   : List(Anu, Bala, Charan, Divya)
+Vector : Vector(Anu, Bala, Charan, Divya)
+Set    : Set(Anu, Bala, Charan, Divya)
+Map    : Map(Anu -> 85, Bala -> 72, Charan -> 95, Divya -> 60)
+
+Collection observations:
+- List   : ordered collection, efficient sequential access
+- Vector : indexed collection with efficient random access
+- Set    : stores unique elements
+- Map    : stores key-value pairs
+
+--- 5. Logger Trait ---
+[ConsoleLogger] Student processing started
+[AuditLogger] Student processing recorded
+
+--- 6. Student Grade Processor ---
+Name     Total   Average   Grade
+---------------------------------
+Anu     263     87.67     A
+Bala    217     72.33     B
+Charan  283     94.33     A+
+Divya   187     62.33     C
+
+--- 7. Students with Grade A or A+ ---
+Anu      Average: 87.67 Grade: A
+Charan   Average: 94.33 Grade: A+
+
+--- 8. Day 1 Summary ---
+Number of students processed: 4
+Number of top students      : 2
+All processing completed using immutable Scala collections.
+
+========================================
+DAY 01 COMPLETED SUCCESSFULLY
+========================================
+[success] Total time: 1 s, completed Sep 7, 2026, 4:52:04 PM
