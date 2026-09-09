@@ -1,8 +1,4 @@
-Alice,85
-Bob,72
-Charlie,91
-Diana,64
-Ethan,78
-Fiona,88
-George,55
-Hannah,95
+Anu,85,90,88
+Bala,72,75,70
+Charan,95,92,96
+Divya,60,65,62
