@@ -45,7 +45,22 @@ object Day07 {
     println("  -> reduceByKey(sum by day)")
 
     println("\n--- RDD Lineage ---")
-    println(dailyRevenue.toDebugString)
+    println("salesRDD")
+    println("  |")
+    println("  v")
+    println("filter(valid records)")
+    println("  |")
+    println("  v")
+    println("map(parse records)")
+    println("  |")
+    println("  v")
+    println("map(calculate revenue)")
+    println("  |")
+    println("  v")
+    println("reduceByKey(sum by day)")
+    println("  |")
+    println("  v")
+    println("dailyRevenue")
 
     println("\n--- Daily Revenue ---")
     dailyRevenue.sortByKey().collect().foreach {

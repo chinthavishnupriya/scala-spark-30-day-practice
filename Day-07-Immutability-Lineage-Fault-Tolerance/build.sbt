@@ -10,6 +10,11 @@ lazy val root = (project in file("."))
     ),
     Compile / run / fork := true,
     Compile / run / javaOptions ++= Seq(
-      "-Dspark.serializer=org.apache.spark.serializer.JavaSerializer"
+      "-Dspark.serializer=org.apache.spark.serializer.JavaSerializer",
+      "--add-opens=java.base/java.nio=ALL-UNNAMED",
+      "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED",
+      "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED",
+      "--add-opens=java.base/java.util=ALL-UNNAMED"
+
     )
   )
