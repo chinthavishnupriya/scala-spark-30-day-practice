@@ -7,6 +7,9 @@ case class Sale(
   price: Double
 )
 
+case class Customer(id: Int, name: String)
+case class Order(customerId: Int, product: String, quantity: Int)
+
 object Day02 {
 
   def main(args: Array[String]): Unit = {
@@ -63,21 +66,32 @@ object Day02 {
     println(s"Sum using reduce : $total")
 
     // --------------------------------------------------
-    // 5. Vector
+    // 5. Vector - Indexed Customer Records
     // --------------------------------------------------
-    println("\n--- 5. Vector ---")
+    println("\n--- 5. Vector - Indexed Customer Records ---")
 
-    val products: Vector[String] =
-      Vector("Laptop", "Mouse", "Keyboard", "Monitor")
+    val customers: Vector[Customer] = Vector(
+      Customer(101, "Anu"),
+      Customer(102, "Bala"),
+      Customer(103, "Charan"),
+      Customer(104, "Divya")
+    )
 
-    println(s"Products         : $products")
-    println(s"First product    : ${products(0)}")
-    println(s"Third product    : ${products(2)}")
+    println(s"Customers         : $customers")
+    println(s"First customer    : ${customers(0)}")
+    println(s"Third customer    : ${customers(2)}")
 
     // --------------------------------------------------
-    // 6. Map
+    // 6. Map - Product Quantities and Prices
     // --------------------------------------------------
-    println("\n--- 6. Map ---")
+    println("\n--- 6. Map - Product Quantities and Prices ---")
+
+    val productQuantities: Map[String, Int] = Map(
+      "Laptop" -> 4,
+      "Mouse" -> 9,
+      "Keyboard" -> 8,
+      "Monitor" -> 3
+    )
 
     val productPrices: Map[String, Double] = Map(
       "Laptop" -> 60000.0,
@@ -86,28 +100,32 @@ object Day02 {
       "Monitor" -> 12000.0
     )
 
-    println(s"Product prices   : $productPrices")
-    println(s"Laptop price     : ${productPrices("Laptop")}")
+    println(s"Product quantities: $productQuantities")
+    println(s"Product prices    : $productPrices")
+    println(s"Laptop quantity   : ${productQuantities("Laptop")}")
+    println(s"Laptop price      : ${productPrices("Laptop")}")
 
     // --------------------------------------------------
-    // 7. for-comprehension
+    // 7. for-comprehension combining Customers and Orders
     // --------------------------------------------------
-    println("\n--- 7. For-Comprehension ---")
+    println("\n--- 7. For-Comprehension - Customers and Orders ---")
 
-    val students = List(
-      ("Anu", 85),
-      ("Bala", 72),
-      ("Charan", 95),
-      ("Divya", 62)
+    val orders = List(
+      Order(101, "Laptop", 1),
+      Order(101, "Mouse", 2),
+      Order(102, "Keyboard", 1),
+      Order(103, "Monitor", 1),
+      Order(104, "Mouse", 3)
     )
 
-    val passedStudents = for {
-      (name, mark) <- students
-      if mark >= 70
-    } yield (name, mark)
+    val customerOrders = for {
+      customer <- customers
+      order <- orders
+      if customer.id == order.customerId
+    } yield (customer.name, order.product, order.quantity)
 
-    println("Students scoring 70 or above:")
-    passedStudents.foreach(println)
+    println("Customer orders:")
+    customerOrders.foreach(println)
 
     // --------------------------------------------------
     // 8. Daily Sales Dataset
@@ -158,9 +176,7 @@ object Day02 {
 
     highValueSales.foreach {
       case (day, product, quantity, revenue) =>
-        println(
-          f"$day%-9s$product%-12s$quantity%-11d₹$revenue%.2f"
-        )
+        println(f"$day%-9s$product%-12s$quantity%-11d₹$revenue%.2f")
     }
 
     // --------------------------------------------------
@@ -206,8 +222,8 @@ object Day02 {
     // --------------------------------------------------
     println("\n--- 13. flatMap - Product Characters ---")
 
-    val productCharacters =
-      products.flatMap(_.toList)
+    val products = productPrices.keys.toVector.sorted
+    val productCharacters = products.flatMap(_.toList)
 
     println(s"Products          : $products")
     println(s"Flattened letters : $productCharacters")
@@ -217,11 +233,13 @@ object Day02 {
     // --------------------------------------------------
     println("\n--- 14. Day 2 Summary ---")
 
-    println(s"Number of sales records : ${sales.size}")
-    println(s"Number of products      : ${products.size}")
-    println(f"Total revenue           : ₹$totalRevenue%.2f")
+    println(s"Number of customers      : ${customers.size}")
+    println(s"Number of customer orders: ${customerOrders.size}")
+    println(s"Number of sales records  : ${sales.size}")
+    println(s"Number of products       : ${products.size}")
+    println(f"Total revenue            : ₹$totalRevenue%.2f")
     println("map, filter, flatMap, reduce, Vector, Map and")
-    println("for-comprehension were successfully demonstrated.")
+    println("customer-order for-comprehension were successfully demonstrated.")
 
     println("\n========================================")
     println("DAY 02 COMPLETED SUCCESSFULLY")
