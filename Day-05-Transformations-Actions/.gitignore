@@ -1,0 +1,13 @@
+# SBT / Scala build files
+target/
+project/target/
+
+# IDE / build tool metadata
+.bsp/
+.bloop/
+.metals/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
