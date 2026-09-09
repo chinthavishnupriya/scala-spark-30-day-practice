@@ -1,21 +1,24 @@
-# Day 7 — Immutability, Lineage and Fault Tolerance
+# Day 07 — Immutability, Lineage and Fault Tolerance
 
 ## Objective
-Understand how Spark RDDs remain immutable, how Spark records RDD lineage, and how lineage helps recover lost partitions.
+
+Understand how Spark RDDs remain immutable, how Spark records the dependencies between RDDs, and how lineage helps Spark recover lost partition data.
 
 ## Practice Requirements
+
 - Create a multi-step RDD transformation chain.
-- Inspect and draw its lineage.
+- Inspect and represent its lineage.
 - Explain why RDDs are immutable.
 - Explain how Spark recomputes lost partitions.
 - Conceptually simulate executor loss and identify what Spark recomputes.
 
 ## Environment
+
 - Scala: 2.13.18
 - Apache Spark: 4.2.0
 - Java: 17.0.20
 - SBT: 1.10.11
-- Master: local[4]
+- Master: `local[4]`
 
 ## Transformation Chain
 
@@ -35,87 +38,130 @@ map(calculate revenue)
 reduceByKey(sum by day)
    |
    v
- dailyRevenue
+dailyRevenue
 ```
 
-`filter` and `map` are narrow transformations. `reduceByKey` is a wide transformation that introduces a shuffle boundary.
+`filter` and `map` are narrow transformations. `reduceByKey` is a wide transformation and introduces a shuffle boundary.
 
 ## RDD Immutability
 
-An RDD cannot be modified after it is created. Operations such as `filter` and `map` create new RDDs instead of changing the original RDD.
+An RDD cannot be modified after it is created. Operations such as `filter` and `map` create new RDDs while preserving their parent RDDs.
 
-In this project:
+The project therefore has a chain of separate datasets:
 
 ```text
-salesRDD -> validSales -> parsedSales -> revenueByDay -> dailyRevenue
+salesRDD
+   ↓
+validSales
+   ↓
+parsedSales
+   ↓
+revenueByDay
+   ↓
+dailyRevenue
 ```
 
-The original `salesRDD` remains unchanged throughout the pipeline.
+The original `salesRDD` remains unchanged even after later transformations are created.
 
 ## Lineage
 
-Spark maintains information about how each RDD was derived from its parent RDDs. `toDebugString` is used to inspect this lineage.
+Spark maintains dependency information describing how an RDD was derived from its parent RDDs. This dependency chain is called lineage.
 
-The lineage can be represented as:
+The project represents the lineage as:
 
 ```text
 salesRDD
-   |
- filter
-   |
- map(parse)
-   |
- map(revenue)
-   |
- reduceByKey
-   |
- dailyRevenue
+   ↓
+filter
+   ↓
+map(parse)
+   ↓
+map(revenue)
+   ↓
+reduceByKey
+   ↓
+dailyRevenue
 ```
 
-Lineage is important for fault tolerance because Spark can use it to recompute missing partitions.
+The program prints a manual lineage representation because direct debug-string inspection can be sensitive to the Java/Spark runtime configuration used in this environment.
 
 ## Fault Tolerance
 
-If a partition is lost because an executor becomes unavailable, Spark does not need to rebuild the entire application manually. It can schedule the missing task elsewhere and recompute the lost partition by replaying the required transformations from the lineage.
+If an executor becomes unavailable and a partition's computed result is lost, Spark can schedule the required work again and use the RDD lineage to reconstruct the missing data. The entire dataset does not have to be manually rebuilt.
 
-For this pipeline, the conceptual recovery path is:
+Conceptual recovery:
 
 ```text
-salesRDD
-   -> filter
-   -> map(parse)
-   -> map(revenue)
-   -> reduceByKey
-   -> lost partition recomputed
+Original source
+     ↓
+filter
+     ↓
+parse
+     ↓
+calculate revenue
+     ↓
+aggregate
+     ↓
+missing partition rebuilt
 ```
 
-Healthy partitions remain available and do not need to be recomputed.
+Only the required missing work is recomputed; healthy partition results can remain available.
 
 ## Conceptual Executor-Loss Scenario
 
-Assume one executor holding a `dailyRevenue` partition is lost.
+Assume an executor holding a `dailyRevenue` partition is lost:
 
-1. Spark detects that the task/partition result is unavailable.
-2. Spark schedules the required task on another executor.
-3. Spark follows the RDD lineage to determine the required parent data and transformations.
+1. Spark detects that the required task result is unavailable.
+2. The task is scheduled again on an available executor.
+3. Spark follows the lineage to determine the required parent data and transformations.
 4. The missing partition is recomputed.
-5. The application can continue without manually rebuilding the dataset.
+5. The application can continue without manually recreating the whole RDD.
 
-This is a conceptual simulation; no real executor is intentionally terminated.
+This project treats executor loss as a conceptual simulation; it does not intentionally terminate a real executor.
+
+## Actions Used
+
+- `collect()` displays the daily revenue results.
+- `count()` verifies the original and filtered RDD sizes.
 
 ## Performance Observations
 
 - Transformations are lazy until an action is executed.
-- `filter` is a narrow transformation.
-- `map` is a narrow transformation.
-- `reduceByKey` is a wide transformation and causes a shuffle.
-- Lineage provides the information needed for recomputation.
-- Persistence/caching can reduce repeated recomputation when an RDD is reused.
+- Narrow transformations can be pipelined within a stage.
+- `reduceByKey` causes a shuffle and creates a stage boundary.
+- Lineage provides the dependency information needed for recomputation.
+- Caching or persistence can reduce repeated recomputation when the same RDD is reused by multiple actions.
 
-## Actions Used
+## Observed Result
 
-- `collect()` to display daily revenue.
-- `count()` to verify the original and filtered RDDs.
+The sample dataset contains 10 sales records. The completed pipeline produces daily revenue values for Monday through Friday and confirms the original and valid-record counts.
+
+## Java 17 Runtime Configuration
+
+The project uses forked SBT execution and Java module-opening options required by the Spark runtime in this development environment. These settings are kept in `build.sbt` and `.jvmopts`.
+
+## Project Structure
+
+```text
+Day-07-Immutability-Lineage-Fault-Tolerance/
+├── .gitignore
+├── .jvmopts
+├── README.md
+├── build.sbt
+├── code/
+│   └── Day07.scala
+├── input/
+│   └── sales.txt
+├── output/
+│   └── result.txt
+├── screenshots/
+│   ├── 01-transformation-lineage-revenue.png
+│   └── 02-immutability-fault-tolerance-success.png
+└── src/
+    └── main/
+        └── scala/
+            └── Day07.scala
+```
 
 ## How to Run
 
@@ -132,4 +178,4 @@ sbt run > output/result.txt 2>&1
 
 ## Learning Outcome
 
-Day 7 demonstrates the relationship between RDD immutability, lineage and fault tolerance. The exercise shows why Spark can recover lost partition data by recomputing only the required portion of the RDD transformation chain.
+Day 7 connects three important Spark ideas: immutable RDDs form a dependency graph, lineage records how data was produced, and that lineage enables Spark to recompute missing partition data when failures occur.
