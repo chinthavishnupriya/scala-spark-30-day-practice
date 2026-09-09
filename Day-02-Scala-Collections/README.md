@@ -126,6 +126,47 @@ Daily aggregation
 - Scala: 2.12.20
 - SBT: 1.10.11
 
+## Commands Used
+
+### Navigate and inspect
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-02-Scala-Collections
+ls
+find . -maxdepth 3 -type f | sort
+```
+
+### Compile and run
+
+```bash
+sbt compile
+sbt run
+```
+
+### Save and inspect output
+
+```bash
+sbt run > output/result.txt 2>&1
+cat output/result.txt
+tail -n 30 output/result.txt
+```
+
+### Git workflow
+
+```bash
+git status --short
+git add Day-02-Scala-Collections/
+git commit -m "Complete Day 2 Scala collections"
+git push origin main
+```
+
+If the remote contains newer commits:
+
+```bash
+git pull --rebase origin main
+git push origin main
+```
+
 ## Project Structure
 
 ```text
