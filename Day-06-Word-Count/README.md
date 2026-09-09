@@ -111,6 +111,46 @@ word counts
 - Normalizing text before aggregation avoids duplicate keys caused by case differences.
 - `take(10)` is suitable for returning a small top-results set to the driver.
 
+## Commands Used
+
+### Navigate and inspect
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-06-Word-Count
+ls
+find . -maxdepth 3 -type f | sort
+```
+
+### Compile and run
+
+```bash
+sbt compile
+sbt run
+```
+
+### Save execution output
+
+```bash
+sbt run > output/result.txt 2>&1
+```
+
+### Inspect important results
+
+```bash
+cat output/result.txt
+tail -n 40 output/result.txt
+grep -n "Top 10" output/result.txt
+```
+
+### Git workflow
+
+```bash
+git status --short
+git add Day-06-Word-Count/
+git commit -m "Complete Day 6 word count"
+git push origin main
+```
+
 ## Project Structure
 
 ```text
