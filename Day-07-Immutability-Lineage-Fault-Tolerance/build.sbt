@@ -7,5 +7,9 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "org.apache.spark" %% "spark-core" % "4.2.0",
       "org.apache.spark" %% "spark-sql" % "4.2.0"
+    ),
+    Compile / run / fork := true,
+    Compile / run / javaOptions ++= Seq(
+      "-Dspark.serializer=org.apache.spark.serializer.JavaSerializer"
     )
   )
