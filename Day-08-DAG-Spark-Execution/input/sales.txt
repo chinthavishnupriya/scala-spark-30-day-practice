@@ -1,0 +1,15 @@
+Monday,Electronics,2,15000
+Monday,Books,5,500
+Monday,Clothing,3,1200
+Tuesday,Electronics,1,18000
+Tuesday,Books,4,600
+Tuesday,Clothing,2,1500
+Wednesday,Electronics,3,12000
+Wednesday,Books,6,450
+Wednesday,Clothing,4,1100
+Thursday,Electronics,2,14000
+Thursday,Books,3,700
+Thursday,Clothing,5,900
+Friday,Electronics,4,16000
+Friday,Books,2,800
+Friday,Clothing,3,1300
