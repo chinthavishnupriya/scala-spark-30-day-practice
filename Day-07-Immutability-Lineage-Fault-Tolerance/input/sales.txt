@@ -1,0 +1,10 @@
+Monday,Laptop,2,60000
+Monday,Mouse,5,800
+Tuesday,Laptop,1,60000
+Tuesday,Monitor,2,12000
+Wednesday,Keyboard,5,1500
+Wednesday,Laptop,1,60000
+Thursday,Mouse,8,800
+Thursday,Monitor,3,12000
+Friday,Laptop,2,60000
+Friday,Keyboard,4,1500
