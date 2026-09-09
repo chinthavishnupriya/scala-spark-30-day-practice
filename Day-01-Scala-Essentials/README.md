@@ -71,6 +71,58 @@ Spark applications are written using Scala collections concepts such as function
 - SBT: 1.10.11
 - Java: 17.0.20
 
+## Commands Used
+
+### Navigate to the project
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-01-Scala-Essentials
+```
+
+### Inspect files
+
+```bash
+ls
+find . -maxdepth 3 -type f | sort
+```
+
+### Compile
+
+```bash
+sbt compile
+```
+
+### Run
+
+```bash
+sbt run
+```
+
+### Save execution output
+
+```bash
+sbt run > output/result.txt 2>&1
+```
+
+### Inspect output
+
+```bash
+cat output/result.txt
+```
+
+```bash
+tail -n 30 output/result.txt
+```
+
+### Git verification and upload
+
+```bash
+git status --short
+git add Day-01-Scala-Essentials/
+git commit -m "Complete Day 1 Scala essentials"
+git push origin main
+```
+
 ## Project Structure
 
 ```text
@@ -93,12 +145,14 @@ Day-01-Scala-Essentials/
 
 ## How to Run
 
+The main commands are:
+
 ```bash
 sbt compile
 sbt run
 ```
 
-To save the execution output:
+To save output:
 
 ```bash
 sbt run > output/result.txt 2>&1
