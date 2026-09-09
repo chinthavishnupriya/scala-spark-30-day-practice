@@ -6,6 +6,7 @@ object Day07 {
     val spark = SparkSession.builder()
       .appName("Day 7 - Immutability, Lineage and Fault Tolerance")
       .master("local[4]")
+      .config("spark.serializer", "org.apache.spark.serializer.JavaSerializer")
       .getOrCreate()
 
     spark.sparkContext.setLogLevel("WARN")
