@@ -108,6 +108,46 @@ Two RDDs are combined with `union`. Duplicate values can then be removed using `
 - `distinct` can introduce data movement.
 - `collect` is appropriate for small demonstration results but should not be used to return an unbounded large dataset to the driver.
 
+## Commands Used
+
+### Navigate and inspect
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-05-Transformations-Actions
+ls
+find . -maxdepth 3 -type f | sort
+```
+
+### Compile and run
+
+```bash
+sbt compile
+sbt run
+```
+
+### Save execution output
+
+```bash
+sbt run > output/day05_run.txt 2>&1
+```
+
+### Inspect output
+
+```bash
+cat output/day05_run.txt
+tail -n 30 output/day05_run.txt
+grep -n "ERROR" output/day05_run.txt
+```
+
+### Git workflow
+
+```bash
+git status --short
+git add Day-05-Transformations-Actions/
+git commit -m "Complete Day 5 transformations and actions"
+git push origin main
+```
+
 ## Project Structure
 
 ```text
