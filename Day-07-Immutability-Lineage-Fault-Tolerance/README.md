@@ -140,6 +140,47 @@ The sample dataset contains 10 sales records. The completed pipeline produces da
 
 The project uses forked SBT execution and Java module-opening options required by the Spark runtime in this development environment. These settings are kept in `build.sbt` and `.jvmopts`.
 
+## Commands Used
+
+### Navigate and inspect
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-07-Immutability-Lineage-Fault-Tolerance
+ls
+find . -maxdepth 3 -type f | sort
+```
+
+### Compile and run
+
+```bash
+sbt compile
+sbt run
+```
+
+### Save and inspect output
+
+```bash
+sbt run > output/result.txt 2>&1
+cat output/result.txt
+tail -n 40 output/result.txt
+```
+
+### Verify successful completion
+
+```bash
+grep -n "DAY 07 COMPLETED SUCCESSFULLY" output/result.txt
+grep -n "\[success\]" output/result.txt
+```
+
+### Git workflow
+
+```bash
+git status --short
+git add Day-07-Immutability-Lineage-Fault-Tolerance/
+git commit -m "Complete Day 7 immutability lineage and fault tolerance"
+git push origin main
+```
+
 ## Project Structure
 
 ```text
