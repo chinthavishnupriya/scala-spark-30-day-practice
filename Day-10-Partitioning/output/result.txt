@@ -1,0 +1,129 @@
+[info] running (fork) Day10 
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/09/09 14:16:05 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/09/09 14:16:05 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/09/09 14:16:05 INFO SparkContext: Running Spark version 4.2.0
+26/09/09 14:16:05 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/09 14:16:05 INFO SparkContext: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/09 14:16:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/09/09 14:16:06 INFO ResourceUtils: ==============================================================
+26/09/09 14:16:06 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/09/09 14:16:06 INFO ResourceUtils: ==============================================================
+26/09/09 14:16:06 INFO SparkContext: Submitted application: Day 10 - Partitioning
+26/09/09 14:16:06 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/09 14:16:06 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/09 14:16:06 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/09 14:16:06 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/09 14:16:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/09 14:16:06 INFO Utils: Successfully started service 'sparkDriver' on port 43797.
+26/09/09 14:16:06 INFO SparkEnv: Registering MapOutputTracker
+26/09/09 14:16:06 INFO SparkEnv: Registering BlockManagerMaster
+26/09/09 14:16:06 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/09/09 14:16:06 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/09/09 14:16:06 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/09/09 14:16:06 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-bd6ee32b-a859-49ee-a955-172da229c6ae
+26/09/09 14:16:07 INFO SparkEnv: Registering OutputCommitCoordinator
+26/09/09 14:16:07 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/09/09 14:16:07 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/09/09 14:16:07 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/09/09 14:16:07 INFO ResourceProfile: Limiting resource is cpu
+26/09/09 14:16:07 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/09/09 14:16:07 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/09 14:16:07 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/09 14:16:07 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/09 14:16:07 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/09 14:16:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/09 14:16:07 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/09/09 14:16:07 INFO Executor: Running Spark version 4.2.0
+26/09/09 14:16:07 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/09 14:16:07 INFO Executor: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/09 14:16:07 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/09/09 14:16:07 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@796c68bf for default.
+26/09/09 14:16:07 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41349.
+26/09/09 14:16:07 INFO NettyBlockTransferService: Server created on 10.255.255.254:41349
+26/09/09 14:16:07 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/09/09 14:16:07 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 41349, None)
+26/09/09 14:16:07 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:41349 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 41349, None)
+26/09/09 14:16:07 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 41349, None)
+26/09/09 14:16:07 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 41349, None)
+========================================
+DAY 10 - PARTITIONING
+========================================
+
+--- Original Dataset ---
+Records              : 20
+Original partitions  : 1
+
+--- repartition(4) ---
+Partitions after repartition : 4
+repartition can increase or decrease partitions.
+It normally involves a shuffle.
+
+--- coalesce(2) ---
+Partitions after coalesce : 2
+coalesce is useful for reducing partitions.
+It can avoid a full shuffle when reducing partitions.
+
+--- Partition Count Comparison ---
+Original      : 1
+Repartitioned : 4
+Coalesced     : 2
+
+--- Partition Contents ---
+Partition 0 -> 5 records
+Partition 1 -> 5 records
+Partition 2 -> 5 records
+Partition 3 -> 5 records
+
+--- Pair RDD Before partitionBy ---
+Partitions : 1
+
+--- Pair RDD After partitionBy ---
+Partitions : 4
+partitionBy assigns keys to partitions using a partitioner.
+
+--- Partitioner Information ---
+Partitioner: org.apache.spark.HashPartitioner@4
+
+--- Revenue by Product ---
+Books        ₹4250.00
+Clothing     ₹7250.00
+Electronics  ₹111000.00
+
+--- When to Increase Partitions ---
+Increase partitions when:
+  The dataset is large.
+  Existing partitions contain too much data.
+  More parallelism is available.
+  Tasks are taking too long.
+
+--- When to Decrease Partitions ---
+Decrease partitions when:
+  There are too many small partitions.
+  Task scheduling overhead becomes significant.
+  A smaller number of output files is desired.
+
+--- Optimization Scenario ---
+Problem:
+  The original dataset has only 1 partition.
+Optimization:
+  Repartition the dataset to 4 partitions.
+Reason:
+  More partitions allow more tasks to process data
+  concurrently when multiple CPU cores are available.
+
+--- Partitioning Summary ---
+repartition:
+  Changes partition count using a shuffle.
+coalesce:
+  Primarily reduces partition count with less data movement.
+partitionBy:
+  Controls how Pair RDD keys are distributed.
+Original partitions : 1
+Optimized partitions: 4
+
+========================================
+DAY 10 COMPLETED SUCCESSFULLY
+========================================
+[success] elapsed time: 9 s
+[0J
