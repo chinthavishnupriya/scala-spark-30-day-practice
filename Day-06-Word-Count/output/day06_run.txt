@@ -1,0 +1,237 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-06-Word-Count/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-06-Word-Count (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-06-Word-Count/)
+[info] running Day06 
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/09/09 06:59:40 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/09/09 06:59:40 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/09/09 06:59:40 INFO SparkContext: Running Spark version 4.2.0
+26/09/09 06:59:40 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/09 06:59:40 INFO SparkContext: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/09 06:59:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/09/09 06:59:40 INFO ResourceUtils: ==============================================================
+26/09/09 06:59:40 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/09/09 06:59:40 INFO ResourceUtils: ==============================================================
+26/09/09 06:59:40 INFO SparkContext: Submitted application: Day 06 - Word Count
+26/09/09 06:59:40 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/09 06:59:40 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/09 06:59:40 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/09 06:59:40 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/09 06:59:40 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/09 06:59:41 INFO Utils: Successfully started service 'sparkDriver' on port 33479.
+26/09/09 06:59:41 INFO SparkEnv: Registering MapOutputTracker
+26/09/09 06:59:41 INFO SparkEnv: Registering BlockManagerMaster
+26/09/09 06:59:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/09/09 06:59:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/09/09 06:59:41 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/09/09 06:59:41 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-03f62483-aec9-4bf0-8b1b-c49271be4071
+26/09/09 06:59:41 INFO SparkEnv: Registering OutputCommitCoordinator
+26/09/09 06:59:41 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/09/09 06:59:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/09/09 06:59:41 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/09/09 06:59:41 INFO ResourceProfile: Limiting resource is cpu
+26/09/09 06:59:41 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/09/09 06:59:41 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/09 06:59:41 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/09 06:59:41 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/09 06:59:41 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/09 06:59:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/09 06:59:42 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/09/09 06:59:42 INFO Executor: Running Spark version 4.2.0
+26/09/09 06:59:42 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/09 06:59:42 INFO Executor: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/09 06:59:42 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/09/09 06:59:42 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@61da0b5e for default.
+26/09/09 06:59:42 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33797.
+26/09/09 06:59:42 INFO NettyBlockTransferService: Server created on 10.255.255.254:33797
+26/09/09 06:59:42 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/09/09 06:59:42 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 33797, None)
+26/09/09 06:59:42 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:33797 with 434.4 MiB RAM, BlockManagerId(driver, 10.255.255.254, 33797, None)
+26/09/09 06:59:42 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 33797, None)
+26/09/09 06:59:42 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 33797, None)
+========================================
+DAY 06 - WORD COUNT
+========================================
+Input partitions: 4
+
+--- Classic Word Count ---
+Application          4
+Configuration        1
+Database             3
+ERROR                5
+High                 1
+INFO                 12
+Loading              1
+Processing           3
+Request              4
+Retry                1
+Retrying             1
+Shutdown             1
+WARN                 3
+application          1
+attempt              1
+completed            2
+configuration        1
+connection           4
+continues            1
+customer             3
+database             1
+detected             1
+failed               5
+file                 1
+is                   2
+longer               1
+memory               1
+missing              1
+one                  1
+optional             1
+processing           3
+request              4
+requested            1
+setting              1
+shutdown             1
+started              2
+successful           1
+successfully         4
+taking               1
+usage                1
+
+--- Case-Insensitive Word Count ---
+application          5
+attempt              1
+completed            2
+configuration        2
+connection           4
+continues            1
+customer             3
+database             4
+detected             1
+error                5
+failed               5
+file                 1
+high                 1
+info                 12
+is                   2
+loading              1
+longer               1
+memory               1
+missing              1
+one                  1
+optional             1
+processing           6
+request              8
+requested            1
+retry                1
+retrying             1
+setting              1
+shutdown             2
+started              2
+successful           1
+successfully         4
+taking               1
+usage                1
+warn                 3
+
+--- Top 10 Most Frequent Words ---
+ 1. info                 12
+ 2. request              8
+ 3. processing           6
+ 4. error                5
+ 5. application          5
+ 6. failed               5
+ 7. connection           4
+ 8. database             4
+ 9. successfully         4
+10. warn                 3
+
+--- Spark Execution Concepts ---
+Transformations:
+  flatMap, filter, map, reduceByKey, sortByKey, sortBy
+
+Actions:
+  collect, take
+
+Lazy transformations:
+  flatMap, filter, map, reduceByKey, sortByKey, sortBy
+
+Shuffle operations:
+  reduceByKey
+  sortByKey / sortBy
+
+Optimization:
+  reduceByKey performs local aggregation before shuffle.
+  take(10) avoids collecting the complete result.
+
+========================================
+DAY 06 APPLICATION COMPLETED
+========================================
+[success] Total time: 9 s, completed Sep 9, 2026, 6:59:45 AM
+26/09/09 06:59:45 ERROR Configuration: error parsing conf core-default.xml
+java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-06-Word-Count/target/bg-jobs/sbt_edb08642/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:148)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1432)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:168)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.getOrCreate(JarFileFactory.java:91)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:117)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:160)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3049)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3145)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3103)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3076)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2954)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2936)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1258)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1892)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:146)
+	at org.apache.hadoop.util.ShutdownHookManager$1.work(ShutdownHookManager.java:103)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+Exception in thread "Thread-3" java.lang.RuntimeException: java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-06-Word-Count/target/bg-jobs/sbt_edb08642/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3129)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3076)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2954)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2936)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1258)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1892)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1869)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:184)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:146)
+	at org.apache.hadoop.util.ShutdownHookManager$1.work(ShutdownHookManager.java:103)
+	at org.apache.hadoop.util.concurrent.SubjectInheritingThread.run(SubjectInheritingThread.java:209)
+Caused by: java.nio.file.NoSuchFileException: /home/vishnupriya/scala-spark-30-day-practice/Day-06-Word-Count/target/bg-jobs/sbt_edb08642/target/0ccf00d8/a27dd2aa/hadoop-client-api-3.5.0.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:148)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1432)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:717)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:168)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.getOrCreate(JarFileFactory.java:91)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:117)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:160)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:3049)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3145)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3103)
+	... 10 more

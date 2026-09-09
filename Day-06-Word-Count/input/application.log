@@ -1,0 +1,20 @@
+INFO Application started successfully
+INFO Loading application configuration
+WARN Configuration file is missing one optional setting
+ERROR Database connection failed
+INFO Retrying database connection
+INFO Database connection successful
+ERROR Database connection failed
+WARN Retry attempt is taking longer
+INFO Processing customer request
+INFO Processing customer request
+ERROR Request processing failed
+INFO Request completed successfully
+INFO Application processing continues
+ERROR Request processing failed
+WARN High memory usage detected
+INFO Application shutdown requested
+ERROR Shutdown request failed
+INFO Application started successfully
+INFO Processing customer request
+INFO Request completed successfully
