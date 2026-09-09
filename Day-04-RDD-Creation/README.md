@@ -110,6 +110,40 @@ Examples in this exercise include transformations such as `map` and `filter`, an
 - SBT 1.10.11
 - Spark master: `local[4]`
 
+## Commands Used
+
+### Navigate and inspect
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-04-RDD-Creation
+ls
+find . -maxdepth 3 -type f | sort
+```
+
+### Compile and run
+
+```bash
+sbt compile
+sbt run
+```
+
+### Save and inspect output
+
+```bash
+sbt run > output/result.txt 2>&1
+cat output/result.txt
+tail -n 30 output/result.txt
+```
+
+### Git workflow
+
+```bash
+git status --short
+git add Day-04-RDD-Creation/
+git commit -m "Complete Day 4 RDD creation"
+git push origin main
+```
+
 ## Project Structure
 
 ```text
