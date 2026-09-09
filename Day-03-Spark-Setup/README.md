@@ -79,6 +79,53 @@ Using more local cores can allow more tasks to execute concurrently when enough 
 - Apache Spark: 4.2.0
 - Platform: Ubuntu on WSL2
 
+## Commands Used
+
+### Navigate and inspect
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-03-Spark-Setup
+ls
+find . -maxdepth 3 -type f | sort
+```
+
+### Compile
+
+```bash
+sbt compile
+```
+
+### Run with different local cores
+
+```bash
+sbt "run 2"
+sbt "run 4"
+```
+
+### Save execution results
+
+```bash
+sbt "run 2" > output/result_local2.txt 2>&1
+sbt "run 4" > output/result_local4.txt 2>&1
+```
+
+### Inspect results
+
+```bash
+cat output/result_local2.txt
+cat output/result_local4.txt
+tail -n 30 output/result_local4.txt
+```
+
+### Git workflow
+
+```bash
+git status --short
+git add Day-03-Spark-Setup/
+git commit -m "Complete Day 3 Spark setup"
+git push origin main
+```
+
 ## Project Structure
 
 ```text
