@@ -1,0 +1,116 @@
+[info] running (fork) Day07 
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/09/09 09:34:00 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+26/09/09 09:34:00 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/09/09 09:34:00 INFO SparkContext: Running Spark version 4.2.0
+26/09/09 09:34:00 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/09 09:34:00 INFO SparkContext: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/09 09:34:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/09/09 09:34:00 INFO ResourceUtils: ==============================================================
+26/09/09 09:34:00 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/09/09 09:34:00 INFO ResourceUtils: ==============================================================
+26/09/09 09:34:00 INFO SparkContext: Submitted application: Day 7 - Immutability, Lineage and Fault Tolerance
+26/09/09 09:34:01 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/09 09:34:01 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/09 09:34:01 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/09 09:34:01 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/09 09:34:01 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/09 09:34:01 INFO Utils: Successfully started service 'sparkDriver' on port 32997.
+26/09/09 09:34:01 INFO SparkEnv: Registering MapOutputTracker
+26/09/09 09:34:01 INFO SparkEnv: Registering BlockManagerMaster
+26/09/09 09:34:01 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/09/09 09:34:01 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/09/09 09:34:01 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/09/09 09:34:01 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-c0625a84-ddc1-411a-bda6-0897b56166e9
+26/09/09 09:34:01 INFO SparkEnv: Registering OutputCommitCoordinator
+26/09/09 09:34:02 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/09/09 09:34:02 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/09/09 09:34:02 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/09/09 09:34:02 INFO ResourceProfile: Limiting resource is cpu
+26/09/09 09:34:02 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/09/09 09:34:02 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/09 09:34:02 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/09 09:34:02 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/09 09:34:02 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/09 09:34:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/09 09:34:02 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/09/09 09:34:02 INFO Executor: Running Spark version 4.2.0
+26/09/09 09:34:02 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/09 09:34:02 INFO Executor: Java version 17.0.20+8-1-26.04-Ubuntu
+26/09/09 09:34:02 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/09/09 09:34:02 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@23ea8830 for default.
+26/09/09 09:34:02 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39355.
+26/09/09 09:34:02 INFO NettyBlockTransferService: Server created on 10.255.255.254:39355
+26/09/09 09:34:02 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/09/09 09:34:02 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 39355, None)
+26/09/09 09:34:02 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:39355 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 39355, None)
+26/09/09 09:34:02 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 39355, None)
+26/09/09 09:34:02 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 39355, None)
+========================================
+DAY 07 - IMMUTABILITY, LINEAGE & FAULT TOLERANCE
+========================================
+
+Original RDD partitions : 4
+Original RDD is immutable: transformations create new RDDs.
+
+--- Transformation Chain ---
+salesRDD
+  -> filter(valid records)
+  -> map(parse records)
+  -> map(calculate revenue)
+  -> reduceByKey(sum by day)
+
+--- RDD Lineage ---
+salesRDD
+  |
+  v
+filter(valid records)
+  |
+  v
+map(parse records)
+  |
+  v
+map(calculate revenue)
+  |
+  v
+reduceByKey(sum by day)
+  |
+  v
+dailyRevenue
+
+--- Daily Revenue ---
+Friday     ₹126000.00
+Monday     ₹124000.00
+Thursday   ₹42400.00
+Tuesday    ₹84000.00
+Wednesday  ₹67500.00
+
+--- Immutability Demonstration ---
+Original salesRDD count : 10
+Valid sales count       : 10
+The original salesRDD remains unchanged after filter/map operations.
+
+--- Fault Tolerance ---
+1. Spark records the lineage of every derived RDD.
+2. If a partition is lost, Spark identifies the missing partition.
+3. Spark recomputes that partition from the required parent RDDs.
+4. Other healthy partitions do not need to be recomputed.
+5. In this pipeline, Spark can rebuild a lost output partition by replaying the required transformations.
+
+--- Conceptual Executor-Loss Simulation ---
+Assume an executor holding one dailyRevenue partition is lost.
+Spark would schedule the lost task on another executor.
+The missing partition is recomputed from its lineage: salesRDD -> filter -> map -> map -> reduceByKey.
+No manual reconstruction of the original dataset is required.
+
+--- Performance Notes ---
+Transformations are lazy until an action such as collect or count runs.
+filter and map are narrow transformations.
+reduceByKey is a wide transformation and creates a shuffle boundary.
+Lineage provides fault recovery, while caching/persistence can reduce recomputation when reused data is available.
+
+========================================
+DAY 07 COMPLETED SUCCESSFULLY
+========================================
+[success] elapsed time: 11 s
+[0J
