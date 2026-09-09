@@ -1,60 +1,63 @@
-# Day 04 - Commands Used
+# Day 04 — Commands Used
 
-## Project Setup
-
+## Navigate and create directories
+```bash
 cd ~/scala-spark-30-day-practice
 mkdir -p Day-04-RDD-Creation/{code,input,output,project,screenshots,troubleshooting,src/main/scala}
 cd Day-04-RDD-Creation
+```
 
-## Project Configuration
+## Check project configuration
+```bash
+cat build.sbt
+cat project/build.properties
+cat .gitignore
+```
 
-cat > .gitignore
-cat > project/build.properties
-cat > build.sbt
+## Check input and source
+```bash
+cat input/customers.txt
+cat input/sales.txt
+sed -n '1,260p' src/main/scala/Day04.scala
+```
 
-## Input Files
-
-cat > input/customers.txt
-cat > input/sales.txt
-
-## Source Code
-
-cat > src/main/scala/Day04.scala
+## Copy source
+```bash
 cp src/main/scala/Day04.scala code/Day04.scala
+```
 
-## Compilation
+## Compile and run
+```bash
+sbt clean compile
+sbt run
+sbt run 2>&1 | tee output/day04_run.txt
+```
 
-sbt compile
+## Inspect results and partitions
+```bash
+cat output/day04_run.txt
+tail -40 output/day04_run.txt
+```
 
-## Execution
+## Verify project files
+```bash
+find . -maxdepth 5 -type f | sort
+```
 
-sbt "run"
-
-## Save Execution Output
-
-sbt "run" 2>&1 | tee output/day04_run.txt
-
-## README Verification
-
-wc -l README.md
-tail -10 README.md
-
-## File Verification
-
-find . -maxdepth 3 -type f | sort
-
-## Git Verification
-
-git status
-git add Day-04-RDD-Creation/
-git status
+## Git workflow
+```bash
+cd ~/scala-spark-30-day-practice
+git status --short
+git add Day-04-RDD-Creation
 git commit -m "Complete Day 4 RDD Creation and Operations"
 git push origin main
 git status
+git log --oneline -3
+```
 
-## Git Ignore Troubleshooting
-
-cat -n .gitignore
+## Git ignore troubleshooting
+```bash
+cat -n Day-04-RDD-Creation/.gitignore
 git status --ignored --short
-git add .gitignore
 git status --short
+```
