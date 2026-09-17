@@ -1,0 +1,10 @@
+T001,C101,Electronics,5000
+T002,C102,Books,1200
+T003,C101,Clothing,2500
+T004,C103,Electronics,7500
+T005,C104,Books,1800
+T006,C102,Clothing,2200
+T007,C101,Electronics,4500
+T008,C105,Books,900
+T009,C103,Clothing,3200
+T010,C104,Electronics,6800
