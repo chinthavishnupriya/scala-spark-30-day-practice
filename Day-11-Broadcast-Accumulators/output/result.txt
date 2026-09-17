@@ -1,0 +1,12 @@
+=== Day 11: Broadcast and Accumulators ===
+Spark version: 4.2.0
+Master: local[4]
+Broadcast product count: 4
+Validated transactions:
+T001,P101,Laptop,2,VALID
+T002,P102,Mouse,5,VALID
+T003,P999,UNKNOWN,1,INVALID
+T004,P103,Keyboard,3,VALID
+T005,P888,UNKNOWN,2,INVALID
+Valid records: 3
+Bad records: 2
