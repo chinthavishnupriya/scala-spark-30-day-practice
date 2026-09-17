@@ -1,0 +1,46 @@
+========================================
+DAY 12 - CACHE AND PERSIST
+========================================
+
+--- Dataset ---
+Raw transaction count     : 10
+Cleaned transaction count : 10
+Partitions                : 4
+
+--- Cache ---
+Storage level after cache : StorageLevel(memory, deserialized, 1 replicas)
+
+--- Report 1: Total Revenue ---
+Total revenue: ₹35600.00
+
+--- Report 2: Revenue by Category ---
+Books        ₹3900.00
+Clothing     ₹7900.00
+Electronics  ₹23800.00
+
+--- Report 3: Customer Transaction Counts ---
+C101 -> 3 transactions
+C102 -> 2 transactions
+C103 -> 2 transactions
+C104 -> 2 transactions
+C105 -> 1 transactions
+
+--- Persist Comparison ---
+Storage level with persist(MEMORY_AND_DISK): StorageLevel(disk, memory, deserialized, 1 replicas)
+cache() is shorthand for persist() with MEMORY_ONLY.
+persist() allows selecting a storage level explicitly.
+
+--- When Caching Can Hurt ---
+Caching can hurt when the RDD is used only once.
+It can also hurt when the dataset is too large for available memory.
+Unnecessary cached data can cause memory pressure and eviction.
+
+--- Summary ---
+Cleaned RDD reused in three reports: YES
+cache(): MEMORY_ONLY by default
+persist(): configurable storage level
+Example storage level: MEMORY_AND_DISK
+
+========================================
+DAY 12 COMPLETED SUCCESSFULLY
+========================================
