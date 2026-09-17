@@ -1,0 +1,8 @@
+target/
+.bsp/
+.metals/
+.project/
+.classpath
+.settings/
+.idea/
+*.iml
