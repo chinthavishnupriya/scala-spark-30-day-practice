@@ -1,32 +1,60 @@
 # Day 14 — DataFrame and Dataset
 
+## Overview
+
+Day 14 focuses on Apache Spark's structured APIs: **DataFrame** and **Dataset**.
+
+The practical task uses an employee payroll dataset to demonstrate:
+
+- Creating a Scala case class
+- Reading CSV data into a DataFrame
+- Converting a DataFrame to `Dataset[Employee]`
+- Performing typed Dataset transformations
+- Converting a Dataset back to a DataFrame
+- Performing payroll analysis
+- Comparing RDD, DataFrame, and Dataset
+- Understanding type safety
+- Understanding Catalyst optimization
+- Inspecting logical and physical execution plans
+- Identifying a shuffle boundary
+
+The implementation uses a typed employee payroll pipeline.
+
+---
+
 ## Objective
 
-Practice Spark's structured APIs by working with DataFrames and Datasets using a typed employee payroll pipeline.
+The objectives of Day 14 are:
 
-## Topics Covered
+1. Create an `Employee` case class.
+2. Read employee records from CSV.
+3. Create a Spark DataFrame.
+4. Convert the DataFrame to `Dataset[Employee]`.
+5. Perform typed transformations on the Dataset.
+6. Convert the Dataset back to a DataFrame.
+7. Perform department-level payroll analysis.
+8. Compare RDD, DataFrame, and Dataset APIs.
+9. Explain Dataset type safety.
+10. Inspect Catalyst logical and physical plans.
 
-- Create a Scala `case class`
-- Read CSV data into a DataFrame
-- Convert DataFrame to `Dataset[Employee]`
-- Perform typed Dataset transformations
-- Convert Dataset back to DataFrame
-- Compare RDD, DataFrame, and Dataset
-- Understand type safety
-- Understand Catalyst optimization
-- Perform employee payroll analysis
-- Inspect the Spark execution plan
+---
 
 ## Environment
 
 | Component | Version |
 |---|---|
-| Ubuntu | WSL2 |
-| Java | 17.0.20 |
+| Operating System | Ubuntu / WSL2 |
+| Java | OpenJDK 17.0.20 |
 | Spark | 4.2.0 |
 | Spark Scala | 2.13.18 |
-| SBT | 1.10.11 |
-| Master | local[4] |
+| Standalone Scala Runner | 2.12.20 |
+| SBT Project Version | 1.10.11 |
+| SBT Runner | 2.0.7 |
+| Spark Master | `local[4]` |
+
+The SBT project explicitly uses Scala 2.13.18, which matches Spark 4.2.0.
+
+---
 
 ## Project Structure
 
