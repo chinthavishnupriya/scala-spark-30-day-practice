@@ -55,7 +55,25 @@ Day-13-Spark-SQL-Basics/
     └── README.md
 ```
 
-Generated SBT directories such as `target/` and `project/target/` are excluded through `.gitignore`.
+### Directory and File Purpose
+
+| Path | Purpose |
+|---|---|
+| `README.md` | Complete Day 13 explanation, implementation details, results, and learning outcomes. |
+| `COMMANDS.md` | Commands used for setup, compilation, execution, verification, screenshots, and Git. |
+| `.gitignore` | Prevents generated build files and IDE files from being committed. |
+| `.jvmopts` | JVM options used by the SBT project. |
+| `build.sbt` | Defines the Scala version and Spark Core/Spark SQL dependencies. |
+| `code/Day13.scala` | Practical source-code copy for reference. |
+| `input/customers.csv` | Customer input dataset used by the Spark SQL application. |
+| `output/result.txt` | Saved execution output from the successful Day 13 run. |
+| `project/build.properties` | Pins the SBT version to 1.10.11. |
+| `project/README.md` | Documents the SBT project configuration and versions. |
+| `screenshots/` | Evidence of compilation and Spark SQL execution/results. |
+| `src/main/scala/Day13.scala` | Main SBT source location for the Day 13 application. |
+| `troubleshooting/README.md` | Common errors, checks, and recovery commands. |
+
+Generated SBT directories such as `target/` and `project/target/` are excluded through `.gitignore` and are not part of the project structure committed to Git.
 
 ## Input Dataset
 
