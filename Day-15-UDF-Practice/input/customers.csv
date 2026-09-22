@@ -1,0 +1,9 @@
+customer_id,name,city,age,salary,transaction_value
+C101,Anu,Hyderabad,24,28000,6500
+C102,Bala,Vijayawada,29,42000,18500
+C103,Charan,Visakhapatnam,34,68000,72000
+C104,Divya,Warangal,26,35000,9200
+C105,Eswar,Hyderabad,31,75000,48500
+C106,Fathima,Tirupati,28,54000,12500
+C107,Gopal,Nellore,39,92000,95000
+C108,Hari,Hyderabad,25,31000,27500
