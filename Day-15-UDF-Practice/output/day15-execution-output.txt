@@ -1,0 +1,145 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-15-UDF-Practice/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-15-UDF-Practice (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-15-UDF-Practice/)
+[info] running (fork) Day15 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/22 16:12:24 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/22 16:12:24 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/22 16:12:24 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/22 16:12:24 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/22 16:12:24 INFO SparkContext: Java version 17.0.20+8-1-26.04-Ubuntu
+[error] 26/09/22 16:12:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/22 16:12:24 INFO ResourceUtils: ==============================================================
+[error] 26/09/22 16:12:24 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/22 16:12:24 INFO ResourceUtils: ==============================================================
+[error] 26/09/22 16:12:24 INFO SparkContext: Submitted application: Day 15 - UDF Practice
+[error] 26/09/22 16:12:24 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/22 16:12:24 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/22 16:12:24 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/22 16:12:24 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/22 16:12:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/22 16:12:25 INFO Utils: Successfully started service 'sparkDriver' on port 40621.
+[error] 26/09/22 16:12:25 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/22 16:12:25 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/22 16:12:25 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/22 16:12:25 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/22 16:12:25 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/22 16:12:25 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-3c6905a3-4861-4c09-b2c0-7ab1d7be2892
+[error] 26/09/22 16:12:25 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/22 16:12:25 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/22 16:12:26 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/22 16:12:26 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/22 16:12:26 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/22 16:12:26 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/22 16:12:26 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/22 16:12:26 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/22 16:12:26 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/22 16:12:26 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/22 16:12:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/22 16:12:26 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/22 16:12:26 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/22 16:12:26 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/22 16:12:26 INFO Executor: Java version 17.0.20+8-1-26.04-Ubuntu
+[error] 26/09/22 16:12:26 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/22 16:12:26 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@2b170932 for default.
+[error] 26/09/22 16:12:26 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44763.
+[error] 26/09/22 16:12:26 INFO NettyBlockTransferService: Server created on 10.255.255.254:44763
+[error] 26/09/22 16:12:26 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/22 16:12:26 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 44763, None)
+[error] 26/09/22 16:12:26 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:44763 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 44763, None)
+[error] 26/09/22 16:12:26 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 44763, None)
+[error] 26/09/22 16:12:26 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 44763, None)
+[info] ===== CUSTOMER DATA =====
+[info] +-----------+-------+-------------+---+------+-----------------+
+[info] |customer_id|name   |city         |age|salary|transaction_value|
+[info] +-----------+-------+-------------+---+------+-----------------+
+[info] |C101       |Anu    |Hyderabad    |24 |28000 |6500             |
+[info] |C102       |Bala   |Vijayawada   |29 |42000 |18500            |
+[info] |C103       |Charan |Visakhapatnam|34 |68000 |72000            |
+[info] |C104       |Divya  |Warangal     |26 |35000 |9200             |
+[info] |C105       |Eswar  |Hyderabad    |31 |75000 |48500            |
+[info] |C106       |Fathima|Tirupati     |28 |54000 |12500            |
+[info] |C107       |Gopal  |Nellore      |39 |92000 |95000            |
+[info] |C108       |Hari   |Hyderabad    |25 |31000 |27500            |
+[info] +-----------+-------+-------------+---+------+-----------------+
+[info] ===== UDF RESULT =====
+[info] +-----------+-------+------+---------------+-----------------+-----------------+
+[info] |customer_id|name   |salary|salary_band_udf|transaction_value|risk_category_udf|
+[info] +-----------+-------+------+---------------+-----------------+-----------------+
+[info] |C101       |Anu    |28000 |Low            |6500             |Low Risk         |
+[info] |C102       |Bala   |42000 |Medium         |18500            |Medium Risk      |
+[info] |C103       |Charan |68000 |High           |72000            |High Risk        |
+[info] |C104       |Divya  |35000 |Medium         |9200             |Low Risk         |
+[info] |C105       |Eswar  |75000 |High           |48500            |Medium Risk      |
+[info] |C106       |Fathima|54000 |Medium         |12500            |Medium Risk      |
+[info] |C107       |Gopal  |92000 |High           |95000            |High Risk        |
+[info] |C108       |Hari   |31000 |Medium         |27500            |Medium Risk      |
+[info] +-----------+-------+------+---------------+-----------------+-----------------+
+[info] ===== BUILT-IN FUNCTION RESULT =====
+[info] +-----------+-------+------+-------------------+-----------------+---------------------+
+[info] |customer_id|name   |salary|salary_band_builtin|transaction_value|risk_category_builtin|
+[info] +-----------+-------+------+-------------------+-----------------+---------------------+
+[info] |C101       |Anu    |28000 |Low                |6500             |Low Risk             |
+[info] |C102       |Bala   |42000 |Medium             |18500            |Medium Risk          |
+[info] |C103       |Charan |68000 |High               |72000            |High Risk            |
+[info] |C104       |Divya  |35000 |Medium             |9200             |Low Risk             |
+[info] |C105       |Eswar  |75000 |High               |48500            |Medium Risk          |
+[info] |C106       |Fathima|54000 |Medium             |12500            |Medium Risk          |
+[info] |C107       |Gopal  |92000 |High               |95000            |High Risk            |
+[info] |C108       |Hari   |31000 |Medium             |27500            |Medium Risk          |
+[info] +-----------+-------+------+-------------------+-----------------+---------------------+
+[info] ===== UDF VS BUILT-IN COMPARISON =====
+[info] +-----------+---------------+-------------------+-----------------+---------------------+------------+----------+
+[info] |customer_id|salary_band_udf|salary_band_builtin|risk_category_udf|risk_category_builtin|salary_match|risk_match|
+[info] +-----------+---------------+-------------------+-----------------+---------------------+------------+----------+
+[info] |C101       |Low            |Low                |Low Risk         |Low Risk             |true        |true      |
+[info] |C102       |Medium         |Medium             |Medium Risk      |Medium Risk          |true        |true      |
+[info] |C103       |High           |High               |High Risk        |High Risk            |true        |true      |
+[info] |C104       |Medium         |Medium             |Low Risk         |Low Risk             |true        |true      |
+[info] |C105       |High           |High               |Medium Risk      |Medium Risk          |true        |true      |
+[info] |C106       |Medium         |Medium             |Medium Risk      |Medium Risk          |true        |true      |
+[info] |C107       |High           |High               |High Risk        |High Risk            |true        |true      |
+[info] |C108       |Medium         |Medium             |Medium Risk      |Medium Risk          |true        |true      |
+[info] +-----------+---------------+-------------------+-----------------+---------------------+------------+----------+
+[info] Comparison mismatches: 0
+[info] UDF and built-in results match for all customers.
+[info] ===== REGISTERED UDF THROUGH SPARK SQL =====
+[info] +-----------+-------+------+---------------+-----------------+-----------------+
+[info] |customer_id|name   |salary|salary_band_sql|transaction_value|risk_category_sql|
+[info] +-----------+-------+------+---------------+-----------------+-----------------+
+[info] |C101       |Anu    |28000 |Low            |6500             |Low Risk         |
+[info] |C102       |Bala   |42000 |Medium         |18500            |Medium Risk      |
+[info] |C103       |Charan |68000 |High           |72000            |High Risk        |
+[info] |C104       |Divya  |35000 |Medium         |9200             |Low Risk         |
+[info] |C105       |Eswar  |75000 |High           |48500            |Medium Risk      |
+[info] |C106       |Fathima|54000 |Medium         |12500            |Medium Risk      |
+[info] |C107       |Gopal  |92000 |High           |95000            |High Risk        |
+[info] |C108       |Hari   |31000 |Medium         |27500            |Medium Risk      |
+[info] +-----------+-------+------+---------------+-----------------+-----------------+
+[info] ===== CUSTOMER RISK SUMMARY =====
+[info] +-----------------+-----+
+[info] |risk_category_udf|count|
+[info] +-----------------+-----+
+[info] |High Risk        |2    |
+[info] |Low Risk         |2    |
+[info] |Medium Risk      |4    |
+[info] +-----------------+-----+
+[info] ===== UDF EXECUTION PLAN =====
+[info] == Parsed Logical Plan ==
+[info] 'Project [unresolvedstarwithcolumns(risk_category_udf, UDF('transaction_value), None)]
+[info] +- Project [customer_id#17, name#18, city#19, age#20, salary#21, transaction_value#22, if (isnull(cast(salary#21 as bigint))) null else UDF(knownnotnull(cast(salary#21 as bigint))) AS salary_band_udf#51]
+[info]    +- Relation [customer_id#17,name#18,city#19,age#20,salary#21,transaction_value#22] csv
+[info] == Analyzed Logical Plan ==
+[info] customer_id: string, name: string, city: string, age: int, salary: int, transaction_value: int, salary_band_udf: string, risk_category_udf: string
+[info] Project [customer_id#17, name#18, city#19, age#20, salary#21, transaction_value#22, salary_band_udf#51, if (isnull(cast(transaction_value#22 as bigint))) null else UDF(knownnotnull(cast(transaction_value#22 as bigint))) AS risk_category_udf#57]
+[info] +- Project [customer_id#17, name#18, city#19, age#20, salary#21, transaction_value#22, if (isnull(cast(salary#21 as bigint))) null else UDF(knownnotnull(cast(salary#21 as bigint))) AS salary_band_udf#51]
+[info]    +- Relation [customer_id#17,name#18,city#19,age#20,salary#21,transaction_value#22] csv
+[info] == Optimized Logical Plan ==
+[info] Project [customer_id#17, name#18, city#19, age#20, salary#21, transaction_value#22, if (isnull(cast(salary#21 as bigint))) null else UDF(knownnotnull(cast(salary#21 as bigint))) AS salary_band_udf#51, if (isnull(cast(transaction_value#22 as bigint))) null else UDF(knownnotnull(cast(transaction_value#22 as bigint))) AS risk_category_udf#57]
+[info] +- Relation [customer_id#17,name#18,city#19,age#20,salary#21,transaction_value#22] csv
+[info] == Physical Plan ==
+[info] *(1) Project [customer_id#17, name#18, city#19, age#20, salary#21, transaction_value#22, if (isnull(cast(salary#21 as bigint))) null else UDF(knownnotnull(cast(salary#21 as bigint))) AS salary_band_udf#51, if (isnull(cast(transaction_value#22 as bigint))) null else UDF(knownnotnull(cast(transaction_value#22 as bigint))) AS risk_category_udf#57]
+[info] +- FileScan csv [customer_id#17,name#18,city#19,age#20,salary#21,transaction_value#22] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-15-UDF-Practice..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<customer_id:string,name:string,city:string,age:int,salary:int,transaction_value:int>
+[info] ===== DAY 15 COMPLETED SUCCESSFULLY =====
+[success] Total time: 24 s, completed Sep 22, 2026, 4:12:40 PM
