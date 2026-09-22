@@ -1,0 +1,187 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-14-DataFrame-Dataset/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-14-DataFrame-Dataset (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-14-DataFrame-Dataset/)
+[info] running (fork) Day14 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/22 06:05:50 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/22 06:05:50 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/22 06:05:50 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/22 06:05:50 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/22 06:05:50 INFO SparkContext: Java version 17.0.20+8-1-26.04-Ubuntu
+[error] 26/09/22 06:05:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/22 06:05:50 INFO ResourceUtils: ==============================================================
+[error] 26/09/22 06:05:50 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/22 06:05:50 INFO ResourceUtils: ==============================================================
+[error] 26/09/22 06:05:51 INFO SparkContext: Submitted application: Day 14 - DataFrame and Dataset
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/22 06:05:51 INFO Utils: Successfully started service 'sparkDriver' on port 46421.
+[error] 26/09/22 06:05:51 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/22 06:05:51 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/22 06:05:51 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/22 06:05:51 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/22 06:05:51 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/22 06:05:51 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-7fc58208-26ad-4dae-bb61-9b5b7472a6bd
+[error] 26/09/22 06:05:51 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/22 06:05:51 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/22 06:05:51 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/22 06:05:51 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/22 06:05:51 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/22 06:05:51 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/22 06:05:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/22 06:05:51 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/22 06:05:51 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/22 06:05:51 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/22 06:05:51 INFO Executor: Java version 17.0.20+8-1-26.04-Ubuntu
+[error] 26/09/22 06:05:51 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/22 06:05:51 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@4e4f4092 for default.
+[error] 26/09/22 06:05:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35559.
+[error] 26/09/22 06:05:52 INFO NettyBlockTransferService: Server created on 10.255.255.254:35559
+[error] 26/09/22 06:05:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/22 06:05:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 35559, None)
+[error] 26/09/22 06:05:52 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:35559 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 35559, None)
+[error] 26/09/22 06:05:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 35559, None)
+[error] 26/09/22 06:05:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 35559, None)
+[info] ======================================================================
+[info] DAY 14 - DATAFRAME AND DATASET
+[info] ======================================================================
+[info] Spark Version : 4.2.0
+[info] Master        : local[4]
+[info] --- 1. DataFrame from CSV ---
+[info] DataFrame Record Count: 8
+[info] +-----------+-------+-----------+---+------+
+[info] |employee_id|name   |department |age|salary|
+[info] +-----------+-------+-----------+---+------+
+[info] |E101       |Anu    |Engineering|24 |45000 |
+[info] |E102       |Bala   |HR         |28 |38000 |
+[info] |E103       |Charan |Engineering|31 |62000 |
+[info] |E104       |Divya  |Finance    |26 |52000 |
+[info] |E105       |Eswar  |Engineering|29 |57000 |
+[info] |E106       |Fathima|HR         |32 |41000 |
+[info] |E107       |Gopal  |Finance    |35 |68000 |
+[info] |E108       |Hari   |Engineering|27 |49000 |
+[info] +-----------+-------+-----------+---+------+
+[info] DataFrame Schema:
+[info] root
+[info]  |-- employee_id: string (nullable = true)
+[info]  |-- name: string (nullable = true)
+[info]  |-- department: string (nullable = true)
+[info]  |-- age: integer (nullable = true)
+[info]  |-- salary: integer (nullable = true)
+[info] --- 2. DataFrame -> Dataset[Employee] ---
+[info] +-----------+-------+-----------+---+------+
+[info] |employee_id|name   |department |age|salary|
+[info] +-----------+-------+-----------+---+------+
+[info] |E101       |Anu    |Engineering|24 |45000 |
+[info] |E102       |Bala   |HR         |28 |38000 |
+[info] |E103       |Charan |Engineering|31 |62000 |
+[info] |E104       |Divya  |Finance    |26 |52000 |
+[info] |E105       |Eswar  |Engineering|29 |57000 |
+[info] |E106       |Fathima|HR         |32 |41000 |
+[info] |E107       |Gopal  |Finance    |35 |68000 |
+[info] |E108       |Hari   |Engineering|27 |49000 |
+[info] +-----------+-------+-----------+---+------+
+[info] Dataset Type: Dataset[Employee]
+[info] --- 3. Typed Dataset Payroll Pipeline ---
+[info] Employees with monthly salary >= 50000:
+[info] +-----------+------+-----------+--------------+-------------+
+[info] |employee_id|name  |department |monthly_salary|annual_salary|
+[info] +-----------+------+-----------+--------------+-------------+
+[info] |E103       |Charan|Engineering|62000         |744000       |
+[info] |E104       |Divya |Finance    |52000         |624000       |
+[info] |E105       |Eswar |Engineering|57000         |684000       |
+[info] |E107       |Gopal |Finance    |68000         |816000       |
+[info] +-----------+------+-----------+--------------+-------------+
+[info] --- 4. Dataset -> DataFrame ---
+[info] +-----------+-------+-----------+---+------+
+[info] |employee_id|name   |department |age|salary|
+[info] +-----------+-------+-----------+---+------+
+[info] |E101       |Anu    |Engineering|24 |45000 |
+[info] |E102       |Bala   |HR         |28 |38000 |
+[info] |E103       |Charan |Engineering|31 |62000 |
+[info] |E104       |Divya  |Finance    |26 |52000 |
+[info] |E105       |Eswar  |Engineering|29 |57000 |
+[info] |E106       |Fathima|HR         |32 |41000 |
+[info] |E107       |Gopal  |Finance    |35 |68000 |
+[info] |E108       |Hari   |Engineering|27 |49000 |
+[info] +-----------+-------+-----------+---+------+
+[info] Converted Dataset[Employee] back to DataFrame.
+[info] --- 5. Department Payroll Analysis ---
+[info] +-----------+--------------+---------------+--------------+
+[info] |department |employee_count|monthly_payroll|annual_payroll|
+[info] +-----------+--------------+---------------+--------------+
+[info] |Engineering|4             |213000         |2556000       |
+[info] |Finance    |2             |120000         |1440000       |
+[info] |HR         |2             |79000          |948000        |
+[info] +-----------+--------------+---------------+--------------+
+[info] --- 6. DataFrame Payroll Analysis ---
+[info] +-----------+--------------+---------------+--------------+
+[info] |department |employee_count|monthly_payroll|annual_payroll|
+[info] +-----------+--------------+---------------+--------------+
+[info] |Engineering|4             |213000         |2556000       |
+[info] |Finance    |2             |120000         |1440000       |
+[info] |HR         |2             |79000          |948000        |
+[info] +-----------+--------------+---------------+--------------+
+[info] --- 7. Catalyst Optimization / Physical Plan ---
+[info] == Parsed Logical Plan ==
+[info] 'Aggregate [value#297], [value#297 AS key#303, unresolvedalias('count(1))]
+[info] +- AppendColumns Day14$$$Lambda$4303/0x0000773d8921cd60@69ee825c, class Employee, [StructField(employee_id,StringType,true), StructField(name,StringType,true), StructField(department,StringType,true), StructField(age,IntegerType,false), StructField(salary,LongType,false)], newInstance(class Employee), [static_invoke(UTF8String.fromString(input[0, java.lang.String, true])) AS value#297]
+[info]    +- TypedFilter Day14$$$Lambda$4300/0x0000773d8921c2d8@7d911f95, class Employee, [StructField(employee_id,StringType,true), StructField(name,StringType,true), StructField(department,StringType,true), StructField(age,IntegerType,false), StructField(salary,LongType,false)], newInstance(class Employee)
+[info]       +- Relation [employee_id#17,name#18,department#19,age#20,salary#21] csv
+[info] == Analyzed Logical Plan ==
+[info] key: string, count(1): bigint
+[info] Aggregate [value#297], [value#297 AS key#303, count(1) AS count(1)#305L]
+[info] +- AppendColumns Day14$$$Lambda$4303/0x0000773d8921cd60@69ee825c, class Employee, [StructField(employee_id,StringType,true), StructField(name,StringType,true), StructField(department,StringType,true), StructField(age,IntegerType,false), StructField(salary,LongType,false)], newInstance(class Employee), [static_invoke(UTF8String.fromString(input[0, java.lang.String, true])) AS value#297]
+[info]    +- TypedFilter Day14$$$Lambda$4300/0x0000773d8921c2d8@7d911f95, class Employee, [StructField(employee_id,StringType,true), StructField(name,StringType,true), StructField(department,StringType,true), StructField(age,IntegerType,false), StructField(salary,LongType,false)], newInstance(class Employee)
+[info]       +- Relation [employee_id#17,name#18,department#19,age#20,salary#21] csv
+[info] == Optimized Logical Plan ==
+[info] Aggregate [value#297], [value#297 AS key#303, count(1) AS count(1)#305L]
+[info] +- Project [value#297]
+[info]    +- AppendColumns Day14$$$Lambda$4303/0x0000773d8921cd60@69ee825c, class Employee, [StructField(employee_id,StringType,true), StructField(name,StringType,true), StructField(department,StringType,true), StructField(age,IntegerType,false), StructField(salary,LongType,false)], newInstance(class Employee), [static_invoke(UTF8String.fromString(input[0, java.lang.String, true])) AS value#297]
+[info]       +- TypedFilter Day14$$$Lambda$4300/0x0000773d8921c2d8@7d911f95, class Employee, [StructField(employee_id,StringType,true), StructField(name,StringType,true), StructField(department,StringType,true), StructField(age,IntegerType,false), StructField(salary,LongType,false)], newInstance(class Employee)
+[info]          +- Relation [employee_id#17,name#18,department#19,age#20,salary#21] csv
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan isFinalPlan=false
+[info] +- HashAggregate(keys=[value#297], functions=[count(1)], output=[key#303, count(1)#305L])
+[info]    +- Exchange hashpartitioning(value#297, 200), ENSURE_REQUIREMENTS, [plan_id=269]
+[info]       +- HashAggregate(keys=[value#297], functions=[partial_count(1)], output=[value#297, count#307L])
+[info]          +- Project [value#297]
+[info]             +- AppendColumns Day14$$$Lambda$4303/0x0000773d8921cd60@69ee825c, newInstance(class Employee), [static_invoke(UTF8String.fromString(input[0, java.lang.String, true])) AS value#297]
+[info]                +- Filter invoke(Day14$$$Lambda$4300/0x0000773d8921c2d8@7d911f95.apply(newInstance(class Employee)))
+[info]                   +- FileScan csv [employee_id#17,name#18,department#19,age#20,salary#21] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-14-DataFrame-Da..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<employee_id:string,name:string,department:string,age:int,salary:int>
+[info] --- 8. RDD vs DataFrame vs Dataset ---
+[info] RDD:
+[info] - Low-level distributed collection
+[info] - No structured schema by default
+[info] - More manual control
+[info] - Less optimization compared with structured APIs
+[info] DataFrame:
+[info] - Distributed table with named columns
+[info] - Schema-based
+[info] - Catalyst optimizer and Tungsten execution
+[info] - Convenient for SQL and analytics
+[info] Dataset:
+[info] - Strongly typed structured API
+[info] - Combines object-oriented programming with Spark SQL
+[info] - Compile-time type safety for typed operations
+[info] - Uses Spark SQL optimization
+[info] --- 9. Key Learning Points ---
+[info] 1. DataFrame provides structured tabular data.
+[info] 2. Dataset[Employee] provides a strongly typed representation.
+[info] 3. Case classes define the schema for typed records.
+[info] 4. Dataset can be converted back to a DataFrame using toDF().
+[info] 5. Catalyst optimizes Spark SQL and Dataset execution plans.
+[info] 6. Typed operations provide compile-time type checking.
+[info] 7. Payroll calculations can be performed using Dataset and DataFrame APIs.
+[info] ======================================================================
+[info] DAY 14 EXECUTION COMPLETED SUCCESSFULLY
+[info] ======================================================================
+[success] Total time: 12 s, completed Sep 22, 2026, 6:05:58 AM
