@@ -1,0 +1,319 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-17-Window-Functions/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-17-Window-Functions (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-17-Window-Functions/)
+[info] running (fork) Day17 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/25 07:12:22 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/25 07:12:22 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/25 07:12:22 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/25 07:12:22 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 07:12:22 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 07:12:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/25 07:12:22 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 07:12:22 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/25 07:12:22 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 07:12:22 INFO SparkContext: Submitted application: Day-17-Window-Functions
+[error] 26/09/25 07:12:22 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 07:12:22 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 07:12:22 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 07:12:22 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 07:12:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 07:12:23 INFO Utils: Successfully started service 'sparkDriver' on port 43811.
+[error] 26/09/25 07:12:23 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/25 07:12:23 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/25 07:12:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/25 07:12:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/25 07:12:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/25 07:12:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-767a996a-e145-4f1e-b7cd-622147e56911
+[error] 26/09/25 07:12:23 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/25 07:12:23 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/25 07:12:23 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/25 07:12:23 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/25 07:12:23 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/25 07:12:23 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/25 07:12:23 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 07:12:23 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 07:12:23 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 07:12:23 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 07:12:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 07:12:23 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/25 07:12:23 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/25 07:12:23 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 07:12:23 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 07:12:24 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/25 07:12:24 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1a7163e3 for default.
+[error] 26/09/25 07:12:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 32975.
+[error] 26/09/25 07:12:24 INFO NettyBlockTransferService: Server created on 10.255.255.254:32975
+[error] 26/09/25 07:12:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/25 07:12:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 32975, None)
+[error] 26/09/25 07:12:24 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:32975 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 32975, None)
+[error] 26/09/25 07:12:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 32975, None)
+[error] 26/09/25 07:12:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 32975, None)
+[info] ===========================================================================
+[info] DAY 17 - WINDOW FUNCTIONS
+[info] ===========================================================================
+[info] --- STUDENT INPUT DATA ---
+[info] +------+-------+-----+
+[info] |course|student|score|
+[info] +------+-------+-----+
+[info] |Spark |Anu    |92   |
+[info] |Spark |Bala   |88   |
+[info] |Spark |Charan |88   |
+[info] |Spark |Divya  |81   |
+[info] |Spark |Eswar  |76   |
+[info] |SQL   |Fathima|95   |
+[info] |SQL   |Gopal  |91   |
+[info] |SQL   |Hari   |91   |
+[info] |SQL   |Indu   |84   |
+[info] |SQL   |Jay    |79   |
+[info] |Python|Kiran  |93   |
+[info] |Python|Latha  |89   |
+[info] |Python|Manoj  |89   |
+[info] |Python|Nisha  |82   |
+[info] |Python|Om     |75   |
+[info] +------+-------+-----+
+[info] --- STUDENT SCHEMA ---
+[info] root
+[info]  |-- course: string (nullable = true)
+[info]  |-- student: string (nullable = true)
+[info]  |-- score: integer (nullable = true)
+[info] Student Records: 15
+[info] --- ROW_NUMBER / RANK / DENSE_RANK ---
+[info] +------+-------+-----+----------+----+----------+
+[info] |course|student|score|row_number|rank|dense_rank|
+[info] +------+-------+-----+----------+----+----------+
+[info] |Python|Kiran  |93   |1         |1   |1         |
+[info] |Python|Latha  |89   |2         |2   |2         |
+[info] |Python|Manoj  |89   |3         |3   |3         |
+[info] |Python|Nisha  |82   |4         |4   |4         |
+[info] |Python|Om     |75   |5         |5   |5         |
+[info] |SQL   |Fathima|95   |1         |1   |1         |
+[info] |SQL   |Gopal  |91   |2         |2   |2         |
+[info] |SQL   |Hari   |91   |3         |3   |3         |
+[info] |SQL   |Indu   |84   |4         |4   |4         |
+[info] |SQL   |Jay    |79   |5         |5   |5         |
+[info] |Spark |Anu    |92   |1         |1   |1         |
+[info] |Spark |Bala   |88   |2         |2   |2         |
+[info] |Spark |Charan |88   |3         |3   |3         |
+[info] |Spark |Divya  |81   |4         |4   |4         |
+[info] |Spark |Eswar  |76   |5         |5   |5         |
+[info] +------+-------+-----+----------+----+----------+
+[info] --- TOP 3 STUDENTS PER COURSE ---
+[info] +------+-------+-----+----------+----+----------+
+[info] |course|student|score|row_number|rank|dense_rank|
+[info] +------+-------+-----+----------+----+----------+
+[info] |Python|Kiran  |93   |1         |1   |1         |
+[info] |Python|Latha  |89   |2         |2   |2         |
+[info] |Python|Manoj  |89   |3         |3   |3         |
+[info] |SQL   |Fathima|95   |1         |1   |1         |
+[info] |SQL   |Gopal  |91   |2         |2   |2         |
+[info] |SQL   |Hari   |91   |3         |3   |3         |
+[info] |Spark |Anu    |92   |1         |1   |1         |
+[info] |Spark |Bala   |88   |2         |2   |2         |
+[info] |Spark |Charan |88   |3         |3   |3         |
+[info] +------+-------+-----+----------+----+----------+
+[info] --- RANKING WITH SCORE TIES ---
+[info] +------+-------+-----+----------+----+----------+
+[info] |course|student|score|row_number|rank|dense_rank|
+[info] +------+-------+-----+----------+----+----------+
+[info] |Python|Kiran  |93   |1         |1   |1         |
+[info] |Python|Latha  |89   |2         |2   |2         |
+[info] |Python|Manoj  |89   |3         |2   |2         |
+[info] |Python|Nisha  |82   |4         |4   |3         |
+[info] |Python|Om     |75   |5         |5   |4         |
+[info] |SQL   |Fathima|95   |1         |1   |1         |
+[info] |SQL   |Gopal  |91   |2         |2   |2         |
+[info] |SQL   |Hari   |91   |3         |2   |2         |
+[info] |SQL   |Indu   |84   |4         |4   |3         |
+[info] |SQL   |Jay    |79   |5         |5   |4         |
+[info] |Spark |Anu    |92   |1         |1   |1         |
+[info] |Spark |Bala   |88   |2         |2   |2         |
+[info] |Spark |Charan |88   |3         |2   |2         |
+[info] |Spark |Divya  |81   |4         |4   |3         |
+[info] |Spark |Eswar  |76   |5         |5   |4         |
+[info] +------+-------+-----+----------+----+----------+
+[info] --- CUSTOMER POLICY DATA ---
+[info] +-----------+---------+-----------+-----------+-------+
+[info] |customer_id|policy_id|policy_type|policy_date|premium|
+[info] +-----------+---------+-----------+-----------+-------+
+[info] |C101       |P001     |Health     |2025-01-15 |12000  |
+[info] |C101       |P002     |Health     |2026-03-10 |15000  |
+[info] |C101       |P007     |Health     |2024-08-20 |10000  |
+[info] |C102       |P003     |Life       |2025-06-20 |18000  |
+[info] |C102       |P004     |Life       |2026-02-12 |21000  |
+[info] |C103       |P005     |Auto       |2025-09-05 |9000   |
+[info] |C103       |P006     |Auto       |2026-04-18 |11000  |
+[info] |C104       |P008     |Home       |2025-03-22 |14000  |
+[info] |C104       |P009     |Home       |2026-01-30 |16000  |
+[info] +-----------+---------+-----------+-----------+-------+
+[info] --- POLICY SCHEMA ---
+[info] root
+[info]  |-- customer_id: string (nullable = true)
+[info]  |-- policy_id: string (nullable = true)
+[info]  |-- policy_type: string (nullable = true)
+[info]  |-- policy_date: date (nullable = true)
+[info]  |-- premium: integer (nullable = true)
+[info] Policy Records: 9
+[info] --- POLICY HISTORY WITH LAG / LEAD ---
+[info] +-----------+---------+-----------+-----------+-------+-----------------+----------------+------------+
+[info] |customer_id|policy_id|policy_type|policy_date|premium|latest_row_number|previous_premium|next_premium|
+[info] +-----------+---------+-----------+-----------+-------+-----------------+----------------+------------+
+[info] |C101       |P007     |Health     |2024-08-20 |10000  |3                |NULL            |12000       |
+[info] |C101       |P001     |Health     |2025-01-15 |12000  |2                |10000           |15000       |
+[info] |C101       |P002     |Health     |2026-03-10 |15000  |1                |12000           |NULL        |
+[info] |C102       |P003     |Life       |2025-06-20 |18000  |2                |NULL            |21000       |
+[info] |C102       |P004     |Life       |2026-02-12 |21000  |1                |18000           |NULL        |
+[info] |C103       |P005     |Auto       |2025-09-05 |9000   |2                |NULL            |11000       |
+[info] |C103       |P006     |Auto       |2026-04-18 |11000  |1                |9000            |NULL        |
+[info] |C104       |P008     |Home       |2025-03-22 |14000  |2                |NULL            |16000       |
+[info] |C104       |P009     |Home       |2026-01-30 |16000  |1                |14000           |NULL        |
+[info] +-----------+---------+-----------+-----------+-------+-----------------+----------------+------------+
+[info] --- LATEST POLICY PER CUSTOMER ---
+[info] +-----------+---------+-----------+-----------+-------+----------------+------------+
+[info] |customer_id|policy_id|policy_type|policy_date|premium|previous_premium|next_premium|
+[info] +-----------+---------+-----------+-----------+-------+----------------+------------+
+[info] |C101       |P002     |Health     |2026-03-10 |15000  |12000           |NULL        |
+[info] |C102       |P004     |Life       |2026-02-12 |21000  |18000           |NULL        |
+[info] |C103       |P006     |Auto       |2026-04-18 |11000  |9000            |NULL        |
+[info] |C104       |P009     |Home       |2026-01-30 |16000  |14000           |NULL        |
+[info] +-----------+---------+-----------+-----------+-------+----------------+------------+
+[info] --- PREMIUM CHANGE USING LAG ---
+[info] +-----------+---------+-----------+-----------+-------+-----------------+----------------+------------+--------------+
+[info] |customer_id|policy_id|policy_type|policy_date|premium|latest_row_number|previous_premium|next_premium|premium_change|
+[info] +-----------+---------+-----------+-----------+-------+-----------------+----------------+------------+--------------+
+[info] |C101       |P007     |Health     |2024-08-20 |10000  |3                |NULL            |12000       |NULL          |
+[info] |C101       |P001     |Health     |2025-01-15 |12000  |2                |10000           |15000       |2000          |
+[info] |C101       |P002     |Health     |2026-03-10 |15000  |1                |12000           |NULL        |3000          |
+[info] |C102       |P003     |Life       |2025-06-20 |18000  |2                |NULL            |21000       |NULL          |
+[info] |C102       |P004     |Life       |2026-02-12 |21000  |1                |18000           |NULL        |3000          |
+[info] |C103       |P005     |Auto       |2025-09-05 |9000   |2                |NULL            |11000       |NULL          |
+[info] |C103       |P006     |Auto       |2026-04-18 |11000  |1                |9000            |NULL        |2000          |
+[info] |C104       |P008     |Home       |2025-03-22 |14000  |2                |NULL            |16000       |NULL          |
+[info] |C104       |P009     |Home       |2026-01-30 |16000  |1                |14000           |NULL        |2000          |
+[info] +-----------+---------+-----------+-----------+-------+-----------------+----------------+------------+--------------+
+[info] --- SPARK SQL: TOP 3 STUDENTS PER COURSE ---
+[info] +------+-------+-----+----------+----+----------+
+[info] |course|student|score|row_number|rank|dense_rank|
+[info] +------+-------+-----+----------+----+----------+
+[info] |Python|Kiran  |93   |1         |1   |1         |
+[info] |Python|Latha  |89   |2         |2   |2         |
+[info] |Python|Manoj  |89   |3         |3   |3         |
+[info] |SQL   |Fathima|95   |1         |1   |1         |
+[info] |SQL   |Gopal  |91   |2         |2   |2         |
+[info] |SQL   |Hari   |91   |3         |3   |3         |
+[info] |Spark |Anu    |92   |1         |1   |1         |
+[info] |Spark |Bala   |88   |2         |2   |2         |
+[info] |Spark |Charan |88   |3         |3   |3         |
+[info] +------+-------+-----+----------+----+----------+
+[info] --- EXECUTION PLAN: TOP 3 STUDENTS ---
+[info] == Parsed Logical Plan ==
+[info] 'Sort ['course ASC NULLS FIRST, 'row_number ASC NULLS FIRST], true
+[info] +- Filter (row_number#41 <= 3)
+[info]    +- Project [course#17, student#18, score#19, row_number#41, rank#43, dense_rank#54]
+[info]       +- Project [course#17, student#18, score#19, row_number#41, rank#43, dense_rank#54, dense_rank#54]
+[info]          +- Window [dense_rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS dense_rank#54], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]             +- Project [course#17, student#18, score#19, row_number#41, rank#43]
+[info]                +- Project [course#17, student#18, score#19, row_number#41, rank#43]
+[info]                   +- Project [course#17, student#18, score#19, row_number#41, rank#43, rank#43]
+[info]                      +- Window [rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS rank#43], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]                         +- Project [course#17, student#18, score#19, row_number#41]
+[info]                            +- Project [course#17, student#18, score#19, row_number#41]
+[info]                               +- Project [course#17, student#18, score#19, row_number#41, row_number#41]
+[info]                                  +- Window [row_number() windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS row_number#41], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]                                     +- Project [course#17, student#18, score#19]
+[info]                                        +- Relation [course#17,student#18,score#19] csv
+[info] == Analyzed Logical Plan ==
+[info] course: string, student: string, score: int, row_number: int, rank: int, dense_rank: int
+[info] Sort [course#17 ASC NULLS FIRST, row_number#41 ASC NULLS FIRST], true
+[info] +- Filter (row_number#41 <= 3)
+[info]    +- Project [course#17, student#18, score#19, row_number#41, rank#43, dense_rank#54]
+[info]       +- Project [course#17, student#18, score#19, row_number#41, rank#43, dense_rank#54, dense_rank#54]
+[info]          +- Window [dense_rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS dense_rank#54], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]             +- Project [course#17, student#18, score#19, row_number#41, rank#43]
+[info]                +- Project [course#17, student#18, score#19, row_number#41, rank#43]
+[info]                   +- Project [course#17, student#18, score#19, row_number#41, rank#43, rank#43]
+[info]                      +- Window [rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS rank#43], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]                         +- Project [course#17, student#18, score#19, row_number#41]
+[info]                            +- Project [course#17, student#18, score#19, row_number#41]
+[info]                               +- Project [course#17, student#18, score#19, row_number#41, row_number#41]
+[info]                                  +- Window [row_number() windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS row_number#41], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]                                     +- Project [course#17, student#18, score#19]
+[info]                                        +- Relation [course#17,student#18,score#19] csv
+[info] == Optimized Logical Plan ==
+[info] Sort [course#17 ASC NULLS FIRST, row_number#41 ASC NULLS FIRST], true
+[info] +- Filter (row_number#41 <= 3)
+[info]    +- Window [row_number() windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS row_number#41, rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS rank#43, dense_rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS dense_rank#54], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]       +- WindowGroupLimit [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST], row_number(), 3
+[info]          +- Relation [course#17,student#18,score#19] csv
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan isFinalPlan=false
+[info] +- Sort [course#17 ASC NULLS FIRST, row_number#41 ASC NULLS FIRST], true, 0
+[info]    +- Exchange rangepartitioning(course#17 ASC NULLS FIRST, row_number#41 ASC NULLS FIRST, 200), ENSURE_REQUIREMENTS, [plan_id=683]
+[info]       +- Filter (row_number#41 <= 3)
+[info]          +- Window [row_number() windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS row_number#41, rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS rank#43, dense_rank(score#19, student#18) windowspecdefinition(course#17, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS dense_rank#54], [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST]
+[info]             +- WindowGroupLimit [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST], row_number(), 3, Final
+[info]                +- Sort [course#17 ASC NULLS FIRST, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST], false, 0
+[info]                   +- Exchange hashpartitioning(course#17, 200), ENSURE_REQUIREMENTS, [plan_id=677]
+[info]                      +- WindowGroupLimit [course#17], [score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST], row_number(), 3, Partial
+[info]                         +- Sort [course#17 ASC NULLS FIRST, score#19 DESC NULLS LAST, student#18 ASC NULLS FIRST], false, 0
+[info]                            +- FileScan csv [course#17,student#18,score#19] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-17-Window-Funct..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<course:string,student:string,score:int>
+[info] --- EXECUTION PLAN: LATEST POLICY ---
+[info] == Parsed Logical Plan ==
+[info] 'Sort ['customer_id ASC NULLS FIRST], true
+[info] +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, previous_premium#206, next_premium#207]
+[info]    +- Filter (latest_row_number#204 = 1)
+[info]       +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206, next_premium#207]
+[info]          +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206, next_premium#207, next_premium#207]
+[info]             +- Window [lead(premium#172, 1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, 1, 1)) AS next_premium#207], [customer_id#168], [policy_date#171 ASC NULLS FIRST]
+[info]                +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206]
+[info]                   +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206]
+[info]                      +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206, previous_premium#206]
+[info]                         +- Window [lag(premium#172, -1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -1, -1)) AS previous_premium#206], [customer_id#168], [policy_date#171 ASC NULLS FIRST]
+[info]                            +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204]
+[info]                               +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204]
+[info]                                  +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, latest_row_number#204]
+[info]                                     +- Window [row_number() windowspecdefinition(customer_id#168, policy_date#171 DESC NULLS LAST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS latest_row_number#204], [customer_id#168], [policy_date#171 DESC NULLS LAST]
+[info]                                        +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172]
+[info]                                           +- Relation [customer_id#168,policy_id#169,policy_type#170,policy_date#171,premium#172] csv
+[info] == Analyzed Logical Plan ==
+[info] customer_id: string, policy_id: string, policy_type: string, policy_date: date, premium: int, previous_premium: int, next_premium: int
+[info] Sort [customer_id#168 ASC NULLS FIRST], true
+[info] +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, previous_premium#206, next_premium#207]
+[info]    +- Filter (latest_row_number#204 = 1)
+[info]       +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206, next_premium#207]
+[info]          +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206, next_premium#207, next_premium#207]
+[info]             +- Window [lead(premium#172, 1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, 1, 1)) AS next_premium#207], [customer_id#168], [policy_date#171 ASC NULLS FIRST]
+[info]                +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206]
+[info]                   +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206]
+[info]                      +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, previous_premium#206, previous_premium#206]
+[info]                         +- Window [lag(premium#172, -1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -1, -1)) AS previous_premium#206], [customer_id#168], [policy_date#171 ASC NULLS FIRST]
+[info]                            +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204]
+[info]                               +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204]
+[info]                                  +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, latest_row_number#204, latest_row_number#204]
+[info]                                     +- Window [row_number() windowspecdefinition(customer_id#168, policy_date#171 DESC NULLS LAST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS latest_row_number#204], [customer_id#168], [policy_date#171 DESC NULLS LAST]
+[info]                                        +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172]
+[info]                                           +- Relation [customer_id#168,policy_id#169,policy_type#170,policy_date#171,premium#172] csv
+[info] == Optimized Logical Plan ==
+[info] Sort [customer_id#168 ASC NULLS FIRST], true
+[info] +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, previous_premium#206, next_premium#207]
+[info]    +- Filter (latest_row_number#204 = 1)
+[info]       +- Window [lag(premium#172, -1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -1, -1)) AS previous_premium#206, lead(premium#172, 1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, 1, 1)) AS next_premium#207], [customer_id#168], [policy_date#171 ASC NULLS FIRST]
+[info]          +- Window [row_number() windowspecdefinition(customer_id#168, policy_date#171 DESC NULLS LAST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS latest_row_number#204], [customer_id#168], [policy_date#171 DESC NULLS LAST]
+[info]             +- Relation [customer_id#168,policy_id#169,policy_type#170,policy_date#171,premium#172] csv
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan isFinalPlan=false
+[info] +- Sort [customer_id#168 ASC NULLS FIRST], true, 0
+[info]    +- Exchange rangepartitioning(customer_id#168 ASC NULLS FIRST, 200), ENSURE_REQUIREMENTS, [plan_id=718]
+[info]       +- Project [customer_id#168, policy_id#169, policy_type#170, policy_date#171, premium#172, previous_premium#206, next_premium#207]
+[info]          +- Filter (latest_row_number#204 = 1)
+[info]             +- Window [lag(premium#172, -1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, -1, -1)) AS previous_premium#206, lead(premium#172, 1, null) windowspecdefinition(customer_id#168, policy_date#171 ASC NULLS FIRST, specifiedwindowframe(RowFrame, 1, 1)) AS next_premium#207], [customer_id#168], [policy_date#171 ASC NULLS FIRST]
+[info]                +- Sort [customer_id#168 ASC NULLS FIRST, policy_date#171 ASC NULLS FIRST], false, 0
+[info]                   +- Window [row_number() windowspecdefinition(customer_id#168, policy_date#171 DESC NULLS LAST, specifiedwindowframe(RowFrame, unboundedpreceding$(), currentrow$())) AS latest_row_number#204], [customer_id#168], [policy_date#171 DESC NULLS LAST]
+[info]                      +- Sort [customer_id#168 ASC NULLS FIRST, policy_date#171 DESC NULLS LAST], false, 0
+[info]                         +- Exchange hashpartitioning(customer_id#168, 200), ENSURE_REQUIREMENTS, [plan_id=709]
+[info]                            +- FileScan csv [customer_id#168,policy_id#169,policy_type#170,policy_date#171,premium#172] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-17-Window-Funct..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<customer_id:string,policy_id:string,policy_type:string,policy_date:date,premium:int>
+[info] ===========================================================================
+[info] DAY 17 COMPLETED SUCCESSFULLY
+[info] ===========================================================================
+[success] Total time: 23 s, completed Sep 25, 2026, 7:12:37 AM
