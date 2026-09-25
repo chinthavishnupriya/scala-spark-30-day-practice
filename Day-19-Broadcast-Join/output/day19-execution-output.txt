@@ -1,0 +1,208 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-19-Broadcast-Join/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-19-Broadcast-Join (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-19-Broadcast-Join/)
+[info] running (fork) Day19 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/25 12:57:20 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/25 12:57:20 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/25 12:57:20 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/25 12:57:20 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 12:57:20 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 12:57:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/25 12:57:21 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 12:57:21 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/25 12:57:21 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 12:57:21 INFO SparkContext: Submitted application: Day-19-Broadcast-Join
+[error] 26/09/25 12:57:21 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 12:57:21 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 12:57:21 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 12:57:21 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 12:57:21 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 12:57:21 INFO Utils: Successfully started service 'sparkDriver' on port 41739.
+[error] 26/09/25 12:57:21 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/25 12:57:21 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/25 12:57:21 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/25 12:57:21 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/25 12:57:21 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/25 12:57:21 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e77d838b-9bf2-4527-843d-0a1f5fb332af
+[error] 26/09/25 12:57:21 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/25 12:57:22 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/25 12:57:22 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/25 12:57:22 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/25 12:57:22 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/25 12:57:22 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/25 12:57:22 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 12:57:22 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 12:57:22 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 12:57:22 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 12:57:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 12:57:22 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/25 12:57:22 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/25 12:57:22 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 12:57:22 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 12:57:22 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/25 12:57:22 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1a7163e3 for default.
+[error] 26/09/25 12:57:22 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38661.
+[error] 26/09/25 12:57:22 INFO NettyBlockTransferService: Server created on 10.255.255.254:38661
+[error] 26/09/25 12:57:22 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/25 12:57:22 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 38661, None)
+[error] 26/09/25 12:57:22 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:38661 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 38661, None)
+[error] 26/09/25 12:57:22 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 38661, None)
+[error] 26/09/25 12:57:22 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 38661, None)
+[info] ==============================================
+[info] DAY 19 - BROADCAST JOIN
+[info] ==============================================
+[info] Spark Version : 4.2.0
+[info] Java Version  : 17.0.20.1
+[info] Master        : local[4]
+[info] ==============================================
+[info] --- TRANSACTION DATA ---
+[info] +--------------+-----------+---------+------+----------------+
+[info] |transaction_id|customer_id|branch_id|amount|transaction_type|
+[info] +--------------+-----------+---------+------+----------------+
+[info] |T001          |C101       |B001     |2500  |UPI             |
+[info] |T002          |C102       |B002     |4800  |CARD            |
+[info] |T003          |C103       |B001     |7200  |UPI             |
+[info] |T004          |C104       |B003     |3100  |CASH            |
+[info] |T005          |C105       |B004     |6500  |CARD            |
+[info] |T006          |C106       |B002     |2200  |UPI             |
+[info] |T007          |C107       |B005     |9100  |CARD            |
+[info] |T008          |C108       |B001     |4300  |UPI             |
+[info] |T009          |C109       |B003     |1800  |CASH            |
+[info] |T010          |C110       |B004     |5600  |CARD            |
+[info] |T011          |C111       |B005     |3700  |UPI             |
+[info] |T012          |C112       |B001     |8400  |CARD            |
+[info] +--------------+-----------+---------+------+----------------+
+[info] --- BRANCH MASTER DATA ---
+[info] +---------+---------------------+-------------+------+
+[info] |branch_id|branch_name          |city         |region|
+[info] +---------+---------------------+-------------+------+
+[info] |B001     |Hyderabad Central    |Hyderabad    |South |
+[info] |B002     |Vijayawada Main      |Vijayawada   |South |
+[info] |B003     |Visakhapatnam Central|Visakhapatnam|South |
+[info] |B004     |Tirupati Main        |Tirupati     |South |
+[info] |B005     |Warangal Central     |Warangal     |South |
+[info] +---------+---------------------+-------------+------+
+[info] --- RECORD COUNTS ---
+[info] Transaction records : 12
+[info] Branch records      : 5
+[info] --- SCHEMAS ---
+[info] root
+[info]  |-- transaction_id: string (nullable = true)
+[info]  |-- customer_id: string (nullable = true)
+[info]  |-- branch_id: string (nullable = true)
+[info]  |-- amount: integer (nullable = true)
+[info]  |-- transaction_type: string (nullable = true)
+[info] root
+[info]  |-- branch_id: string (nullable = true)
+[info]  |-- branch_name: string (nullable = true)
+[info]  |-- city: string (nullable = true)
+[info]  |-- region: string (nullable = true)
+[info] --- NORMAL INNER JOIN ---
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] |transaction_id|customer_id|branch_id|branch_name          |city         |region|amount|transaction_type|
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] |T001          |C101       |B001     |Hyderabad Central    |Hyderabad    |South |2500  |UPI             |
+[info] |T002          |C102       |B002     |Vijayawada Main      |Vijayawada   |South |4800  |CARD            |
+[info] |T003          |C103       |B001     |Hyderabad Central    |Hyderabad    |South |7200  |UPI             |
+[info] |T004          |C104       |B003     |Visakhapatnam Central|Visakhapatnam|South |3100  |CASH            |
+[info] |T005          |C105       |B004     |Tirupati Main        |Tirupati     |South |6500  |CARD            |
+[info] |T006          |C106       |B002     |Vijayawada Main      |Vijayawada   |South |2200  |UPI             |
+[info] |T007          |C107       |B005     |Warangal Central     |Warangal     |South |9100  |CARD            |
+[info] |T008          |C108       |B001     |Hyderabad Central    |Hyderabad    |South |4300  |UPI             |
+[info] |T009          |C109       |B003     |Visakhapatnam Central|Visakhapatnam|South |1800  |CASH            |
+[info] |T010          |C110       |B004     |Tirupati Main        |Tirupati     |South |5600  |CARD            |
+[info] |T011          |C111       |B005     |Warangal Central     |Warangal     |South |3700  |UPI             |
+[info] |T012          |C112       |B001     |Hyderabad Central    |Hyderabad    |South |8400  |CARD            |
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] --- BROADCAST JOIN ---
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] |transaction_id|customer_id|branch_id|branch_name          |city         |region|amount|transaction_type|
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] |T001          |C101       |B001     |Hyderabad Central    |Hyderabad    |South |2500  |UPI             |
+[info] |T002          |C102       |B002     |Vijayawada Main      |Vijayawada   |South |4800  |CARD            |
+[info] |T003          |C103       |B001     |Hyderabad Central    |Hyderabad    |South |7200  |UPI             |
+[info] |T004          |C104       |B003     |Visakhapatnam Central|Visakhapatnam|South |3100  |CASH            |
+[info] |T005          |C105       |B004     |Tirupati Main        |Tirupati     |South |6500  |CARD            |
+[info] |T006          |C106       |B002     |Vijayawada Main      |Vijayawada   |South |2200  |UPI             |
+[info] |T007          |C107       |B005     |Warangal Central     |Warangal     |South |9100  |CARD            |
+[info] |T008          |C108       |B001     |Hyderabad Central    |Hyderabad    |South |4300  |UPI             |
+[info] |T009          |C109       |B003     |Visakhapatnam Central|Visakhapatnam|South |1800  |CASH            |
+[info] |T010          |C110       |B004     |Tirupati Main        |Tirupati     |South |5600  |CARD            |
+[info] |T011          |C111       |B005     |Warangal Central     |Warangal     |South |3700  |UPI             |
+[info] |T012          |C112       |B001     |Hyderabad Central    |Hyderabad    |South |8400  |CARD            |
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] --- RESULT COMPARISON ---
+[info] Normal Join Count    : 12
+[info] Broadcast Join Count : 12
+[info] Result counts match  : true
+[info] --- BROADCAST JOIN EXECUTION PLAN ---
+[info] == Parsed Logical Plan ==
+[info] Project [transaction_id#17, customer_id#18, branch_id#19, branch_name#40, city#41, region#42, amount#20, transaction_type#21]
+[info] +- Join Inner, (branch_id#19 = branch_id#39)
+[info]    :- Relation [transaction_id#17,customer_id#18,branch_id#19,amount#20,transaction_type#21] csv
+[info]    +- ResolvedHint (strategy=broadcast)
+[info]       +- Relation [branch_id#39,branch_name#40,city#41,region#42] csv
+[info] == Analyzed Logical Plan ==
+[info] transaction_id: string, customer_id: string, branch_id: string, branch_name: string, city: string, region: string, amount: int, transaction_type: string
+[info] Project [transaction_id#17, customer_id#18, branch_id#19, branch_name#40, city#41, region#42, amount#20, transaction_type#21]
+[info] +- Join Inner, (branch_id#19 = branch_id#39)
+[info]    :- Relation [transaction_id#17,customer_id#18,branch_id#19,amount#20,transaction_type#21] csv
+[info]    +- ResolvedHint (strategy=broadcast)
+[info]       +- Relation [branch_id#39,branch_name#40,city#41,region#42] csv
+[info] == Optimized Logical Plan ==
+[info] Project [transaction_id#17, customer_id#18, branch_id#19, branch_name#40, city#41, region#42, amount#20, transaction_type#21]
+[info] +- Join Inner, (branch_id#19 = branch_id#39), rightHint=(strategy=broadcast)
+[info]    :- Filter isnotnull(branch_id#19)
+[info]    :  +- Relation [transaction_id#17,customer_id#18,branch_id#19,amount#20,transaction_type#21] csv
+[info]    +- Filter isnotnull(branch_id#39)
+[info]       +- Relation [branch_id#39,branch_name#40,city#41,region#42] csv
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan isFinalPlan=false
+[info] +- Project [transaction_id#17, customer_id#18, branch_id#19, branch_name#40, city#41, region#42, amount#20, transaction_type#21]
+[info]    +- BroadcastHashJoin [branch_id#19], [branch_id#39], Inner, BuildRight, false, false
+[info]       :- Filter isnotnull(branch_id#19)
+[info]       :  +- FileScan csv [transaction_id#17,customer_id#18,branch_id#19,amount#20,transaction_type#21] Batched: false, DataFilters: [isnotnull(branch_id#19)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-19-Broadcast-Jo..., PartitionFilters: [], PushedFilters: [IsNotNull(branch_id)], ReadSchema: struct<transaction_id:string,customer_id:string,branch_id:string,amount:int,transaction_type:string>
+[info]       +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=552]
+[info]          +- Filter isnotnull(branch_id#39)
+[info]             +- FileScan csv [branch_id#39,branch_name#40,city#41,region#42] Batched: false, DataFilters: [isnotnull(branch_id#39)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-19-Broadcast-Jo..., PartitionFilters: [], PushedFilters: [IsNotNull(branch_id)], ReadSchema: struct<branch_id:string,branch_name:string,city:string,region:string>
+[info] --- SPARK SQL JOIN ---
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] |transaction_id|customer_id|branch_id|branch_name          |city         |region|amount|transaction_type|
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] |T001          |C101       |B001     |Hyderabad Central    |Hyderabad    |South |2500  |UPI             |
+[info] |T002          |C102       |B002     |Vijayawada Main      |Vijayawada   |South |4800  |CARD            |
+[info] |T003          |C103       |B001     |Hyderabad Central    |Hyderabad    |South |7200  |UPI             |
+[info] |T004          |C104       |B003     |Visakhapatnam Central|Visakhapatnam|South |3100  |CASH            |
+[info] |T005          |C105       |B004     |Tirupati Main        |Tirupati     |South |6500  |CARD            |
+[info] |T006          |C106       |B002     |Vijayawada Main      |Vijayawada   |South |2200  |UPI             |
+[info] |T007          |C107       |B005     |Warangal Central     |Warangal     |South |9100  |CARD            |
+[info] |T008          |C108       |B001     |Hyderabad Central    |Hyderabad    |South |4300  |UPI             |
+[info] |T009          |C109       |B003     |Visakhapatnam Central|Visakhapatnam|South |1800  |CASH            |
+[info] |T010          |C110       |B004     |Tirupati Main        |Tirupati     |South |5600  |CARD            |
+[info] |T011          |C111       |B005     |Warangal Central     |Warangal     |South |3700  |UPI             |
+[info] |T012          |C112       |B001     |Hyderabad Central    |Hyderabad    |South |8400  |CARD            |
+[info] +--------------+-----------+---------+---------------------+-------------+------+------+----------------+
+[info] --- BRANCH-WISE TRANSACTION SUMMARY ---
+[info] +---------+---------------------+-------------+-----------------+------------+--------------+
+[info] |branch_id|branch_name          |city         |transaction_count|total_amount|average_amount|
+[info] +---------+---------------------+-------------+-----------------+------------+--------------+
+[info] |B001     |Hyderabad Central    |Hyderabad    |4                |22400       |5600.0        |
+[info] |B005     |Warangal Central     |Warangal     |2                |12800       |6400.0        |
+[info] |B004     |Tirupati Main        |Tirupati     |2                |12100       |6050.0        |
+[info] |B002     |Vijayawada Main      |Vijayawada   |2                |7000        |3500.0        |
+[info] |B003     |Visakhapatnam Central|Visakhapatnam|2                |4900        |2450.0        |
+[info] +---------+---------------------+-------------+-----------------+------------+--------------+
+[info] --- BROADCAST JOIN OBSERVATIONS ---
+[info] 1. The branch master is the small reference dataset.
+[info] 2. broadcast(branchesDF) explicitly marks it for broadcast.
+[info] 3. Each executor can use the broadcast reference data locally.
+[info] 4. The join avoids shuffling the large transaction side for the broadcast strategy.
+[info] 5. Broadcasting is appropriate only when the reference dataset is small enough.
+[info] 6. A very large broadcast dataset can create memory pressure.
+[info] 7. Shuffle Sort-Merge Join remains useful when both datasets are large.
+[info] ==============================================
+[info] DAY 19 COMPLETED
+[info] ==============================================
+[success] Total time: 22 s, completed Sep 25, 2026, 12:57:36 PM
