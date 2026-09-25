@@ -1,0 +1,5 @@
+payment_id,order_id,payment_method,payment_status
+P001,O001,UPI,Paid
+P002,O002,Card,Paid
+P003,O003,UPI,Pending
+P004,O004,NetBanking,Paid

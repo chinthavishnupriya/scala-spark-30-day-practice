@@ -1,0 +1,234 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-18-Joins/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-18-Joins (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-18-Joins/)
+[info] running (fork) Day18 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/25 12:19:49 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/25 12:19:50 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/25 12:19:50 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/25 12:19:50 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 12:19:50 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 12:19:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/25 12:19:50 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 12:19:50 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/25 12:19:50 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 12:19:50 INFO SparkContext: Submitted application: Day-18-Joins
+[error] 26/09/25 12:19:50 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 12:19:50 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 12:19:50 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 12:19:50 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 12:19:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 12:19:51 INFO Utils: Successfully started service 'sparkDriver' on port 33915.
+[error] 26/09/25 12:19:51 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/25 12:19:51 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/25 12:19:51 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/25 12:19:51 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/25 12:19:51 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/25 12:19:51 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-63a02002-6096-4991-b360-93b6270b6df8
+[error] 26/09/25 12:19:51 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/25 12:19:52 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/25 12:19:52 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/25 12:19:52 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/25 12:19:52 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/25 12:19:52 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/25 12:19:52 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 12:19:52 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 12:19:52 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 12:19:52 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 12:19:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 12:19:52 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/25 12:19:52 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/25 12:19:52 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 12:19:52 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 12:19:52 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/25 12:19:52 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1a7163e3 for default.
+[error] 26/09/25 12:19:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33977.
+[error] 26/09/25 12:19:52 INFO NettyBlockTransferService: Server created on 10.255.255.254:33977
+[error] 26/09/25 12:19:52 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/25 12:19:52 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 33977, None)
+[error] 26/09/25 12:19:52 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:33977 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 33977, None)
+[error] 26/09/25 12:19:52 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 33977, None)
+[error] 26/09/25 12:19:52 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 33977, None)
+[info] ===========================================================================
+[info] DAY 18 - JOINS
+[info] ===========================================================================
+[info] --- CUSTOMERS ---
+[info] +-----------+-------------+-------------+
+[info] |customer_id|customer_name|city         |
+[info] +-----------+-------------+-------------+
+[info] |C101       |Anu          |Hyderabad    |
+[info] |C102       |Bala         |Vijayawada   |
+[info] |C103       |Charan       |Visakhapatnam|
+[info] |C104       |Divya        |Warangal     |
+[info] |C105       |Eswar        |Tirupati     |
+[info] +-----------+-------------+-------------+
+[info] --- ORDERS ---
+[info] +--------+-----------+--------+------+
+[info] |order_id|customer_id|product |amount|
+[info] +--------+-----------+--------+------+
+[info] |O001    |C101       |Laptop  |65000 |
+[info] |O002    |C102       |Phone   |28000 |
+[info] |O003    |C101       |Keyboard|2500  |
+[info] |O004    |C103       |Monitor |18000 |
+[info] |O005    |C106       |Mouse   |1200  |
+[info] +--------+-----------+--------+------+
+[info] --- PAYMENTS ---
+[info] +----------+--------+--------------+--------------+
+[info] |payment_id|order_id|payment_method|payment_status|
+[info] +----------+--------+--------------+--------------+
+[info] |P001      |O001    |UPI           |Paid          |
+[info] |P002      |O002    |Card          |Paid          |
+[info] |P003      |O003    |UPI           |Pending       |
+[info] |P004      |O004    |NetBanking    |Paid          |
+[info] +----------+--------+--------------+--------------+
+[info] --- RECORD COUNTS ---
+[info] Customers: 5
+[info] Orders: 5
+[info] Payments: 4
+[info] --- INNER JOIN: CUSTOMERS + ORDERS ---
+[info] +-----------+-------------+-------------+--------+--------+------+
+[info] |customer_id|customer_name|city         |order_id|product |amount|
+[info] +-----------+-------------+-------------+--------+--------+------+
+[info] |C101       |Anu          |Hyderabad    |O001    |Laptop  |65000 |
+[info] |C101       |Anu          |Hyderabad    |O003    |Keyboard|2500  |
+[info] |C102       |Bala         |Vijayawada   |O002    |Phone   |28000 |
+[info] |C103       |Charan       |Visakhapatnam|O004    |Monitor |18000 |
+[info] +-----------+-------------+-------------+--------+--------+------+
+[info] --- LEFT JOIN: CUSTOMERS + ORDERS ---
+[info] +-----------+-------------+--------+--------+------+
+[info] |customer_id|customer_name|order_id|product |amount|
+[info] +-----------+-------------+--------+--------+------+
+[info] |C101       |Anu          |O001    |Laptop  |65000 |
+[info] |C101       |Anu          |O003    |Keyboard|2500  |
+[info] |C102       |Bala         |O002    |Phone   |28000 |
+[info] |C103       |Charan       |O004    |Monitor |18000 |
+[info] |C104       |Divya        |NULL    |NULL    |NULL  |
+[info] |C105       |Eswar        |NULL    |NULL    |NULL  |
+[info] +-----------+-------------+--------+--------+------+
+[info] --- LEFT JOIN WITH NULL HANDLING ---
+[info] +-----------+-------------+--------+--------+------+------------+------------+
+[info] |customer_id|customer_name|order_id|product |amount|order_status|order_amount|
+[info] +-----------+-------------+--------+--------+------+------------+------------+
+[info] |C101       |Anu          |O001    |Laptop  |65000 |Has Order   |65000       |
+[info] |C101       |Anu          |O003    |Keyboard|2500  |Has Order   |2500        |
+[info] |C102       |Bala         |O002    |Phone   |28000 |Has Order   |28000       |
+[info] |C103       |Charan       |O004    |Monitor |18000 |Has Order   |18000       |
+[info] |C104       |Divya        |NULL    |NULL    |NULL  |No Order    |0           |
+[info] |C105       |Eswar        |NULL    |NULL    |NULL  |No Order    |0           |
+[info] +-----------+-------------+--------+--------+------+------------+------------+
+[info] --- RIGHT JOIN: CUSTOMERS + ORDERS ---
+[info] +-----------+-------------+--------+--------+------+
+[info] |customer_id|customer_name|order_id|product |amount|
+[info] +-----------+-------------+--------+--------+------+
+[info] |C101       |Anu          |O001    |Laptop  |65000 |
+[info] |C102       |Bala         |O002    |Phone   |28000 |
+[info] |C101       |Anu          |O003    |Keyboard|2500  |
+[info] |C103       |Charan       |O004    |Monitor |18000 |
+[info] |NULL       |NULL         |O005    |Mouse   |1200  |
+[info] +-----------+-------------+--------+--------+------+
+[info] --- FULL OUTER JOIN: CUSTOMERS + ORDERS ---
+[info] +-----------+-------------+-----------------+--------+--------+------+
+[info] |customer_id|customer_name|order_customer_id|order_id|product |amount|
+[info] +-----------+-------------+-----------------+--------+--------+------+
+[info] |NULL       |NULL         |C106             |O005    |Mouse   |1200  |
+[info] |C101       |Anu          |C101             |O001    |Laptop  |65000 |
+[info] |C101       |Anu          |C101             |O003    |Keyboard|2500  |
+[info] |C102       |Bala         |C102             |O002    |Phone   |28000 |
+[info] |C103       |Charan       |C103             |O004    |Monitor |18000 |
+[info] |C104       |Divya        |NULL             |NULL    |NULL    |NULL  |
+[info] |C105       |Eswar        |NULL             |NULL    |NULL    |NULL  |
+[info] +-----------+-------------+-----------------+--------+--------+------+
+[info] --- ORDERS + PAYMENTS ---
+[info] +--------+-----------+--------+------+--------------+--------------+
+[info] |order_id|customer_id|product |amount|payment_method|payment_status|
+[info] +--------+-----------+--------+------+--------------+--------------+
+[info] |O001    |C101       |Laptop  |65000 |UPI           |Paid          |
+[info] |O002    |C102       |Phone   |28000 |Card          |Paid          |
+[info] |O003    |C101       |Keyboard|2500  |UPI           |Pending       |
+[info] |O004    |C103       |Monitor |18000 |NetBanking    |Paid          |
+[info] |O005    |C106       |Mouse   |1200  |NULL          |NULL          |
+[info] +--------+-----------+--------+------+--------------+--------------+
+[info] --- COMPLETE CUSTOMER + ORDER + PAYMENT JOIN ---
+[info] +-----------+-------------+-------------+--------+--------+------+--------------+--------------+
+[info] |customer_id|customer_name|city         |order_id|product |amount|payment_method|payment_status|
+[info] +-----------+-------------+-------------+--------+--------+------+--------------+--------------+
+[info] |C101       |Anu          |Hyderabad    |O001    |Laptop  |65000 |UPI           |Paid          |
+[info] |C101       |Anu          |Hyderabad    |O003    |Keyboard|2500  |UPI           |Pending       |
+[info] |C102       |Bala         |Vijayawada   |O002    |Phone   |28000 |Card          |Paid          |
+[info] |C103       |Charan       |Visakhapatnam|O004    |Monitor |18000 |NetBanking    |Paid          |
+[info] |C104       |Divya        |Warangal     |NULL    |NULL    |NULL  |NULL          |NULL          |
+[info] |C105       |Eswar        |Tirupati     |NULL    |NULL    |NULL  |NULL          |NULL          |
+[info] +-----------+-------------+-------------+--------+--------+------+--------------+--------------+
+[info] --- SPARK SQL: COMPLETE JOIN ---
+[info] +-----------+-------------+--------+--------+------+--------------+--------------+
+[info] |customer_id|customer_name|order_id|product |amount|payment_method|payment_status|
+[info] +-----------+-------------+--------+--------+------+--------------+--------------+
+[info] |C101       |Anu          |O001    |Laptop  |65000 |UPI           |Paid          |
+[info] |C101       |Anu          |O003    |Keyboard|2500  |UPI           |Pending       |
+[info] |C102       |Bala         |O002    |Phone   |28000 |Card          |Paid          |
+[info] |C103       |Charan       |O004    |Monitor |18000 |NetBanking    |Paid          |
+[info] |C104       |Divya        |NULL    |NULL    |NULL  |NULL          |NULL          |
+[info] |C105       |Eswar        |NULL    |NULL    |NULL  |NULL          |NULL          |
+[info] +-----------+-------------+--------+--------+------+--------------+--------------+
+[info] --- EXECUTION PLAN: COMPLETE JOIN ---
+[info] == Parsed Logical Plan ==
+[info] 'Sort ['customer_id ASC NULLS FIRST, 'order_id ASC NULLS FIRST], true
+[info] +- Project [customer_id#17, customer_name#18, city#19, order_id#37, product#39, amount#40, payment_method#60, payment_status#61]
+[info]    +- Join LeftOuter, (order_id#37 = order_id#59)
+[info]       :- Join LeftOuter, (customer_id#17 = customer_id#38)
+[info]       :  :- SubqueryAlias c
+[info]       :  :  +- Relation [customer_id#17,customer_name#18,city#19] csv
+[info]       :  +- SubqueryAlias o
+[info]       :     +- Relation [order_id#37,customer_id#38,product#39,amount#40] csv
+[info]       +- SubqueryAlias p
+[info]          +- Relation [payment_id#58,order_id#59,payment_method#60,payment_status#61] csv
+[info] == Analyzed Logical Plan ==
+[info] customer_id: string, customer_name: string, city: string, order_id: string, product: string, amount: int, payment_method: string, payment_status: string
+[info] Sort [customer_id#17 ASC NULLS FIRST, order_id#37 ASC NULLS FIRST], true
+[info] +- Project [customer_id#17, customer_name#18, city#19, order_id#37, product#39, amount#40, payment_method#60, payment_status#61]
+[info]    +- Join LeftOuter, (order_id#37 = order_id#59)
+[info]       :- Join LeftOuter, (customer_id#17 = customer_id#38)
+[info]       :  :- SubqueryAlias c
+[info]       :  :  +- Relation [customer_id#17,customer_name#18,city#19] csv
+[info]       :  +- SubqueryAlias o
+[info]       :     +- Relation [order_id#37,customer_id#38,product#39,amount#40] csv
+[info]       +- SubqueryAlias p
+[info]          +- Relation [payment_id#58,order_id#59,payment_method#60,payment_status#61] csv
+[info] == Optimized Logical Plan ==
+[info] Sort [customer_id#17 ASC NULLS FIRST, order_id#37 ASC NULLS FIRST], true
+[info] +- Project [customer_id#17, customer_name#18, city#19, order_id#37, product#39, amount#40, payment_method#60, payment_status#61]
+[info]    +- Join LeftOuter, (order_id#37 = order_id#59)
+[info]       :- Project [customer_id#17, customer_name#18, city#19, order_id#37, product#39, amount#40]
+[info]       :  +- Join LeftOuter, (customer_id#17 = customer_id#38)
+[info]       :     :- Relation [customer_id#17,customer_name#18,city#19] csv
+[info]       :     +- Filter isnotnull(customer_id#38)
+[info]       :        +- Relation [order_id#37,customer_id#38,product#39,amount#40] csv
+[info]       +- Project [order_id#59, payment_method#60, payment_status#61]
+[info]          +- Filter isnotnull(order_id#59)
+[info]             +- Relation [payment_id#58,order_id#59,payment_method#60,payment_status#61] csv
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan isFinalPlan=false
+[info] +- Sort [customer_id#17 ASC NULLS FIRST, order_id#37 ASC NULLS FIRST], true, 0
+[info]    +- Exchange rangepartitioning(customer_id#17 ASC NULLS FIRST, order_id#37 ASC NULLS FIRST, 200), ENSURE_REQUIREMENTS, [plan_id=1527]
+[info]       +- Project [customer_id#17, customer_name#18, city#19, order_id#37, product#39, amount#40, payment_method#60, payment_status#61]
+[info]          +- SortMergeJoin [order_id#37], [order_id#59], LeftOuter
+[info]             :- Sort [order_id#37 ASC NULLS FIRST], false, 0
+[info]             :  +- Exchange hashpartitioning(order_id#37, 200), ENSURE_REQUIREMENTS, [plan_id=1520]
+[info]             :     +- Project [customer_id#17, customer_name#18, city#19, order_id#37, product#39, amount#40]
+[info]             :        +- SortMergeJoin [customer_id#17], [customer_id#38], LeftOuter
+[info]             :           :- Sort [customer_id#17 ASC NULLS FIRST], false, 0
+[info]             :           :  +- Exchange hashpartitioning(customer_id#17, 200), ENSURE_REQUIREMENTS, [plan_id=1512]
+[info]             :           :     +- FileScan csv [customer_id#17,customer_name#18,city#19] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-18-Joins/input/..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<customer_id:string,customer_name:string,city:string>
+[info]             :           +- Sort [customer_id#38 ASC NULLS FIRST], false, 0
+[info]             :              +- Exchange hashpartitioning(customer_id#38, 200), ENSURE_REQUIREMENTS, [plan_id=1513]
+[info]             :                 +- Filter isnotnull(customer_id#38)
+[info]             :                    +- FileScan csv [order_id#37,customer_id#38,product#39,amount#40] Batched: false, DataFilters: [isnotnull(customer_id#38)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-18-Joins/input/..., PartitionFilters: [], PushedFilters: [IsNotNull(customer_id)], ReadSchema: struct<order_id:string,customer_id:string,product:string,amount:int>
+[info]             +- Sort [order_id#59 ASC NULLS FIRST], false, 0
+[info]                +- Exchange hashpartitioning(order_id#59, 200), ENSURE_REQUIREMENTS, [plan_id=1521]
+[info]                   +- Filter isnotnull(order_id#59)
+[info]                      +- FileScan csv [order_id#59,payment_method#60,payment_status#61] Batched: false, DataFilters: [isnotnull(order_id#59)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-18-Joins/input/..., PartitionFilters: [], PushedFilters: [IsNotNull(order_id)], ReadSchema: struct<order_id:string,payment_method:string,payment_status:string>
+[info] ===========================================================================
+[info] DAY 18 COMPLETED SUCCESSFULLY
+[info] ===========================================================================
+[success] Total time: 32 s, completed Sep 25, 2026, 12:20:13 PM
