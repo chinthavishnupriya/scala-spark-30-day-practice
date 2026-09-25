@@ -1,0 +1,199 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-16-Aggregations/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-16-Aggregations (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-16-Aggregations/)
+[info] running (fork) Day16 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/25 06:26:03 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/25 06:26:03 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/25 06:26:03 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/25 06:26:03 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 06:26:03 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 06:26:03 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/25 06:26:03 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 06:26:03 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/25 06:26:03 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 06:26:03 INFO SparkContext: Submitted application: Day-16-Aggregations
+[error] 26/09/25 06:26:03 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 06:26:03 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 06:26:03 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 06:26:03 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 06:26:03 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 06:26:03 INFO Utils: Successfully started service 'sparkDriver' on port 41635.
+[error] 26/09/25 06:26:03 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/25 06:26:03 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/25 06:26:03 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/25 06:26:03 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/25 06:26:03 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/25 06:26:03 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6973106d-11bf-4a38-96ab-d1b03c89bf4d
+[error] 26/09/25 06:26:04 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/25 06:26:04 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/25 06:26:04 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/25 06:26:04 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/25 06:26:04 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/25 06:26:04 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/25 06:26:04 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 06:26:04 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 06:26:04 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 06:26:04 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 06:26:04 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 06:26:04 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/25 06:26:04 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/25 06:26:04 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 06:26:04 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 06:26:04 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/25 06:26:04 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@56d6a1b1 for default.
+[error] 26/09/25 06:26:04 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45839.
+[error] 26/09/25 06:26:04 INFO NettyBlockTransferService: Server created on 10.255.255.254:45839
+[error] 26/09/25 06:26:04 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/25 06:26:04 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 45839, None)
+[error] 26/09/25 06:26:04 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:45839 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 45839, None)
+[error] 26/09/25 06:26:04 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 45839, None)
+[error] 26/09/25 06:26:04 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 45839, None)
+[info] ======================================================================
+[info] DAY 16 - AGGREGATIONS
+[info] ======================================================================
+[info] --- INPUT DATA ---
+[info] +-----------+----------+----------+--------+--------------------+-----------------+
+[info] |department |city      |doctor    |patients|consultation_revenue|procedure_revenue|
+[info] +-----------+----------+----------+--------+--------------------+-----------------+
+[info] |Cardiology |Hyderabad |Dr Rao    |42      |126000              |210000           |
+[info] |Cardiology |Hyderabad |Dr Mehta  |35      |105000              |175000           |
+[info] |Cardiology |Vijayawada|Dr Kumar  |28      |84000               |140000           |
+[info] |Neurology  |Hyderabad |Dr Sharma |31      |93000               |155000           |
+[info] |Neurology  |Hyderabad |Dr Reddy  |26      |78000               |130000           |
+[info] |Neurology  |Vijayawada|Dr Das    |22      |66000               |110000           |
+[info] |Orthopedics|Hyderabad |Dr Singh  |38      |95000               |190000           |
+[info] |Orthopedics|Vijayawada|Dr Rao    |30      |75000               |150000           |
+[info] |Orthopedics|Tirupati  |Dr Naidu  |24      |60000               |120000           |
+[info] |Pediatrics |Hyderabad |Dr Priya  |45      |90000               |90000            |
+[info] |Pediatrics |Vijayawada|Dr Anil   |36      |72000               |72000            |
+[info] |Pediatrics |Tirupati  |Dr Lakshmi|29      |58000               |58000            |
+[info] |Dermatology|Hyderabad |Dr Varma  |20      |50000               |80000            |
+[info] |Dermatology|Tirupati  |Dr Swetha |18      |45000               |70000            |
+[info] +-----------+----------+----------+--------+--------------------+-----------------+
+[info] --- SCHEMA ---
+[info] root
+[info]  |-- department: string (nullable = true)
+[info]  |-- city: string (nullable = true)
+[info]  |-- doctor: string (nullable = true)
+[info]  |-- patients: integer (nullable = true)
+[info]  |-- consultation_revenue: integer (nullable = true)
+[info]  |-- procedure_revenue: integer (nullable = true)
+[info] Total Records: 14
+[info] --- DATA WITH TOTAL REVENUE ---
+[info] +-----------+----------+----------+--------+--------------------+-----------------+-------------+
+[info] |department |city      |doctor    |patients|consultation_revenue|procedure_revenue|total_revenue|
+[info] +-----------+----------+----------+--------+--------------------+-----------------+-------------+
+[info] |Cardiology |Hyderabad |Dr Rao    |42      |126000              |210000           |336000       |
+[info] |Cardiology |Hyderabad |Dr Mehta  |35      |105000              |175000           |280000       |
+[info] |Cardiology |Vijayawada|Dr Kumar  |28      |84000               |140000           |224000       |
+[info] |Neurology  |Hyderabad |Dr Sharma |31      |93000               |155000           |248000       |
+[info] |Neurology  |Hyderabad |Dr Reddy  |26      |78000               |130000           |208000       |
+[info] |Neurology  |Vijayawada|Dr Das    |22      |66000               |110000           |176000       |
+[info] |Orthopedics|Hyderabad |Dr Singh  |38      |95000               |190000           |285000       |
+[info] |Orthopedics|Vijayawada|Dr Rao    |30      |75000               |150000           |225000       |
+[info] |Orthopedics|Tirupati  |Dr Naidu  |24      |60000               |120000           |180000       |
+[info] |Pediatrics |Hyderabad |Dr Priya  |45      |90000               |90000            |180000       |
+[info] |Pediatrics |Vijayawada|Dr Anil   |36      |72000               |72000            |144000       |
+[info] |Pediatrics |Tirupati  |Dr Lakshmi|29      |58000               |58000            |116000       |
+[info] |Dermatology|Hyderabad |Dr Varma  |20      |50000               |80000            |130000       |
+[info] |Dermatology|Tirupati  |Dr Swetha |18      |45000               |70000            |115000       |
+[info] +-----------+----------+----------+--------+--------------------+-----------------+-------------+
+[info] --- BASIC AGGREGATIONS ---
+[info] +------------+-------------+------------------+---------------+---------------+
+[info] |record_count|total_revenue|average_revenue   |minimum_revenue|maximum_revenue|
+[info] +------------+-------------+------------------+---------------+---------------+
+[info] |14          |2847000      |203357.14285714287|115000         |336000         |
+[info] +------------+-------------+------------------+---------------+---------------+
+[info] --- DEPARTMENT-WISE REVENUE STATISTICS ---
+[info] +-----------+------------+--------------+------------------+------------------+---------------+---------------+
+[info] |department |record_count|total_patients|department_revenue|average_revenue   |minimum_revenue|maximum_revenue|
+[info] +-----------+------------+--------------+------------------+------------------+---------------+---------------+
+[info] |Cardiology |3           |105           |840000            |280000.0          |224000         |336000         |
+[info] |Orthopedics|3           |92            |690000            |230000.0          |180000         |285000         |
+[info] |Neurology  |3           |79            |632000            |210666.66666666666|176000         |248000         |
+[info] |Pediatrics |3           |110           |440000            |146666.66666666666|116000         |180000         |
+[info] |Dermatology|2           |38            |245000            |122500.0          |115000         |130000         |
+[info] +-----------+------------+--------------+------------------+------------------+---------------+---------------+
+[info] --- DEPARTMENT + CITY AGGREGATION ---
+[info] +-----------+----------+------------+--------------+-------------+---------------+
+[info] |department |city      |record_count|total_patients|total_revenue|average_revenue|
+[info] +-----------+----------+------------+--------------+-------------+---------------+
+[info] |Cardiology |Hyderabad |2           |77            |616000       |308000.0       |
+[info] |Cardiology |Vijayawada|1           |28            |224000       |224000.0       |
+[info] |Dermatology|Hyderabad |1           |20            |130000       |130000.0       |
+[info] |Dermatology|Tirupati  |1           |18            |115000       |115000.0       |
+[info] |Neurology  |Hyderabad |2           |57            |456000       |228000.0       |
+[info] |Neurology  |Vijayawada|1           |22            |176000       |176000.0       |
+[info] |Orthopedics|Hyderabad |1           |38            |285000       |285000.0       |
+[info] |Orthopedics|Tirupati  |1           |24            |180000       |180000.0       |
+[info] |Orthopedics|Vijayawada|1           |30            |225000       |225000.0       |
+[info] |Pediatrics |Hyderabad |1           |45            |180000       |180000.0       |
+[info] |Pediatrics |Tirupati  |1           |29            |116000       |116000.0       |
+[info] |Pediatrics |Vijayawada|1           |36            |144000       |144000.0       |
+[info] +-----------+----------+------------+--------------+-------------+---------------+
+[info] --- HAVING-LIKE FILTER ---
+[info] +-----------+------------+--------------+------------------+------------------+---------------+---------------+
+[info] |department |record_count|total_patients|department_revenue|average_revenue   |minimum_revenue|maximum_revenue|
+[info] +-----------+------------+--------------+------------------+------------------+---------------+---------------+
+[info] |Cardiology |3           |105           |840000            |280000.0          |224000         |336000         |
+[info] |Orthopedics|3           |92            |690000            |230000.0          |180000         |285000         |
+[info] |Neurology  |3           |79            |632000            |210666.66666666666|176000         |248000         |
+[info] |Pediatrics |3           |110           |440000            |146666.66666666666|116000         |180000         |
+[info] +-----------+------------+--------------+------------------+------------------+---------------+---------------+
+[info] --- PATIENT STATISTICS BY DEPARTMENT ---
+[info] +-----------+--------------+------------------+----------------+----------------+
+[info] |department |total_patients|average_patients  |minimum_patients|maximum_patients|
+[info] +-----------+--------------+------------------+----------------+----------------+
+[info] |Pediatrics |110           |36.666666666666664|29              |45              |
+[info] |Cardiology |105           |35.0              |28              |42              |
+[info] |Orthopedics|92            |30.666666666666668|24              |38              |
+[info] |Neurology  |79            |26.333333333333332|22              |31              |
+[info] |Dermatology|38            |19.0              |18              |20              |
+[info] +-----------+--------------+------------------+----------------+----------------+
+[info] --- HIGHEST REVENUE DEPARTMENT ---
+[info] +----------+------------+--------------+------------------+---------------+---------------+---------------+
+[info] |department|record_count|total_patients|department_revenue|average_revenue|minimum_revenue|maximum_revenue|
+[info] +----------+------------+--------------+------------------+---------------+---------------+---------------+
+[info] |Cardiology|3           |105           |840000            |280000.0       |224000         |336000         |
+[info] +----------+------------+--------------+------------------+---------------+---------------+---------------+
+[info] --- SPARK SQL AGGREGATION ---
+[info] +-----------+------------+--------------+-------------+------------------+---------------+---------------+
+[info] |department |record_count|total_patients|total_revenue|average_revenue   |minimum_revenue|maximum_revenue|
+[info] +-----------+------------+--------------+-------------+------------------+---------------+---------------+
+[info] |Cardiology |3           |105           |840000       |280000.0          |224000         |336000         |
+[info] |Orthopedics|3           |92            |690000       |230000.0          |180000         |285000         |
+[info] |Neurology  |3           |79            |632000       |210666.66666666666|176000         |248000         |
+[info] |Pediatrics |3           |110           |440000       |146666.66666666666|116000         |180000         |
+[info] +-----------+------------+--------------+-------------+------------------+---------------+---------------+
+[info] --- EXECUTION PLAN ---
+[info] == Parsed Logical Plan ==
+[info] 'Sort ['department_revenue DESC NULLS LAST], true
+[info] +- Aggregate [department#17], [department#17, count(1) AS record_count#145L, sum(patients#20) AS total_patients#146L, sum(total_revenue#59) AS department_revenue#147L, avg(total_revenue#59) AS average_revenue#148, min(total_revenue#59) AS minimum_revenue#149, max(total_revenue#59) AS maximum_revenue#150]
+[info]    +- Project [department#17, city#18, doctor#19, patients#20, consultation_revenue#21, procedure_revenue#22, (consultation_revenue#21 + procedure_revenue#22) AS total_revenue#59]
+[info]       +- Relation [department#17,city#18,doctor#19,patients#20,consultation_revenue#21,procedure_revenue#22] csv
+[info] == Analyzed Logical Plan ==
+[info] department: string, record_count: bigint, total_patients: bigint, department_revenue: bigint, average_revenue: double, minimum_revenue: int, maximum_revenue: int
+[info] Sort [department_revenue#147L DESC NULLS LAST], true
+[info] +- Aggregate [department#17], [department#17, count(1) AS record_count#145L, sum(patients#20) AS total_patients#146L, sum(total_revenue#59) AS department_revenue#147L, avg(total_revenue#59) AS average_revenue#148, min(total_revenue#59) AS minimum_revenue#149, max(total_revenue#59) AS maximum_revenue#150]
+[info]    +- Project [department#17, city#18, doctor#19, patients#20, consultation_revenue#21, procedure_revenue#22, (consultation_revenue#21 + procedure_revenue#22) AS total_revenue#59]
+[info]       +- Relation [department#17,city#18,doctor#19,patients#20,consultation_revenue#21,procedure_revenue#22] csv
+[info] == Optimized Logical Plan ==
+[info] Sort [department_revenue#147L DESC NULLS LAST], true
+[info] +- Aggregate [department#17], [department#17, count(1) AS record_count#145L, sum(patients#20) AS total_patients#146L, sum(total_revenue#59) AS department_revenue#147L, avg(total_revenue#59) AS average_revenue#148, min(total_revenue#59) AS minimum_revenue#149, max(total_revenue#59) AS maximum_revenue#150]
+[info]    +- Project [department#17, patients#20, (consultation_revenue#21 + procedure_revenue#22) AS total_revenue#59]
+[info]       +- Relation [department#17,city#18,doctor#19,patients#20,consultation_revenue#21,procedure_revenue#22] csv
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan isFinalPlan=false
+[info] +- Sort [department_revenue#147L DESC NULLS LAST], true, 0
+[info]    +- Exchange rangepartitioning(department_revenue#147L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=505]
+[info]       +- HashAggregate(keys=[department#17], functions=[count(1), sum(patients#20), sum(total_revenue#59), avg(total_revenue#59), min(total_revenue#59), max(total_revenue#59)], output=[department#17, record_count#145L, total_patients#146L, department_revenue#147L, average_revenue#148, minimum_revenue#149, maximum_revenue#150])
+[info]          +- Exchange hashpartitioning(department#17, 200), ENSURE_REQUIREMENTS, [plan_id=502]
+[info]             +- HashAggregate(keys=[department#17], functions=[partial_count(1), partial_sum(patients#20), partial_sum(total_revenue#59), partial_avg(total_revenue#59), partial_min(total_revenue#59), partial_max(total_revenue#59)], output=[department#17, count#178L, sum#179L, sum#180L, sum#181, count#182L, min#183, max#184])
+[info]                +- Project [department#17, patients#20, (consultation_revenue#21 + procedure_revenue#22) AS total_revenue#59]
+[info]                   +- FileScan csv [department#17,patients#20,consultation_revenue#21,procedure_revenue#22] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-16-Aggregations..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<department:string,patients:int,consultation_revenue:int,procedure_revenue:int>
+[info] ======================================================================
+[info] DAY 16 COMPLETED SUCCESSFULLY
+[info] ======================================================================
+[success] Total time: 16 s, completed Sep 25, 2026, 6:26:14 AM

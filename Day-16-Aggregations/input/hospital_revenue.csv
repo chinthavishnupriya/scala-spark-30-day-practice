@@ -1,0 +1,15 @@
+department,city,doctor,patients,consultation_revenue,procedure_revenue
+Cardiology,Hyderabad,Dr Rao,42,126000,210000
+Cardiology,Hyderabad,Dr Mehta,35,105000,175000
+Cardiology,Vijayawada,Dr Kumar,28,84000,140000
+Neurology,Hyderabad,Dr Sharma,31,93000,155000
+Neurology,Hyderabad,Dr Reddy,26,78000,130000
+Neurology,Vijayawada,Dr Das,22,66000,110000
+Orthopedics,Hyderabad,Dr Singh,38,95000,190000
+Orthopedics,Vijayawada,Dr Rao,30,75000,150000
+Orthopedics,Tirupati,Dr Naidu,24,60000,120000
+Pediatrics,Hyderabad,Dr Priya,45,90000,90000
+Pediatrics,Vijayawada,Dr Anil,36,72000,72000
+Pediatrics,Tirupati,Dr Lakshmi,29,58000,58000
+Dermatology,Hyderabad,Dr Varma,20,50000,80000
+Dermatology,Tirupati,Dr Swetha,18,45000,70000
