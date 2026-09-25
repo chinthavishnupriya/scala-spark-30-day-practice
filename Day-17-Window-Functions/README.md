@@ -128,9 +128,9 @@ For example:
 
 | Customer | Policy | Premium | Previous Premium | Change |
 |---|---|---:|---:|---:|
-| C101 | P001 | 12000 | null | null |
-| C101 | P002 | 15000 | 12000 | 3000 |
 | C101 | P007 | 10000 | null | null |
+| C101 | P001 | 12000 | 10000 | 2000 |
+| C101 | P002 | 15000 | 12000 | 3000 |
 
 The displayed policy-history order is chronological; the exact previous value follows the chronological window.
 
