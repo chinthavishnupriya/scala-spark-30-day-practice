@@ -1,0 +1,12 @@
+{"sale_id":"S001","customer_id":"C101","product":"Laptop","amount":65000,"sale_date":"2026-09-20"}
+{"sale_id":"S002","customer_id":"C102","product":"Phone","amount":28000,"sale_date":"2026-09-20"}
+{"sale_id":"S003","customer_id":"C103","product":"Keyboard","amount":2500,"sale_date":"2026-09-20"}
+{"sale_id":"S004","customer_id":"C104","product":"Monitor","amount":18000,"sale_date":"2026-09-21"}
+{"sale_id":"S005","customer_id":"C105","product":"Tablet","amount":32000,"sale_date":"2026-09-21"}
+{"sale_id":"S006","customer_id":"C106","product":"Mouse","amount":1200,"sale_date":"2026-09-21"}
+{"sale_id":"S007","customer_id":"C107","product":"Laptop","amount":72000,"sale_date":"2026-09-22"}
+{"sale_id":"S008","customer_id":"C108","product":"Phone","amount":30000,"sale_date":"2026-09-22"}
+{"sale_id":"S009","customer_id":"C109","product":"Headset","amount":4500,"sale_date":"2026-09-22"}
+{"sale_id":"S010","customer_id":"C110","product":"Monitor","amount":21000,"sale_date":"2026-09-23"}
+{"sale_id":"S011","customer_id":"C111","product":"Keyboard","amount":2800,"sale_date":"2026-09-23"}
+{"sale_id":"S012","customer_id":"C112","product":"Tablet","amount":35000,"sale_date":"2026-09-23"}

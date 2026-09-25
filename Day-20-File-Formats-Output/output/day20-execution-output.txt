@@ -1,0 +1,181 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-20-File-Formats-Output/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-20-File-Formats-Output (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-20-File-Formats-Output/)
+[info] running (fork) Day20 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/25 13:32:24 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/25 13:32:24 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/25 13:32:24 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/25 13:32:24 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 13:32:24 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 13:32:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/25 13:32:25 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 13:32:25 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/25 13:32:25 INFO ResourceUtils: ==============================================================
+[error] 26/09/25 13:32:25 INFO SparkContext: Submitted application: Day20-File-Formats-Output
+[error] 26/09/25 13:32:25 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 13:32:25 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 13:32:25 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 13:32:25 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 13:32:25 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 13:32:25 INFO Utils: Successfully started service 'sparkDriver' on port 44187.
+[error] 26/09/25 13:32:26 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/25 13:32:26 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/25 13:32:26 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/25 13:32:26 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/25 13:32:26 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/25 13:32:26 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ca8e519c-1750-4e2b-9e7b-a7a15c6c6d41
+[error] 26/09/25 13:32:26 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/25 13:32:26 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/25 13:32:26 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/25 13:32:26 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/25 13:32:26 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/25 13:32:26 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/25 13:32:26 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/25 13:32:26 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/25 13:32:26 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/25 13:32:26 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/25 13:32:26 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/25 13:32:27 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/25 13:32:27 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/25 13:32:27 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/25 13:32:27 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/25 13:32:27 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/25 13:32:27 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@44da7eb3 for default.
+[error] 26/09/25 13:32:27 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44739.
+[error] 26/09/25 13:32:27 INFO NettyBlockTransferService: Server created on 10.255.255.254:44739
+[error] 26/09/25 13:32:27 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/25 13:32:27 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 44739, None)
+[error] 26/09/25 13:32:27 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:44739 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 44739, None)
+[error] 26/09/25 13:32:27 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 44739, None)
+[error] 26/09/25 13:32:27 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 44739, None)
+[info] ==============================================
+[info] DAY 20 - FILE FORMATS AND OUTPUT
+[info] ==============================================
+[info] --- READING CSV INPUT ---
+[info] +-------+-----------+--------+------+----------+
+[info] |sale_id|customer_id|product |amount|sale_date |
+[info] +-------+-----------+--------+------+----------+
+[info] |S001   |C101       |Laptop  |65000 |2026-09-20|
+[info] |S002   |C102       |Phone   |28000 |2026-09-20|
+[info] |S003   |C103       |Keyboard|2500  |2026-09-20|
+[info] |S004   |C104       |Monitor |18000 |2026-09-21|
+[info] |S005   |C105       |Tablet  |32000 |2026-09-21|
+[info] |S006   |C106       |Mouse   |1200  |2026-09-21|
+[info] |S007   |C107       |Laptop  |72000 |2026-09-22|
+[info] |S008   |C108       |Phone   |30000 |2026-09-22|
+[info] |S009   |C109       |Headset |4500  |2026-09-22|
+[info] |S010   |C110       |Monitor |21000 |2026-09-23|
+[info] |S011   |C111       |Keyboard|2800  |2026-09-23|
+[info] |S012   |C112       |Tablet  |35000 |2026-09-23|
+[info] +-------+-----------+--------+------+----------+
+[info] Input record count: 12
+[info] Input schema:
+[info] root
+[info]  |-- sale_id: string (nullable = true)
+[info]  |-- customer_id: string (nullable = true)
+[info]  |-- product: string (nullable = true)
+[info]  |-- amount: integer (nullable = true)
+[info]  |-- sale_date: date (nullable = true)
+[info] --- WRITING CSV ---
+[info] CSV output written to: output/day20_csv
+[info] CSV data files: 1
+[info] --- WRITING JSON ---
+[info] JSON output written to: output/day20_json
+[info] JSON data files: 1
+[info] --- WRITING PARQUET ---
+[info] Parquet output written to: output/day20_parquet
+[info] Parquet data files: 1
+[info] --- READING PARQUET BACK ---
+[info] +-------+-----------+--------+------+----------+
+[info] |sale_id|customer_id|product |amount|sale_date |
+[info] +-------+-----------+--------+------+----------+
+[info] |S001   |C101       |Laptop  |65000 |2026-09-20|
+[info] |S002   |C102       |Phone   |28000 |2026-09-20|
+[info] |S003   |C103       |Keyboard|2500  |2026-09-20|
+[info] |S004   |C104       |Monitor |18000 |2026-09-21|
+[info] |S005   |C105       |Tablet  |32000 |2026-09-21|
+[info] |S006   |C106       |Mouse   |1200  |2026-09-21|
+[info] |S007   |C107       |Laptop  |72000 |2026-09-22|
+[info] |S008   |C108       |Phone   |30000 |2026-09-22|
+[info] |S009   |C109       |Headset |4500  |2026-09-22|
+[info] |S010   |C110       |Monitor |21000 |2026-09-23|
+[info] |S011   |C111       |Keyboard|2800  |2026-09-23|
+[info] |S012   |C112       |Tablet  |35000 |2026-09-23|
+[info] +-------+-----------+--------+------+----------+
+[info] Parquet record count: 12
+[info] --- ADDING YEAR / MONTH / DAY COLUMNS ---
+[info] +-------+-----------+--------+------+----------+----+-----+---+
+[info] |sale_id|customer_id|product |amount|sale_date |year|month|day|
+[info] +-------+-----------+--------+------+----------+----+-----+---+
+[info] |S001   |C101       |Laptop  |65000 |2026-09-20|2026|9    |20 |
+[info] |S002   |C102       |Phone   |28000 |2026-09-20|2026|9    |20 |
+[info] |S003   |C103       |Keyboard|2500  |2026-09-20|2026|9    |20 |
+[info] |S004   |C104       |Monitor |18000 |2026-09-21|2026|9    |21 |
+[info] |S005   |C105       |Tablet  |32000 |2026-09-21|2026|9    |21 |
+[info] |S006   |C106       |Mouse   |1200  |2026-09-21|2026|9    |21 |
+[info] |S007   |C107       |Laptop  |72000 |2026-09-22|2026|9    |22 |
+[info] |S008   |C108       |Phone   |30000 |2026-09-22|2026|9    |22 |
+[info] |S009   |C109       |Headset |4500  |2026-09-22|2026|9    |22 |
+[info] |S010   |C110       |Monitor |21000 |2026-09-23|2026|9    |23 |
+[info] |S011   |C111       |Keyboard|2800  |2026-09-23|2026|9    |23 |
+[info] |S012   |C112       |Tablet  |35000 |2026-09-23|2026|9    |23 |
+[info] +-------+-----------+--------+------+----------+----+-----+---+
+[info] Date-partitioned schema:
+[info] root
+[info]  |-- sale_id: string (nullable = true)
+[info]  |-- customer_id: string (nullable = true)
+[info]  |-- product: string (nullable = true)
+[info]  |-- amount: integer (nullable = true)
+[info]  |-- sale_date: date (nullable = true)
+[info]  |-- year: integer (nullable = true)
+[info]  |-- month: integer (nullable = true)
+[info]  |-- day: integer (nullable = true)
+[info] --- REPARTITIONING DATA ---
+[info] Partitions after repartition: 3
+[info] --- WRITING PARTITIONED PARQUET ---
+[info] Partitioned Parquet output written to: output/day20_partitioned_parquet
+[info] --- PARTITIONED OUTPUT LAYOUT ---
+[info] day20_partitioned_parquet/
+[info]   ._SUCCESS.crc
+[info]   _SUCCESS
+[info]   year=2026/
+[info]     month=9/
+[info]       day=20/
+[info]         .part-00002-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet.crc
+[info]         part-00002-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet
+[info]       day=21/
+[info]         .part-00001-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet.crc
+[info]         part-00001-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet
+[info]       day=22/
+[info]         .part-00002-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet.crc
+[info]         part-00002-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet
+[info]       day=23/
+[info]         .part-00001-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet.crc
+[info]         part-00001-beb66301-1660-421d-aa07-a28c7bb54d7a.c000.snappy.parquet
+[info] Partitioned Parquet data files: 4
+[info] --- EXECUTION PLAN ---
+[info] == Parsed Logical Plan ==
+[info] 'Project [unresolvedstarwithcolumns(day, 'dayofmonth('sale_date), None)]
+[info] +- Project [sale_id#17, customer_id#18, product#19, amount#20, sale_date#99, year#100, month(sale_date#99) AS month#101]
+[info]    +- Project [sale_id#17, customer_id#18, product#19, amount#20, sale_date#99, year(sale_date#99) AS year#100]
+[info]       +- Project [sale_id#17, customer_id#18, product#19, amount#20, to_date(sale_date#21, None, Some(Etc/UTC), true) AS sale_date#99]
+[info]          +- Relation [sale_id#17,customer_id#18,product#19,amount#20,sale_date#21] csv
+[info] == Analyzed Logical Plan ==
+[info] sale_id: string, customer_id: string, product: string, amount: int, sale_date: date, year: int, month: int, day: int
+[info] Project [sale_id#17, customer_id#18, product#19, amount#20, sale_date#99, year#100, month#101, dayofmonth(sale_date#99) AS day#102]
+[info] +- Project [sale_id#17, customer_id#18, product#19, amount#20, sale_date#99, year#100, month(sale_date#99) AS month#101]
+[info]    +- Project [sale_id#17, customer_id#18, product#19, amount#20, sale_date#99, year(sale_date#99) AS year#100]
+[info]       +- Project [sale_id#17, customer_id#18, product#19, amount#20, to_date(sale_date#21, None, Some(Etc/UTC), true) AS sale_date#99]
+[info]          +- Relation [sale_id#17,customer_id#18,product#19,amount#20,sale_date#21] csv
+[info] == Optimized Logical Plan ==
+[info] Project [sale_id#17, customer_id#18, product#19, amount#20, sale_date#21, year(sale_date#21) AS year#100, month(sale_date#21) AS month#101, dayofmonth(sale_date#21) AS day#102]
+[info] +- Relation [sale_id#17,customer_id#18,product#19,amount#20,sale_date#21] csv
+[info] == Physical Plan ==
+[info] *(1) Project [sale_id#17, customer_id#18, product#19, amount#20, sale_date#21, year(sale_date#21) AS year#100, month(sale_date#21) AS month#101, dayofmonth(sale_date#21) AS day#102]
+[info] +- FileScan csv [sale_id#17,customer_id#18,product#19,amount#20,sale_date#21] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/vishnupriya/scala-spark-30-day-practice/Day-20-File-Formats..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<sale_id:string,customer_id:string,product:string,amount:int,sale_date:date>
+[info] ==============================================
+[info] DAY 20 COMPLETED SUCCESSFULLY
+[info] ==============================================
+[success] Total time: 22 s, completed Sep 25, 2026, 1:32:41 PM
