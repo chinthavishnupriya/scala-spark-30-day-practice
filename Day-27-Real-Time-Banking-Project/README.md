@@ -11,7 +11,7 @@ Implement a real-time banking pipeline using Spark Streaming/DStreams:
 - Use cache/persist and partitioning.
 - Explain how the application would run on YARN.
 
-These are the Day 27 requirements from the practice set. 
+These are the Day 27 requirements from the practice set.
 
 ## Technology
 
@@ -162,6 +162,43 @@ Expected suspicious burst:
 BURST ALERT: A001 -> 3 transactions in window
 ```
 
+## Verified Runtime Results
+
+The Day 27 application was compiled and executed successfully with the local Spark 4.2.0 / Java 17 setup.
+
+Captured execution evidence is stored in:
+
+```text
+output/day27-execution-output.txt
+screenshots/
+├── 01-compilation-success.png
+├── 02-streaming-started.png
+├── 03-account-aggregation.png
+├── 04-branch-risk-enrichment.png
+├── 05-suspicious-burst.png
+└── 06-complete-execution.png
+```
+
+Verified runtime results:
+
+```text
+A001 -> 13700.00
+A002 -> 550.00
+A003 -> 15000.00
+
+BURST ALERT: A001 -> 3 transactions in window
+```
+
+All six sample transactions were successfully enriched with branch name and risk level:
+
+- T001/T002/T003 → B001, Hyderabad Central, HIGH
+- T004/T006 → B002, Warangal, LOW
+- T005 → B003, Vijayawada, MEDIUM
+
+The repeated A001 burst alert is expected because the 20-second window slides every 10 seconds, producing overlapping windows.
+
+The local Spark run also emitted single-node block-replication warnings. These did not prevent the streaming computations or expected results.
+
 ## DStreams and Micro-Batches
 
 The application uses a 5-second batch interval. Incoming socket data is grouped into micro-batches, and the DStream transformations are evaluated for each generated RDD.
@@ -258,4 +295,16 @@ Day-27-Real-Time-Banking-Project/
 
 ## Status
 
-Implementation is prepared. Compilation and runtime screenshots should be captured locally after pulling the GitHub changes.
+**Day 27 completed and verified.**
+
+- Implementation: ✅
+- Compilation: ✅
+- Runtime execution: ✅
+- Account aggregation: ✅
+- Suspicious burst detection: ✅
+- Branch/risk enrichment: ✅
+- Persist/cache usage: ✅
+- Partitioning: ✅
+- Execution output captured: ✅
+- Screenshots captured: ✅
+- GitHub push: ✅
