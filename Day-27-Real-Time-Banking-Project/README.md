@@ -308,3 +308,71 @@ Day-27-Real-Time-Banking-Project/
 - Execution output captured: ✅
 - Screenshots captured: ✅
 - GitHub push: ✅
+
+
+## Detailed Spark Concepts
+
+### Transformations
+
+The main transformations in the application are:
+
+1. `flatMap` — parses socket lines into valid `BankTransaction` records.
+2. `map` — converts transactions into account/amount or account/count pairs.
+3. `reduceByKey` — aggregates amounts by account.
+4. `reduceByKeyAndWindow` — aggregates transaction counts over a 20-second window with a 10-second slide.
+5. `filter` — keeps accounts whose window count is at least 3.
+6. `partitionBy` — explicitly partitions branch-keyed data with `HashPartitioner(4)`.
+7. `transform` — applies the branch/risk enrichment logic to each micro-batch.
+8. `join` — combines transaction records with branch/risk reference records.
+
+### Actions and output boundaries
+
+The demonstration uses `foreachRDD` to process each generated RDD and `collect()` to print the small sample results. `collect()` is deliberately limited to the tiny practice dataset; it should not be used to bring large production datasets to the driver.
+
+### Shuffle boundaries
+
+The important potential shuffle points are:
+
+- `reduceByKey` for account aggregation.
+- `reduceByKeyAndWindow` for windowed account counts.
+- The branch/risk `join` when records are not already co-partitioned.
+
+The application explicitly assigns `HashPartitioner(4)` to both branch-keyed Pair RDDs to make the partitioning strategy visible.
+
+### Persistence and lineage
+
+The parsed transaction stream is persisted because the same stream feeds three independent downstream branches. Without persistence, upstream parsing could be recomputed when those branches execute.
+
+The branch/risk Pair RDD is also persisted because it is reused across micro-batches.
+
+Checkpointing is configured at `output/checkpoint` for streaming fault-tolerance support. Runtime checkpoint state is excluded from Git.
+
+### Input validation
+
+Each socket line must contain exactly six comma-separated fields. The amount is parsed as a `Double`; malformed numeric amounts are ignored rather than terminating the streaming application.
+
+For production use, stronger schema validation, dead-letter handling, timestamps, authentication, durable ingestion, and monitoring would be required.
+
+## Reference-data design note
+
+The small branch/risk map is placed in a Spark broadcast variable and then materialized into a partitioned Pair RDD for the explicit `join` demonstration.
+
+This is **not** a broadcast join implementation. The actual enrichment uses a Pair RDD join with explicit partitioning. The broadcast variable is used to distribute the small reference data efficiently before creating that RDD.
+
+## Reproducibility Checklist
+
+Before considering a fresh run complete:
+
+- [ ] `sbt clean compile` succeeds.
+- [ ] TCP server is listening on port 9998.
+- [ ] Spark reports `StreamingContext started.`
+- [ ] A001/A002/A003 totals are printed.
+- [ ] A001 burst alert is printed.
+- [ ] T001–T006 branch/risk records are printed.
+- [ ] `output/day27-execution-output.txt` contains the run.
+- [ ] Six execution screenshots are present.
+- [ ] `diff -u src/main/scala/Day27.scala code/Day27.scala` returns no differences.
+
+## Evidence
+
+The repository contains the captured runtime log and six screenshots so the implementation can be reviewed without rerunning the local socket session. The screenshot set separates compilation, startup, account aggregation, enrichment, burst detection, and complete execution evidence.
