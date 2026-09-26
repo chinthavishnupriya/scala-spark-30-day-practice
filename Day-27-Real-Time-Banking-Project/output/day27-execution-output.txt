@@ -1,0 +1,90 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-27-Real-Time-Banking-Project/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-27-Real-Time-Banking-Project (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-27-Real-Time-Banking-Project/)
+[info] running (fork) Day27 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/26 19:18:29 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/26 19:18:29 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/26 19:18:29 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/26 19:18:29 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/26 19:18:29 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/26 19:18:29 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/26 19:18:29 INFO ResourceUtils: ==============================================================
+[error] 26/09/26 19:18:29 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/26 19:18:29 INFO ResourceUtils: ==============================================================
+[error] 26/09/26 19:18:29 INFO SparkContext: Submitted application: Day 27 - Real-Time Banking Project
+[error] 26/09/26 19:18:30 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/26 19:18:30 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/26 19:18:30 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/26 19:18:30 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/26 19:18:30 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/26 19:18:30 INFO Utils: Successfully started service 'sparkDriver' on port 46645.
+[error] 26/09/26 19:18:30 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/26 19:18:30 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/26 19:18:30 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/26 19:18:30 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/26 19:18:30 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/26 19:18:30 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e1c54f97-7e31-474e-9258-6395fef90070
+[error] 26/09/26 19:18:30 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/26 19:18:30 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/26 19:18:30 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/26 19:18:31 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/26 19:18:31 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/26 19:18:31 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/26 19:18:31 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/26 19:18:31 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/26 19:18:31 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/26 19:18:31 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/26 19:18:31 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/26 19:18:31 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/26 19:18:31 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/26 19:18:31 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/26 19:18:31 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/26 19:18:31 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/26 19:18:31 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3481ff98 for default.
+[error] 26/09/26 19:18:31 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37889.
+[error] 26/09/26 19:18:31 INFO NettyBlockTransferService: Server created on 10.255.255.254:37889
+[error] 26/09/26 19:18:31 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/26 19:18:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 37889, None)
+[error] 26/09/26 19:18:31 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:37889 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 37889, None)
+[error] 26/09/26 19:18:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 37889, None)
+[error] 26/09/26 19:18:31 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 37889, None)
+[info] ==============================================
+[info] DAY 27 - REAL-TIME BANKING PROJECT
+[info] ==============================================
+[info] Batch interval : 5 seconds
+[info] Window size    : 20 seconds
+[info] Slide interval : 10 seconds
+[info] Socket server  : localhost:9998
+[info] Suspicious burst threshold: >= 3 transactions/account/window
+[info] StreamingContext started.
+[info] Send banking events to port 9998.
+[info] Press Ctrl+C to stop.
+[error] 26/09/26 19:18:39 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+[error] 26/09/26 19:18:39 WARN BlockManager: Block input-0-1790450318800 replicated to only 0 peer(s) instead of 1 peers
+[error] 26/09/26 19:18:39 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+[error] 26/09/26 19:18:39 WARN BlockManager: Block input-0-1790450319600 replicated to only 0 peer(s) instead of 1 peers
+[info] ----------------------------------------------
+[info] ACCOUNT TOTALS - 1790450320000 ms
+[info] A001 -> 13700.00
+[info] A002 -> 550.00
+[info] A003 -> 15000.00
+[info] ----------------------------------------------
+[info] ----------------------------------------------
+[info] SUSPICIOUS BURST ALERT - 1790450320000 ms
+[info] BURST ALERT: A001 -> 3 transactions in window
+[info] ----------------------------------------------
+[info] ----------------------------------------------
+[info] BRANCH/RISK ENRICHMENT - 1790450320000 ms
+[info] T001 | account=A001 | amount=5000.00 | branch=B001 (Hyderabad Central) | risk=HIGH
+[info] T002 | account=A001 | amount=4500.00 | branch=B001 (Hyderabad Central) | risk=HIGH
+[info] T003 | account=A001 | amount=4200.00 | branch=B001 (Hyderabad Central) | risk=HIGH
+[info] T004 | account=A002 | amount=300.00 | branch=B002 (Warangal) | risk=LOW
+[info] T005 | account=A003 | amount=15000.00 | branch=B003 (Vijayawada) | risk=MEDIUM
+[info] T006 | account=A002 | amount=250.00 | branch=B002 (Warangal) | risk=LOW
+[info] ----------------------------------------------
+[info] ----------------------------------------------
+[info] SUSPICIOUS BURST ALERT - 1790450330000 ms
+[info] BURST ALERT: A001 -> 3 transactions in window
+[info] ----------------------------------------------
