@@ -1,0 +1,13 @@
+customer_id,customer_name,city,segment
+C001,Aarav,Hyderabad,Premium
+C002,Diya,Bengaluru,Regular
+C003,Rohan,Chennai,Regular
+C004,Ananya,Hyderabad,Premium
+C005,Vikram,Mumbai,Regular
+C006,Meera,Pune,Regular
+C007,Arjun,Delhi,Premium
+C008,Sneha,Hyderabad,Regular
+C009,Kiran,Bengaluru,Premium
+C010,Neha,Chennai,Regular
+C011,Ravi,Mumbai,Regular
+C012,Isha,Hyderabad,Premium

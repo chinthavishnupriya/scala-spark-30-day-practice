@@ -1,0 +1,314 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-22-Batch-Mini-Project/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-22-Batch-Mini-Project (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-22-Batch-Mini-Project/)
+[info] running (fork) Day22 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/26 13:10:37 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/26 13:10:37 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/26 13:10:37 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/26 13:10:37 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/26 13:10:37 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/26 13:10:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/26 13:10:38 INFO ResourceUtils: ==============================================================
+[error] 26/09/26 13:10:38 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/26 13:10:38 INFO ResourceUtils: ==============================================================
+[error] 26/09/26 13:10:38 INFO SparkContext: Submitted application: Day 22 - Batch Mini Project
+[error] 26/09/26 13:10:38 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/26 13:10:38 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/26 13:10:38 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/26 13:10:38 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/26 13:10:38 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/26 13:10:38 INFO Utils: Successfully started service 'sparkDriver' on port 37953.
+[error] 26/09/26 13:10:39 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/26 13:10:39 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/26 13:10:39 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/26 13:10:39 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/26 13:10:39 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/26 13:10:39 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f91da1d5-1eef-49a7-98ba-0277252cb475
+[error] 26/09/26 13:10:39 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/26 13:10:39 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/26 13:10:39 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/26 13:10:39 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/26 13:10:39 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/26 13:10:39 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/26 13:10:39 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/26 13:10:39 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/26 13:10:39 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/26 13:10:39 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/26 13:10:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/26 13:10:40 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/26 13:10:40 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/26 13:10:40 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/26 13:10:40 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/26 13:10:40 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/26 13:10:40 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3d512652 for default.
+[error] 26/09/26 13:10:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45935.
+[error] 26/09/26 13:10:40 INFO NettyBlockTransferService: Server created on 10.255.255.254:45935
+[error] 26/09/26 13:10:40 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/26 13:10:40 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 45935, None)
+[error] 26/09/26 13:10:40 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:45935 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 45935, None)
+[error] 26/09/26 13:10:40 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 45935, None)
+[error] 26/09/26 13:10:40 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 45935, None)
+[info] ==============================================
+[info] DAY 22 - BATCH MINI PROJECT
+[info] ==============================================
+[info] --- 1. READ RAW TRANSACTIONS ---
+[info] Raw transaction count: 12
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+
+[info] |transaction_id|customer_id|product_id|quantity|unit_price|transaction_date|status   |
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+
+[info] |T001          |C001       |P001      |2       |1200      |2026-09-20      |COMPLETED|
+[info] |T002          |C002       |P002      |1       |2500      |2026-09-20      |COMPLETED|
+[info] |T003          |C003       |P003      |3       |800       |2026-09-20      |COMPLETED|
+[info] |T004          |C004       |P004      |1       |4500      |2026-09-21      |COMPLETED|
+[info] |T005          |C005       |P005      |2       |1500      |2026-09-21      |COMPLETED|
+[info] |T006          |C006       |P001      |1       |1200      |2026-09-21      |CANCELLED|
+[info] |T007          |C007       |P002      |2       |2500      |2026-09-22      |COMPLETED|
+[info] |T008          |C008       |P003      |4       |800       |2026-09-22      |COMPLETED|
+[info] |T009          |C009       |P004      |1       |4500      |2026-09-22      |COMPLETED|
+[info] |T010          |C010       |P005      |3       |1500      |2026-09-23      |COMPLETED|
+[info] |T011          |C011       |P001      |-1      |1200      |2026-09-23      |COMPLETED|
+[info] |T012          |C012       |P002      |2       |2500      |2026-09-23      |COMPLETED|
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+
+[info] --- 2. READ CUSTOMER DATA ---
+[info] Customer count: 12
+[info] +-----------+-------------+---------+-------+
+[info] |customer_id|customer_name|city     |segment|
+[info] +-----------+-------------+---------+-------+
+[info] |C001       |Aarav        |Hyderabad|Premium|
+[info] |C002       |Diya         |Bengaluru|Regular|
+[info] |C003       |Rohan        |Chennai  |Regular|
+[info] |C004       |Ananya       |Hyderabad|Premium|
+[info] |C005       |Vikram       |Mumbai   |Regular|
+[info] |C006       |Meera        |Pune     |Regular|
+[info] |C007       |Arjun        |Delhi    |Premium|
+[info] |C008       |Sneha        |Hyderabad|Regular|
+[info] |C009       |Kiran        |Bengaluru|Premium|
+[info] |C010       |Neha         |Chennai  |Regular|
+[info] |C011       |Ravi         |Mumbai   |Regular|
+[info] |C012       |Isha         |Hyderabad|Premium|
+[info] +-----------+-------------+---------+-------+
+[info] --- 3. READ PRODUCT DATA ---
+[info] Product count: 5
+[info] +----------+-------------------+-----------+
+[info] |product_id|product_name       |category   |
+[info] +----------+-------------------+-----------+
+[info] |P001      |Wireless Mouse     |Accessories|
+[info] |P002      |Mechanical Keyboard|Accessories|
+[info] |P003      |USB Hub            |Accessories|
+[info] |P004      |Monitor            |Electronics|
+[info] |P005      |Webcam             |Electronics|
+[info] +----------+-------------------+-----------+
+[info] --- 4. CLEAN INVALID TRANSACTIONS ---
+[info] Invalid records removed: 2
+[info] Clean transaction count: 10
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+
+[info] |transaction_id|customer_id|product_id|quantity|unit_price|transaction_date|status   |
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+
+[info] |T001          |C001       |P001      |2       |1200      |2026-09-20      |COMPLETED|
+[info] |T002          |C002       |P002      |1       |2500      |2026-09-20      |COMPLETED|
+[info] |T003          |C003       |P003      |3       |800       |2026-09-20      |COMPLETED|
+[info] |T004          |C004       |P004      |1       |4500      |2026-09-21      |COMPLETED|
+[info] |T005          |C005       |P005      |2       |1500      |2026-09-21      |COMPLETED|
+[info] |T007          |C007       |P002      |2       |2500      |2026-09-22      |COMPLETED|
+[info] |T008          |C008       |P003      |4       |800       |2026-09-22      |COMPLETED|
+[info] |T009          |C009       |P004      |1       |4500      |2026-09-22      |COMPLETED|
+[info] |T010          |C010       |P005      |3       |1500      |2026-09-23      |COMPLETED|
+[info] |T012          |C012       |P002      |2       |2500      |2026-09-23      |COMPLETED|
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+
+[info] --- 5. CALCULATE TRANSACTION REVENUE ---
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+-------+
+[info] |transaction_id|customer_id|product_id|quantity|unit_price|transaction_date|status   |revenue|
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+-------+
+[info] |T001          |C001       |P001      |2       |1200      |2026-09-20      |COMPLETED|2400   |
+[info] |T002          |C002       |P002      |1       |2500      |2026-09-20      |COMPLETED|2500   |
+[info] |T003          |C003       |P003      |3       |800       |2026-09-20      |COMPLETED|2400   |
+[info] |T004          |C004       |P004      |1       |4500      |2026-09-21      |COMPLETED|4500   |
+[info] |T005          |C005       |P005      |2       |1500      |2026-09-21      |COMPLETED|3000   |
+[info] |T007          |C007       |P002      |2       |2500      |2026-09-22      |COMPLETED|5000   |
+[info] |T008          |C008       |P003      |4       |800       |2026-09-22      |COMPLETED|3200   |
+[info] |T009          |C009       |P004      |1       |4500      |2026-09-22      |COMPLETED|4500   |
+[info] |T010          |C010       |P005      |3       |1500      |2026-09-23      |COMPLETED|4500   |
+[info] |T012          |C012       |P002      |2       |2500      |2026-09-23      |COMPLETED|5000   |
+[info] +--------------+-----------+----------+--------+----------+----------------+---------+-------+
+[info] --- 6. JOIN CUSTOMER DATA ---
+[info] +-----------+--------------+----------+--------+----------+----------------+---------+-------+-------------+---------+-------+
+[info] |customer_id|transaction_id|product_id|quantity|unit_price|transaction_date|status   |revenue|customer_name|city     |segment|
+[info] +-----------+--------------+----------+--------+----------+----------------+---------+-------+-------------+---------+-------+
+[info] |C001       |T001          |P001      |2       |1200      |2026-09-20      |COMPLETED|2400   |Aarav        |Hyderabad|Premium|
+[info] |C002       |T002          |P002      |1       |2500      |2026-09-20      |COMPLETED|2500   |Diya         |Bengaluru|Regular|
+[info] |C003       |T003          |P003      |3       |800       |2026-09-20      |COMPLETED|2400   |Rohan        |Chennai  |Regular|
+[info] |C004       |T004          |P004      |1       |4500      |2026-09-21      |COMPLETED|4500   |Ananya       |Hyderabad|Premium|
+[info] |C005       |T005          |P005      |2       |1500      |2026-09-21      |COMPLETED|3000   |Vikram       |Mumbai   |Regular|
+[info] |C007       |T007          |P002      |2       |2500      |2026-09-22      |COMPLETED|5000   |Arjun        |Delhi    |Premium|
+[info] |C008       |T008          |P003      |4       |800       |2026-09-22      |COMPLETED|3200   |Sneha        |Hyderabad|Regular|
+[info] |C009       |T009          |P004      |1       |4500      |2026-09-22      |COMPLETED|4500   |Kiran        |Bengaluru|Premium|
+[info] |C010       |T010          |P005      |3       |1500      |2026-09-23      |COMPLETED|4500   |Neha         |Chennai  |Regular|
+[info] |C012       |T012          |P002      |2       |2500      |2026-09-23      |COMPLETED|5000   |Isha         |Hyderabad|Premium|
+[info] +-----------+--------------+----------+--------+----------+----------------+---------+-------+-------------+---------+-------+
+[info] --- 7. JOIN PRODUCT DATA ---
+[info] +----------+-----------+--------------+--------+----------+----------------+---------+-------+-------------+---------+-------+-------------------+-----------+
+[info] |product_id|customer_id|transaction_id|quantity|unit_price|transaction_date|status   |revenue|customer_name|city     |segment|product_name       |category   |
+[info] +----------+-----------+--------------+--------+----------+----------------+---------+-------+-------------+---------+-------+-------------------+-----------+
+[info] |P001      |C001       |T001          |2       |1200      |2026-09-20      |COMPLETED|2400   |Aarav        |Hyderabad|Premium|Wireless Mouse     |Accessories|
+[info] |P002      |C002       |T002          |1       |2500      |2026-09-20      |COMPLETED|2500   |Diya         |Bengaluru|Regular|Mechanical Keyboard|Accessories|
+[info] |P003      |C003       |T003          |3       |800       |2026-09-20      |COMPLETED|2400   |Rohan        |Chennai  |Regular|USB Hub            |Accessories|
+[info] |P004      |C004       |T004          |1       |4500      |2026-09-21      |COMPLETED|4500   |Ananya       |Hyderabad|Premium|Monitor            |Electronics|
+[info] |P005      |C005       |T005          |2       |1500      |2026-09-21      |COMPLETED|3000   |Vikram       |Mumbai   |Regular|Webcam             |Electronics|
+[info] |P002      |C007       |T007          |2       |2500      |2026-09-22      |COMPLETED|5000   |Arjun        |Delhi    |Premium|Mechanical Keyboard|Accessories|
+[info] |P003      |C008       |T008          |4       |800       |2026-09-22      |COMPLETED|3200   |Sneha        |Hyderabad|Regular|USB Hub            |Accessories|
+[info] |P004      |C009       |T009          |1       |4500      |2026-09-22      |COMPLETED|4500   |Kiran        |Bengaluru|Premium|Monitor            |Electronics|
+[info] |P005      |C010       |T010          |3       |1500      |2026-09-23      |COMPLETED|4500   |Neha         |Chennai  |Regular|Webcam             |Electronics|
+[info] |P002      |C012       |T012          |2       |2500      |2026-09-23      |COMPLETED|5000   |Isha         |Hyderabad|Premium|Mechanical Keyboard|Accessories|
+[info] +----------+-----------+--------------+--------+----------+----------------+---------+-------+-------------+---------+-------+-------------------+-----------+
+[info] --- 8. DAILY SALES AGGREGATION ---
+[info] +----------------+---------+-----------+-----------------+----------+-------------+
+[info] |transaction_date|city     |category   |transaction_count|units_sold|total_revenue|
+[info] +----------------+---------+-----------+-----------------+----------+-------------+
+[info] |2026-09-20      |Bengaluru|Accessories|1                |1         |2500         |
+[info] |2026-09-20      |Chennai  |Accessories|1                |3         |2400         |
+[info] |2026-09-20      |Hyderabad|Accessories|1                |2         |2400         |
+[info] |2026-09-21      |Hyderabad|Electronics|1                |1         |4500         |
+[info] |2026-09-21      |Mumbai   |Electronics|1                |2         |3000         |
+[info] |2026-09-22      |Delhi    |Accessories|1                |2         |5000         |
+[info] |2026-09-22      |Bengaluru|Electronics|1                |1         |4500         |
+[info] |2026-09-22      |Hyderabad|Accessories|1                |4         |3200         |
+[info] |2026-09-23      |Hyderabad|Accessories|1                |2         |5000         |
+[info] |2026-09-23      |Chennai  |Electronics|1                |3         |4500         |
+[info] +----------------+---------+-----------+-----------------+----------+-------------+
+[info] --- 9. CUSTOMER REVENUE AGGREGATION ---
+[info] +-----------+-------------+---------+-------+-----------------+-------------+
+[info] |customer_id|customer_name|city     |segment|transaction_count|total_revenue|
+[info] +-----------+-------------+---------+-------+-----------------+-------------+
+[info] |C012       |Isha         |Hyderabad|Premium|1                |5000         |
+[info] |C007       |Arjun        |Delhi    |Premium|1                |5000         |
+[info] |C004       |Ananya       |Hyderabad|Premium|1                |4500         |
+[info] |C010       |Neha         |Chennai  |Regular|1                |4500         |
+[info] |C009       |Kiran        |Bengaluru|Premium|1                |4500         |
+[info] |C008       |Sneha        |Hyderabad|Regular|1                |3200         |
+[info] |C005       |Vikram       |Mumbai   |Regular|1                |3000         |
+[info] |C002       |Diya         |Bengaluru|Regular|1                |2500         |
+[info] |C003       |Rohan        |Chennai  |Regular|1                |2400         |
+[info] |C001       |Aarav        |Hyderabad|Premium|1                |2400         |
+[info] +-----------+-------------+---------+-------+-----------------+-------------+
+[info] --- 10. WRITE PARTITIONED PARQUET OUTPUT ---
+[info] Partitioned Parquet output written to:
+[info] output/daily-sales
+[info] --- 11. VERIFY PARQUET OUTPUT ---
+[info] Output record count: 10
+[info] +---------+-----------+-----------------+----------+-------------+----------------+
+[info] |city     |category   |transaction_count|units_sold|total_revenue|transaction_date|
+[info] +---------+-----------+-----------------+----------+-------------+----------------+
+[info] |Bengaluru|Accessories|1                |1         |2500         |2026-09-20      |
+[info] |Chennai  |Accessories|1                |3         |2400         |2026-09-20      |
+[info] |Hyderabad|Accessories|1                |2         |2400         |2026-09-20      |
+[info] |Delhi    |Accessories|1                |2         |5000         |2026-09-22      |
+[info] |Bengaluru|Electronics|1                |1         |4500         |2026-09-22      |
+[info] |Hyderabad|Accessories|1                |4         |3200         |2026-09-22      |
+[info] |Hyderabad|Electronics|1                |1         |4500         |2026-09-21      |
+[info] |Mumbai   |Electronics|1                |2         |3000         |2026-09-21      |
+[info] |Hyderabad|Accessories|1                |2         |5000         |2026-09-23      |
+[info] |Chennai  |Electronics|1                |3         |4500         |2026-09-23      |
+[info] +---------+-----------+-----------------+----------+-------------+----------------+
+[info] --- 12. EXECUTION PLAN ---
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan (19)
+[info] +- Sort (18)
+[info]    +- Exchange (17)
+[info]       +- HashAggregate (16)
+[info]          +- Exchange (15)
+[info]             +- HashAggregate (14)
+[info]                +- Project (13)
+[info]                   +- BroadcastHashJoin Inner BuildRight (12)
+[info]                      :- Project (8)
+[info]                      :  +- BroadcastHashJoin Inner BuildRight (7)
+[info]                      :     :- Project (3)
+[info]                      :     :  +- Filter (2)
+[info]                      :     :     +- Scan csv  (1)
+[info]                      :     +- BroadcastExchange (6)
+[info]                      :        +- Filter (5)
+[info]                      :           +- Scan csv  (4)
+[info]                      +- BroadcastExchange (11)
+[info]                         +- Filter (10)
+[info]                            +- Scan csv  (9)
+[info] (1) Scan csv 
+[info] Output [6]: [customer_id#18, product_id#19, quantity#20, unit_price#21, transaction_date#22, status#23]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/vishnupriya/scala-spark-30-day-practice/Day-22-Batch-Mini-Project/input/transactions.csv]
+[info] PushedFilters: [IsNotNull(status), IsNotNull(quantity), IsNotNull(unit_price), EqualTo(status,COMPLETED), GreaterThan(quantity,0), GreaterThan(unit_price,0), IsNotNull(customer_id), IsNotNull(product_id)]
+[info] ReadSchema: struct<customer_id:string,product_id:string,quantity:int,unit_price:int,transaction_date:date,status:string>
+[info] (2) Filter
+[info] Input [6]: [customer_id#18, product_id#19, quantity#20, unit_price#21, transaction_date#22, status#23]
+[info] Condition : (((((((isnotnull(status#23) AND isnotnull(quantity#20)) AND isnotnull(unit_price#21)) AND (status#23 = COMPLETED)) AND (quantity#20 > 0)) AND (unit_price#21 > 0)) AND isnotnull(customer_id#18)) AND isnotnull(product_id#19))
+[info] (3) Project
+[info] Output [5]: [customer_id#18, product_id#19, quantity#20, transaction_date#22, (quantity#20 * unit_price#21) AS revenue#221]
+[info] Input [6]: [customer_id#18, product_id#19, quantity#20, unit_price#21, transaction_date#22, status#23]
+[info] (4) Scan csv 
+[info] Output [2]: [customer_id#82, city#84]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/vishnupriya/scala-spark-30-day-practice/Day-22-Batch-Mini-Project/input/customers.csv]
+[info] PushedFilters: [IsNotNull(customer_id)]
+[info] ReadSchema: struct<customer_id:string,city:string>
+[info] (5) Filter
+[info] Input [2]: [customer_id#82, city#84]
+[info] Condition : isnotnull(customer_id#82)
+[info] (6) BroadcastExchange
+[info] Input [2]: [customer_id#82, city#84]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=1494]
+[info] (7) BroadcastHashJoin
+[info] Left keys [1]: [customer_id#18]
+[info] Right keys [1]: [customer_id#82]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (8) Project
+[info] Output [5]: [product_id#19, quantity#20, transaction_date#22, revenue#221, city#84]
+[info] Input [7]: [customer_id#18, product_id#19, quantity#20, transaction_date#22, revenue#221, customer_id#82, city#84]
+[info] (9) Scan csv 
+[info] Output [2]: [product_id#129, category#131]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/vishnupriya/scala-spark-30-day-practice/Day-22-Batch-Mini-Project/input/products.csv]
+[info] PushedFilters: [IsNotNull(product_id)]
+[info] ReadSchema: struct<product_id:string,category:string>
+[info] (10) Filter
+[info] Input [2]: [product_id#129, category#131]
+[info] Condition : isnotnull(product_id#129)
+[info] (11) BroadcastExchange
+[info] Input [2]: [product_id#129, category#131]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=1498]
+[info] (12) BroadcastHashJoin
+[info] Left keys [1]: [product_id#19]
+[info] Right keys [1]: [product_id#129]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (13) Project
+[info] Output [5]: [quantity#20, transaction_date#22, revenue#221, city#84, category#131]
+[info] Input [7]: [product_id#19, quantity#20, transaction_date#22, revenue#221, city#84, product_id#129, category#131]
+[info] (14) HashAggregate
+[info] Input [5]: [quantity#20, transaction_date#22, revenue#221, city#84, category#131]
+[info] Keys [3]: [transaction_date#22, city#84, category#131]
+[info] Functions [3]: [partial_count(1), partial_sum(quantity#20), partial_sum(revenue#221)]
+[info] Aggregate Attributes [3]: [count#378L, sum#379L, sum#380L]
+[info] Results [6]: [transaction_date#22, city#84, category#131, count#381L, sum#382L, sum#383L]
+[info] (15) Exchange
+[info] Input [6]: [transaction_date#22, city#84, category#131, count#381L, sum#382L, sum#383L]
+[info] Arguments: hashpartitioning(transaction_date#22, city#84, category#131, 200), ENSURE_REQUIREMENTS, [plan_id=1503]
+[info] (16) HashAggregate
+[info] Input [6]: [transaction_date#22, city#84, category#131, count#381L, sum#382L, sum#383L]
+[info] Keys [3]: [transaction_date#22, city#84, category#131]
+[info] Functions [3]: [count(1), sum(quantity#20), sum(revenue#221)]
+[info] Aggregate Attributes [3]: [count(1)#369L, sum(quantity#20)#370L, sum(revenue#221)#371L]
+[info] Results [6]: [transaction_date#22, city#84, category#131, count(1)#369L AS transaction_count#353L, sum(quantity#20)#370L AS units_sold#354L, sum(revenue#221)#371L AS total_revenue#355L]
+[info] (17) Exchange
+[info] Input [6]: [transaction_date#22, city#84, category#131, transaction_count#353L, units_sold#354L, total_revenue#355L]
+[info] Arguments: rangepartitioning(transaction_date#22 ASC NULLS FIRST, total_revenue#355L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=1506]
+[info] (18) Sort
+[info] Input [6]: [transaction_date#22, city#84, category#131, transaction_count#353L, units_sold#354L, total_revenue#355L]
+[info] Arguments: [transaction_date#22 ASC NULLS FIRST, total_revenue#355L DESC NULLS LAST], true, 0
+[info] (19) AdaptiveSparkPlan
+[info] Output [6]: [transaction_date#22, city#84, category#131, transaction_count#353L, units_sold#354L, total_revenue#355L]
+[info] Arguments: isFinalPlan=false
+[info] ==============================================
+[info] DAY 22 COMPLETED SUCCESSFULLY
+[info] ==============================================
+[success] Total time: 26 s, completed Sep 26, 2026, 1:10:57 PM
