@@ -7,6 +7,7 @@ case class BranchRisk(branchName: String, riskLevel: String)
 
 object Day27 {
   private val Port = 9998
+
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("Day 27 - Real-Time Banking Project").setMaster("local[4]")
     val ssc = new StreamingContext(conf, Seconds(5))
@@ -32,48 +33,65 @@ object Day27 {
     val accountTotals = transactions.map(t => (t.accountId, t.amount)).reduceByKey(_ + _)
     accountTotals.foreachRDD { (rdd, time) =>
       if (!rdd.isEmpty()) {
-        println("\nACCOUNT TOTALS - " + time)
-        rdd.sortByKey().collect().foreach { case (account, total) => println(f"$account -> $total%.2f") }
+        println("\n----------------------------------------------")
+        println("ACCOUNT TOTALS - " + time)
+        rdd.sortByKey().collect().foreach { case (account, total) =>
+          println(f"$account -> $total%.2f")
+        }
+        println("----------------------------------------------")
       }
     }
 
-    val suspiciousBursts = transactions.map(t => (t.accountId, 1))
+    val suspiciousBursts = transactions
+      .map(t => (t.accountId, 1))
       .reduceByKeyAndWindow((a: Int, b: Int) => a + b, Seconds(20), Seconds(10))
       .filter { case (_, count) => count >= 3 }
 
     suspiciousBursts.foreachRDD { (rdd, time) =>
       if (!rdd.isEmpty()) {
-        println("\nSUSPICIOUS BURST ALERT - " + time)
+        println("\n----------------------------------------------")
+        println("SUSPICIOUS BURST ALERT - " + time)
         rdd.sortByKey().collect().foreach { case (account, count) =>
           println("BURST ALERT: " + account + " -> " + count + " transactions in window")
         }
+        println("----------------------------------------------")
       }
     }
 
-    val branchRiskPair = ssc.sparkContext.parallelize(branchRiskBroadcast.value.toSeq)
+    val branchRiskPair = ssc.sparkContext
+      .parallelize(branchRiskBroadcast.value.toSeq)
       .partitionBy(new HashPartitioner(4))
       .persist(StorageLevel.MEMORY_ONLY)
 
     val enrichedTransactions = transactions.transform { rdd =>
       val transactionPairs = rdd.map(t => (t.branchId, t)).partitionBy(new HashPartitioner(4))
-      transactionPairs.join(branchRiskPair).map { case (branchId, (tx, risk)) => (branchId, tx, risk) }
+      transactionPairs.join(branchRiskPair).map {
+        case (branchId, (tx, risk)) => (branchId, tx, risk)
+      }
     }
 
     enrichedTransactions.foreachRDD { (rdd, time) =>
       if (!rdd.isEmpty()) {
-        println("\nBRANCH/RISK ENRICHMENT - " + time)
+        println("\n----------------------------------------------")
+        println("BRANCH/RISK ENRICHMENT - " + time)
         rdd.collect().sortBy(_._2.transactionId).foreach { case (branchId, tx, risk) =>
-          println(tx.transactionId + " | account=" + tx.accountId +
-            " | amount=" + "%.2f".format(tx.amount) +
+          val amount = "%.2f".format(tx.amount)
+          println(tx.transactionId + " | account=" + tx.accountId + " | amount=" + amount +
             " | branch=" + branchId + " (" + risk.branchName + ") | risk=" + risk.riskLevel)
         }
+        println("----------------------------------------------")
       }
     }
 
+    println("==============================================")
     println("DAY 27 - REAL-TIME BANKING PROJECT")
-    println("Batch interval: 5 seconds | Window: 20 seconds | Slide: 10 seconds")
-    println("Socket server: localhost:" + Port)
+    println("==============================================")
+    println("Batch interval : 5 seconds")
+    println("Window size    : 20 seconds")
+    println("Slide interval : 10 seconds")
+    println("Socket server  : localhost:" + Port)
     println("Suspicious burst threshold: >= 3 transactions/account/window")
+    println()
 
     ssc.start()
     println("StreamingContext started.")
