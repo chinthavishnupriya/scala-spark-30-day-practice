@@ -1,0 +1,9 @@
+booking_id,customer_id,hotel,city,room_type,nights,amount,booking_date
+B001,C101,Grand Palace,Hyderabad,Deluxe,2,12000,2026-09-20
+B002,C102,Lake View Resort,Hyderabad,Suite,3,18000,2026-09-20
+B003,C103,City Inn,Bengaluru,Standard,1,4500,2026-09-21
+B004,C104,Grand Palace,Hyderabad,Standard,2,9000,2026-09-21
+B005,C105,Beach Resort,Goa,Deluxe,4,28000,2026-09-22
+B006,C106,Lake View Resort,Hyderabad,Standard,2,11000,2026-09-22
+B007,C107,City Inn,Bengaluru,Deluxe,3,13500,2026-09-23
+B008,C108,Beach Resort,Goa,Suite,2,16000,2026-09-23
