@@ -436,3 +436,164 @@ cat input/sample-vitals.txt
 ## Result
 
 Day 26 successfully demonstrates a real-time healthcare monitoring workflow using Spark Streaming. The implementation processes patient vital events, broadcasts threshold configuration, detects abnormal readings, counts abnormal records with an accumulator, and identifies repeated abnormal readings using a sliding window.
+
+
+## 26. Detailed Execution Workflow
+
+### Step 1 — Navigate to the project
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-26-Real-Time-Healthcare-Project
+```
+
+### Step 2 — Compile
+
+```bash
+sbt clean compile
+```
+
+Successful compilation ends with `[success]`.
+
+### Step 3 — Start the TCP server
+
+In Terminal 1:
+
+```bash
+nc -lk 9999
+```
+
+Keep this terminal open.
+
+### Step 4 — Start Spark Streaming
+
+In Terminal 2:
+
+```bash
+rm -rf output/checkpoint
+sbt run 2>&1 | tee output/day26-execution-output.txt
+```
+
+### Step 5 — Send sample events
+
+Paste the records from `input/sample-vitals.txt` into the running netcat terminal.
+
+### Step 6 — Verify alerts
+
+Check the Spark terminal for immediate abnormal alerts and the repeated P002 alert.
+
+### Step 7 — Stop the application
+
+Use `Ctrl+C` in the Spark terminal after the required output has been captured.
+
+## 27. Useful Inspection Commands
+
+Show the source:
+
+```bash
+sed -n '1,260p' src/main/scala/Day26.scala
+```
+
+Show the copied source:
+
+```bash
+diff -u src/main/scala/Day26.scala code/Day26.scala
+```
+
+Show sample input:
+
+```bash
+cat input/sample-vitals.txt
+```
+
+Show saved execution output:
+
+```bash
+cat output/day26-execution-output.txt
+```
+
+Search for abnormal alerts:
+
+```bash
+grep 'ALERT:' output/day26-execution-output.txt
+```
+
+Search for the repeated alert:
+
+```bash
+grep 'REPEATED ALERT' output/day26-execution-output.txt
+```
+
+Search for the accumulator result:
+
+```bash
+grep 'Total abnormal records' output/day26-execution-output.txt
+```
+
+Check project files:
+
+```bash
+find . -maxdepth 3 -type f | sort
+```
+
+## 28. Git Verification
+
+Check uncommitted changes:
+
+```bash
+git status --short
+```
+
+View the latest commits:
+
+```bash
+git log --oneline -5
+```
+
+Review the Day 26 changes:
+
+```bash
+git diff HEAD -- Day-26-Real-Time-Healthcare-Project
+```
+
+After committing, push with:
+
+```bash
+git push origin main
+```
+
+## 29. Learning Summary
+
+This exercise connects several Spark concepts in one streaming pipeline:
+
+1. A socket provides continuously arriving records.
+2. Spark converts the input into micro-batches.
+3. `flatMap` validates and creates structured patient events.
+4. A broadcast variable distributes threshold configuration.
+5. `filter` identifies abnormal readings.
+6. An accumulator counts abnormal records for the demonstration.
+7. Persistence allows the abnormal stream to feed multiple consumers.
+8. `reduceByKeyAndWindow` counts repeated abnormal readings.
+9. Checkpointing supports recovery for the windowed streaming computation.
+10. Spark's partitioned execution and lineage provide the basis for distributed processing and recomputation.
+
+## 30. Production Extension Ideas
+
+The local project intentionally uses a simple TCP socket and DStreams for practice. A production-oriented healthcare pipeline could extend the design with:
+
+- Durable event ingestion
+- Structured Streaming
+- Secure transport
+- Authentication and authorization
+- Durable databases
+- Alert delivery services
+- Monitoring and observability
+- Data validation and schema evolution
+- Access auditing
+- Retention and privacy controls
+- High-availability deployment
+
+These are architectural extensions rather than requirements of the local Day 26 demonstration.
+
+## Final Status
+
+Implementation, compilation, runtime validation, sample input, execution output, command documentation, and troubleshooting documentation are complete. Screenshots remain separate and are intentionally not included in this documentation update.
