@@ -217,6 +217,59 @@ Day-28-Real-Time-Booking-Project/
 └── troubleshooting/README.md
 ```
 
+## Verification Results
+
+The Day 28 implementation was compiled and executed successfully with the supplied sample events.
+
+Verified during runtime:
+
+- StreamingContext started with a 5-second micro-batch interval.
+- 20-second booking window with a 10-second slide produced rolling booking counts.
+- Stateful BOOK/CANCEL processing produced the expected cumulative route state.
+- Broadcast route reference data was used for capacity and mode enrichment.
+- Spark SQL produced occupancy and availability reports.
+- Execution output was captured in `output/day28-execution-output.txt`.
+- Six execution screenshots were captured under `screenshots/`.
+
+Final cumulative state observed:
+
+| Route | Booked | Cancelled | Occupied | Available | Occupancy |
+|---|---:|---:|---:|---:|---:|
+| R001 | 5 | 1 | 4 | 36 | 10.00% |
+| R002 | 4 | 0 | 4 | 46 | 8.00% |
+| R003 | 2 | 0 | 2 | 43 | 4.44% |
+
+The rolling window reached:
+
+```text
+R001 -> 3 bookings
+R002 -> 2 bookings
+R003 -> 1 booking
+```
+
+The first observed window can contain fewer events when events arrive across micro-batch/window boundaries; this is expected for a live socket stream.
+
+### Execution Evidence
+
+```text
+output/
+└── day28-execution-output.txt
+
+screenshots/
+├── 01-compilation-success.png
+├── 02-streaming-started.png
+├── 03-rolling-booking-count.png
+├── 04-stateful-booking-report.png
+├── 05-spark-sql-report.png
+└── 06-complete-execution.png
+```
+
+### Local Execution Notes
+
+The project intentionally runs with `local[4]` and a localhost TCP socket for practice. Single-node Spark may print block-replication warnings because there are no peer executors; these warnings did not prevent the application from processing the sample events or producing the required reports.
+
+For larger workloads, avoid `collect()` on large RDDs and `show(false)` on unbounded result sets. A production deployment should use a durable distributed streaming source and an appropriate state-management/recovery design.
+
 ## Status
 
-**Implementation prepared. Runtime verification pending.**
+**Day 28 complete — implementation, compilation, runtime verification, output capture, and execution screenshots completed.**
