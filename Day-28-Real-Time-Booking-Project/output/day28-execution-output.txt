@@ -1,0 +1,286 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-28-Real-Time-Booking-Project/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Day-28-Real-Time-Booking-Project (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-28-Real-Time-Booking-Project/)
+[info] running (fork) Day28 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/28 04:19:21 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/28 04:19:21 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/28 04:19:21 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/28 04:19:21 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/28 04:19:21 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/28 04:19:21 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/28 04:19:22 INFO ResourceUtils: ==============================================================
+[error] 26/09/28 04:19:22 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/28 04:19:22 INFO ResourceUtils: ==============================================================
+[error] 26/09/28 04:19:22 INFO SparkContext: Submitted application: Day 28 - Real-Time Booking Project
+[error] 26/09/28 04:19:22 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/28 04:19:22 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/28 04:19:22 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/28 04:19:22 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/28 04:19:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/28 04:19:22 INFO Utils: Successfully started service 'sparkDriver' on port 38141.
+[error] 26/09/28 04:19:22 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/28 04:19:22 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/28 04:19:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/28 04:19:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/28 04:19:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/28 04:19:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-bae8827e-9156-422d-a81d-3f9f453d17b0
+[error] 26/09/28 04:19:23 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/28 04:19:23 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/28 04:19:24 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/28 04:19:24 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/28 04:19:24 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/28 04:19:24 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/28 04:19:24 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/28 04:19:24 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/28 04:19:24 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/28 04:19:24 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/28 04:19:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/28 04:19:24 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/28 04:19:24 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/28 04:19:24 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/28 04:19:24 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/28 04:19:24 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/28 04:19:24 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@480b57e2 for default.
+[error] 26/09/28 04:19:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33897.
+[error] 26/09/28 04:19:24 INFO NettyBlockTransferService: Server created on 10.255.255.254:33897
+[error] 26/09/28 04:19:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/28 04:19:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 33897, None)
+[error] 26/09/28 04:19:24 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:33897 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 33897, None)
+[error] 26/09/28 04:19:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 33897, None)
+[error] 26/09/28 04:19:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 33897, None)
+[error] 26/09/28 04:19:26 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+[info] ==============================================
+[info] DAY 28 - REAL-TIME BOOKING PROJECT
+[info] ==============================================
+[info] Batch interval : 5 seconds
+[info] Window size    : 20 seconds
+[info] Slide interval : 10 seconds
+[info] Socket server  : localhost:9997
+[info] State model    : cumulative BOOK/CANCEL seats by route
+[info] Reference data : broadcast route capacity/mode
+[info] Reporting      : Spark SQL
+[info] StreamingContext started.
+[info] Send booking events to port 9997.
+[info] Press Ctrl+C to stop.
+[error] 26/09/28 04:19:54 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+[error] 26/09/28 04:19:54 WARN BlockManager: Block input-0-1790569194000 replicated to only 0 peer(s) instead of 1 peers
+[info] ----------------------------------------------
+[info] ROLLING BOOKING COUNT - 1790569195000 ms
+[error] 26/09/28 04:19:55 WARN RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+[error] 26/09/28 04:19:55 WARN BlockManager: Block input-0-1790569195400 replicated to only 0 peer(s) instead of 1 peers
+[info] R001 -> 3 bookings in 20 seconds
+[info] R002 -> 1 bookings in 20 seconds
+[info] R003 -> 1 bookings in 20 seconds
+[info] ----------------------------------------------
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569195000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |3          |0             |3            |47            |6.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569200000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ----------------------------------------------
+[info] ROLLING BOOKING COUNT - 1790569205000 ms
+[info] R001 -> 3 bookings in 20 seconds
+[info] R002 -> 2 bookings in 20 seconds
+[info] R003 -> 1 bookings in 20 seconds
+[info] ----------------------------------------------
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569205000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569210000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ----------------------------------------------
+[info] ROLLING BOOKING COUNT - 1790569215000 ms
+[info] R002 -> 1 bookings in 20 seconds
+[info] ----------------------------------------------
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569215000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569220000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569225000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569230000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569235000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569240000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569245000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569250000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569255000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569260000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569265000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569270000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569275000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569280000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569285000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] ==============================================
+[info] SPARK SQL BOOKING REPORT - 1790569290000 ms
+[info] ==============================================
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |routeId|routeName           |mode |capacity|bookedSeats|cancelledSeats|occupiedSeats|availableSeats|occupancyPercent|
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
+[info] |R001   |Hyderabad-Warangal  |BUS  |40      |5          |1             |4            |36            |10.00           |
+[info] |R002   |Hyderabad-Vijayawada|BUS  |50      |4          |0             |4            |46            |8.00            |
+[info] |R003   |Hyderabad-Tirupati  |TRAIN|45      |2          |0             |2            |43            |4.44            |
+[info] +-------+--------------------+-----+--------+-----------+--------------+-------------+--------------+----------------+
