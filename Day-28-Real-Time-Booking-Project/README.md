@@ -273,3 +273,302 @@ For larger workloads, avoid `collect()` on large RDDs and `show(false)` on unbou
 ## Status
 
 **Day 28 complete — implementation, compilation, runtime verification, output capture, and execution screenshots completed.**
+
+## Detailed Architecture
+
+The project is organized as a small real-time booking pipeline:
+
+```text
+Booking Events
+     |
+     v
+TCP Socket :9997
+     |
+     v
+5-second DStream batches
+     |
+     +-------------------------+--------------------------+
+     |                         |                          |
+     v                         v                          v
+Event validation        Stateful Pair RDD          BOOK-only Pair RDD
+     |                         |                          |
+     |                         v                          v
+     |                  updateStateByKey          reduceByKeyAndWindow
+     |                         |                          |
+     |                         v                          v
+     |                  Route state                 20s / 10s window
+     |                         |                          |
+     +-------------------------+--------------------------+
+                               |
+                               v
+                    Broadcast route reference
+                               |
+                               v
+                         Spark SQL report
+```
+
+## Event Processing Rules
+
+Every input record is expected to contain:
+
+```text
+bookingId,customerId,eventType,timestamp,routeId,seats
+```
+
+The parser accepts only records with six fields, an event type of BOOK or CANCEL, and a positive integer seat count. Invalid records are ignored.
+
+BOOK events contribute to both cumulative booking state and the rolling booking-event window. CANCEL events contribute to cumulative cancellation state but are excluded from the BOOK-only rolling count.
+
+## State Calculation
+
+For each route, the application maintains two cumulative values:
+
+```text
+bookedSeats
+cancelledSeats
+```
+
+The derived values are:
+
+```text
+occupiedSeats = max(0, bookedSeats - cancelledSeats)
+availableSeats = max(0, capacity - occupiedSeats)
+```
+
+Example:
+
+```text
+R001
+bookedSeats    = 5
+cancelledSeats = 1
+capacity       = 40
+
+occupiedSeats  = max(0, 5 - 1) = 4
+availableSeats = max(0, 40 - 4) = 36
+```
+
+## Window Calculation
+
+The rolling booking stream filters for BOOK events and maps each event to:
+
+```text
+(routeId, 1)
+```
+
+`reduceByKeyAndWindow` then aggregates the number of booking events per route over a 20-second window with a 10-second slide.
+
+Important distinction:
+
+- The rolling count measures booking events in the current window.
+- The stateful report measures cumulative booked and cancelled seats.
+- The two values therefore answer different questions and should not be expected to be identical.
+
+## Broadcast Reference Data
+
+The route metadata is small and read-only during the practice run, so it is placed in a Spark broadcast variable.
+
+Broadcast data supplies:
+
+- Route name
+- Capacity
+- Transport mode
+
+This avoids treating the small reference map as a normal repeated dependency for every state record.
+
+## Spark SQL Reporting Flow
+
+For each non-empty state RDD, the application:
+
+1. Reads the current route state.
+2. Looks up route metadata from the broadcast variable.
+3. Builds report rows.
+4. Converts the rows into a DataFrame.
+5. Creates the temporary view `booking_report`.
+6. Executes a SQL query.
+7. Calculates `occupancyPercent`.
+8. Orders the report by route ID.
+9. Displays the result.
+
+The occupancy formula is:
+
+```text
+occupancyPercent = (occupiedSeats * 100) / capacity
+```
+
+## Transformations and Actions
+
+### Transformations
+
+- `flatMap` parses and validates socket records.
+- `map` converts events into state-update pairs.
+- `filter` selects BOOK events for the rolling stream.
+- `map` converts BOOK events into `(routeId, 1)` pairs.
+- `reduceByKeyAndWindow` performs keyed window aggregation.
+- `updateStateByKey` maintains cumulative state.
+- RDD `map` enriches state with broadcast reference data.
+
+### Actions / Output Operations
+
+- `foreachRDD` processes each generated RDD.
+- `isEmpty()` checks whether a result contains records.
+- `collect()` retrieves the tiny rolling result for display.
+- `show(false)` displays the small Spark SQL report.
+
+`collect()` is appropriate here only because the demonstration dataset is intentionally small.
+
+## Partitioning and Shuffle Boundaries
+
+The project uses `local[4]`, giving Spark four local execution threads for the practice run.
+
+Key-based operations such as `reduceByKeyAndWindow` and stateful keyed processing require data to be grouped by route key. These operations can therefore introduce shuffle or state-management work.
+
+The project does not hard-code a production partition count because the correct number depends on input volume, key distribution, executor resources, and cluster configuration.
+
+## Performance Considerations
+
+For this educational project:
+
+- The broadcast route map is small.
+- The sample output is small enough for driver-side display.
+- `local[4]` is sufficient for local testing.
+- The checkpoint directory supports streaming recovery state.
+
+For larger workloads:
+
+- Avoid collecting large RDDs to the driver.
+- Tune partitions according to workload and cluster resources.
+- Use a durable distributed streaming source.
+- Define state retention and recovery requirements.
+- Monitor processing time, batch duration, input rate, and scheduling delay.
+
+## Test Cases
+
+### Test 1 — BOOK event
+
+Input:
+
+```text
+BK001,C001,BOOK,10:00:01,R001,2
+```
+
+Expected effect:
+
+```text
+R001 bookedSeats increases by 2.
+R001 cancelledSeats is unchanged.
+```
+
+### Test 2 — CANCEL event
+
+Input:
+
+```text
+BK005,C001,CANCEL,10:00:09,R001,1
+```
+
+Expected effect:
+
+```text
+R001 cancelledSeats increases by 1.
+Occupied seats are reduced through the derived state calculation.
+```
+
+### Test 3 — Invalid event type
+
+Input:
+
+```text
+BK008,C007,RESERVE,10:00:15,R001,1
+```
+
+Expected effect:
+
+```text
+The record is ignored.
+```
+
+### Test 4 — Invalid seat count
+
+Input:
+
+```text
+BK009,C008,BOOK,10:00:16,R001,-1
+```
+
+Expected effect:
+
+```text
+The record is ignored.
+```
+
+## Sample Execution Interpretation
+
+The verified execution demonstrated that the application starts the streaming context, receives socket events, produces rolling counts, maintains cumulative state, and generates Spark SQL reports.
+
+The first rolling window may show fewer events than a later window because the socket events are received according to actual micro-batch timing. A later complete window produced the expected sample counts.
+
+## Reproducibility
+
+To reproduce the practical from a clean state:
+
+```bash
+cd ~/scala-spark-30-day-practice/Day-28-Real-Time-Booking-Project
+rm -rf output/checkpoint
+sbt clean compile
+```
+
+Start the socket in one terminal:
+
+```bash
+nc -lk 9997
+```
+
+Start Spark in another terminal:
+
+```bash
+mkdir -p output
+sbt run 2>&1 | tee output/day28-execution-output.txt
+```
+
+Paste the sample events into the socket terminal.
+
+## Learning Outcomes
+
+After completing Day 28, the practical demonstrates understanding of:
+
+- Real-time DStream input.
+- Micro-batch processing.
+- Stateful stream aggregation.
+- Pair RDD operations.
+- Windowed aggregation.
+- Broadcast variables.
+- DataFrame creation from RDD data.
+- Spark SQL temporary views.
+- Occupancy and availability calculations.
+- Checkpointing concepts.
+- Local Spark execution and troubleshooting.
+
+## Evidence Included in Repository
+
+The completed project contains source code, sample input, build configuration, commands, troubleshooting notes, runtime output, and execution screenshots.
+
+```text
+Day-28-Real-Time-Booking-Project/
+├── build.sbt
+├── .jvmopts
+├── project/build.properties
+├── input/sample-booking-events.txt
+├── src/main/scala/Day28.scala
+├── code/Day28.scala
+├── COMMANDS.md
+├── README.md
+├── troubleshooting/README.md
+├── output/day28-execution-output.txt
+└── screenshots/
+    ├── 01-compilation-success.png
+    ├── 02-streaming-started.png
+    ├── 03-rolling-booking-count.png
+    ├── 04-stateful-booking-report.png
+    ├── 05-spark-sql-report.png
+    └── 06-complete-execution.png
+```
