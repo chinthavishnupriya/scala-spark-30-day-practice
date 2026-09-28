@@ -1,0 +1,13 @@
+target/
+project/target/
+project/project/
+.metals/
+.bloop/
+.idea/
+.vscode/
+*.class
+*.log
+output/checkpoint/
+spark-warehouse/
+metastore_db/
+derby.log
