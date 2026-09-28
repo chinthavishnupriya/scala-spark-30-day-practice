@@ -11,7 +11,9 @@ Build an end-to-end Spark batch pipeline using the required flow: Raw → Clean 
 - Joins and analytical window function
 - Partitioning and persistence
 - Shuffle, stage, DAG, and optimization discussion
+- Production considerations
 - Production-style documentation and architecture
+- Execution evidence and verification
 
 ## Architecture
 
@@ -68,6 +70,27 @@ Important shuffle-producing or shuffle-prone operations are reduceByKey, reparti
 - No forced broadcast join is used; Spark can choose a join strategy from statistics and configuration.
 - Driver-side collect is restricted to a tiny already-aggregated result.
 
+## Production Considerations
+
+For production deployment, replace local CSV paths with durable object storage or HDFS, define explicit schemas instead of relying on inferSchema, validate malformed records and nulls, and configure partitions from measured data volume and cluster resources. Avoid collecting non-trivial datasets to the driver. Monitor Spark UI stages, shuffle read/write, task skew, executor memory, and cache usage. For genuinely small reference data, a broadcast join can reduce shuffle. Add data-quality checks, structured logging, retry/alerting, access controls, and externalized configuration before deployment.
+
+## Execution Evidence
+
+The successful Day 29 run verified:
+- Raw orders: 12
+- Products: 5
+- Customers: 4
+- Clean completed orders: 11
+- Enriched rows: 11
+- Pair RDD revenue: CARD ₹7100.00, CASH ₹800.00, UPI ₹4600.00
+- Customer revenue: C001 ₹4600.00, C002 ₹3800.00, C003 ₹1200.00, C004 ₹2900.00
+- Window ranking completed for all 11 completed orders
+- Category summary: Electronics ₹7400.00 and Stationery ₹5100.00
+- Formatted physical plan printed with Exchange, broadcast, persistence, and partitioning evidence
+- Successful runtime completed in approximately 32 seconds in the local WSL practice environment
+
+Execution screenshots are stored under the screenshots/ directory.
+
 ## Expected Sample Results
 Completed-order revenue by payment method:
 
@@ -98,17 +121,17 @@ Evidence capture:
     sbt run 2>&1 | tee output/day29-execution-output.txt
 
 ## Verification Checklist
-- [ ] Compilation succeeds.
-- [ ] Raw counts appear.
-- [ ] Clean order count appears.
-- [ ] Pair RDD payment revenue appears.
-- [ ] Customer DataFrame summary appears.
-- [ ] Window ranking appears.
-- [ ] Category summary appears.
-- [ ] Physical plan appears.
-- [ ] Runtime output is saved.
-- [ ] Execution screenshots are captured.
-- [ ] Git working tree is clean after committing evidence.
+- [x] Compilation succeeds.
+- [x] Raw counts appear.
+- [x] Clean order count appears.
+- [x] Pair RDD payment revenue appears.
+- [x] Customer DataFrame summary appears.
+- [x] Window ranking appears.
+- [x] Category summary appears.
+- [x] Physical plan appears.
+- [x] Runtime output was generated and inspected locally.
+- [x] Execution screenshots are captured.
+- [x] Git working tree is clean after committing evidence.
 
 ## Project Structure
 
