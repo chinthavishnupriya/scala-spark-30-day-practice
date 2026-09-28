@@ -14,6 +14,17 @@ Verify Java, Scala, and sbt versions:
 
 Expected versions are Java 17, Scala 2.13.18, sbt 1.10.11, and Spark 4.2.0.
 
+## Java 17 ZoneInfo Access Error
+
+If runtime fails with an exception mentioning IllegalAccessException, sun.util.calendar.ZoneInfo, or SparkDateTimeUtils.toJavaDate, verify that build.sbt contains:
+
+    "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED"
+
+This option was required by the successful local Java 17 / Spark 4.2.0 Day 29 run for date processing. After changing the build configuration, rerun:
+
+    sbt clean compile
+    sbt run
+
 ## Input Path
 
 The program expects:
@@ -83,3 +94,5 @@ After committing:
     git status
 
 The final working tree should be clean.
+
+The runtime output is generated under output/ during execution. The project ignore rules exclude generated output files; committed screenshots preserve the execution evidence.
