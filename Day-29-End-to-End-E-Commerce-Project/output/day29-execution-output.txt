@@ -1,0 +1,482 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to day29-end-to-end-e-commerce (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/)
+[info] running (fork) Day29 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/09/28 04:49:00 WARN Utils: Your hostname, vishnupriya, resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/09/28 04:49:00 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/09/28 04:49:00 INFO SparkContext: Running Spark version 4.2.0
+[error] 26/09/28 04:49:00 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/28 04:49:00 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/28 04:49:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/09/28 04:49:00 INFO ResourceUtils: ==============================================================
+[error] 26/09/28 04:49:00 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/09/28 04:49:00 INFO ResourceUtils: ==============================================================
+[error] 26/09/28 04:49:00 INFO SparkContext: Submitted application: Day 29 - End-to-End E-Commerce Project
+[error] 26/09/28 04:49:00 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/28 04:49:00 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/28 04:49:00 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/28 04:49:00 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/28 04:49:00 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/28 04:49:01 INFO Utils: Successfully started service 'sparkDriver' on port 45945.
+[error] 26/09/28 04:49:01 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/09/28 04:49:01 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/09/28 04:49:01 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/09/28 04:49:01 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/09/28 04:49:01 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/09/28 04:49:01 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6d994f63-6634-4a3d-8e0c-042b3a3d182b
+[error] 26/09/28 04:49:01 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/09/28 04:49:01 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/09/28 04:49:02 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/09/28 04:49:02 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/09/28 04:49:02 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/09/28 04:49:02 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/09/28 04:49:02 INFO SecurityManager: Changing view acls to: vishnupriya
+[error] 26/09/28 04:49:02 INFO SecurityManager: Changing modify acls to: vishnupriya
+[error] 26/09/28 04:49:02 INFO SecurityManager: Changing view acls groups to: vishnupriya
+[error] 26/09/28 04:49:02 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+[error] 26/09/28 04:49:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+[error] 26/09/28 04:49:02 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/09/28 04:49:02 INFO Executor: Running Spark version 4.2.0
+[error] 26/09/28 04:49:02 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/09/28 04:49:02 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+[error] 26/09/28 04:49:02 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/09/28 04:49:02 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3120495d for default.
+[error] 26/09/28 04:49:02 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33047.
+[error] 26/09/28 04:49:02 INFO NettyBlockTransferService: Server created on 10.255.255.254:33047
+[error] 26/09/28 04:49:02 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/09/28 04:49:02 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 33047, None)
+[error] 26/09/28 04:49:02 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:33047 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 33047, None)
+[error] 26/09/28 04:49:02 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 33047, None)
+[error] 26/09/28 04:49:02 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 33047, None)
+[info] ==============================================
+[info] DAY 29 - END-TO-END E-COMMERCE PROJECT
+[info] ==============================================
+[info] Raw orders : 12
+[info] Products   : 5
+[info] Customers  : 4
+[info] Clean completed orders: 11
+[info] Enriched rows: 11
+[info] --- Pair RDD: Revenue by Payment Method ---
+[info] CARD   -> ₹7100.00
+[info] CASH   -> ₹800.00
+[info] UPI    -> ₹4600.00
+[info] --- DataFrame: Customer Revenue Summary ---
+[info] +-----------+-------------+------+-----------+-----+-------------+
+[info] |customer_id|customer_name|region|order_count|items|total_revenue|
+[info] +-----------+-------------+------+-----------+-----+-------------+
+[info] |C001       |Asha         |South |4          |7    |4600.0       |
+[info] |C002       |Ravi         |North |3          |5    |3800.0       |
+[info] |C004       |Arun         |West  |3          |4    |2900.0       |
+[info] |C003       |Meena        |East  |1          |4    |1200.0       |
+[info] +-----------+-------------+------+-----------+-----+-------------+
+[info] --- Window: Orders Ranked Within Customer ---
+[info] +--------+-----------+-------------+-------------------+-----------+----------+-------+-------------------+
+[info] |order_id|customer_id|customer_name|product_name       |category   |order_date|revenue|customer_order_rank|
+[info] +--------+-----------+-------------+-------------------+-----------+----------+-------+-------------------+
+[info] |O011    |C001       |Asha         |USB Hub            |Electronics|2026-09-25|1500.0 |1                  |
+[info] |O007    |C001       |Asha         |Mechanical Keyboard|Electronics|2026-09-23|1200.0 |2                  |
+[info] |O001    |C001       |Asha         |Wireless Mouse     |Electronics|2026-09-20|1000.0 |3                  |
+[info] |O003    |C001       |Asha         |Notebook           |Stationery |2026-09-21|900.0  |4                  |
+[info] |O005    |C002       |Ravi         |Backpack           |Stationery |2026-09-22|1600.0 |1                  |
+[info] |O002    |C002       |Ravi         |Mechanical Keyboard|Electronics|2026-09-20|1200.0 |2                  |
+[info] |O010    |C002       |Ravi         |Wireless Mouse     |Electronics|2026-09-24|1000.0 |3                  |
+[info] |O008    |C003       |Meena        |Notebook           |Stationery |2026-09-23|1200.0 |1                  |
+[info] |O006    |C004       |Arun         |USB Hub            |Electronics|2026-09-22|1500.0 |1                  |
+[info] |O009    |C004       |Arun         |Backpack           |Stationery |2026-09-24|800.0  |2                  |
+[info] |O012    |C004       |Arun         |Notebook           |Stationery |2026-09-25|600.0  |3                  |
+[info] +--------+-----------+-------------+-------------------+-----------+----------+-------+-------------------+
+[info] --- Enriched Category Summary ---
+[info] +-----------+------+-------+
+[info] |category   |orders|revenue|
+[info] +-----------+------+-------+
+[info] |Electronics|6     |7400.0 |
+[info] |Stationery |5     |5100.0 |
+[info] +-----------+------+-------+
+[info] --- Physical Plan / Shuffle Inspection ---
+[info] == Physical Plan ==
+[info] AdaptiveSparkPlan (73)
+[info] +- Sort (72)
+[info]    +- Exchange (71)
+[info]       +- HashAggregate (70)
+[info]          +- HashAggregate (69)
+[info]             +- HashAggregate (68)
+[info]                +- HashAggregate (67)
+[info]                   +- InMemoryTableScan (1)
+[info]                         +- InMemoryRelation (2)
+[info]                               +- AdaptiveSparkPlan (66)
+[info]                                  +- == Final Plan ==
+[info]                                     ResultQueryStage (50)
+[info]                                     +- * Project (49)
+[info]                                        +- * BroadcastHashJoin Inner BuildRight (48)
+[info]                                           :- * Project (36)
+[info]                                           :  +- * BroadcastHashJoin Inner BuildRight (35)
+[info]                                           :     :- ShuffleQueryStage (12), Statistics(sizeInBytes=1408.0 B, rowCount=11)
+[info]                                           :     :  +- Exchange (11)
+[info]                                           :     :     +- * Filter (10)
+[info]                                           :     :        +- TableCacheQueryStage (9), Statistics(sizeInBytes=755.0 B, rowCount=11)
+[info]                                           :     :           +- InMemoryTableScan (3)
+[info]                                           :     :                 +- InMemoryRelation (4)
+[info]                                           :     :                       +- * Project (8)
+[info]                                           :     :                          +- * Project (7)
+[info]                                           :     :                             +- * Filter (6)
+[info]                                           :     :                                +- Scan csv  (5)
+[info]                                           :     +- BroadcastQueryStage (34), Statistics(sizeInBytes=8.0 MiB, rowCount=5)
+[info]                                           :        +- BroadcastExchange (33)
+[info]                                           :           +- * Filter (32)
+[info]                                           :              +- TableCacheQueryStage (31), Statistics(sizeInBytes=189.0 B, rowCount=5)
+[info]                                           :                 +- InMemoryTableScan (13)
+[info]                                           :                       +- InMemoryRelation (14)
+[info]                                           :                             +- AdaptiveSparkPlan (30)
+[info]                                        +- == Final Plan ==
+[info]                                           ResultQueryStage (23)
+[info]                                           +- SortAggregate (22)
+[info]                                              +- * Sort (21)
+[info]                                                 +- ShuffleQueryStage (20), Statistics(sizeInBytes=424.0 B, rowCount=5)
+[info]                                                    +- Exchange (19)
+[info]                                                       +- SortAggregate (18)
+[info]                                                          +- * Sort (17)
+[info]                                                             +- * Project (16)
+[info]                                                                +- Scan csv  (15)
+[info]                                        +- == Initial Plan ==
+[info]                                           SortAggregate (29)
+[info]                                           +- Sort (28)
+[info]                                              +- Exchange (27)
+[info]                                                 +- SortAggregate (26)
+[info]                                                    +- Sort (25)
+[info]                                                       +- Project (24)
+[info]                                                          +- Scan csv  (15)
+[info]                                           +- BroadcastQueryStage (47), Statistics(sizeInBytes=8.0 MiB, rowCount=4)
+[info]                                              +- BroadcastExchange (46)
+[info]                                                 +- SortAggregate (45)
+[info]                                                    +- * Sort (44)
+[info]                                                       +- AQEShuffleRead (43), coalesced
+[info]                                                          +- ShuffleQueryStage (42), Statistics(sizeInBytes=288.0 B, rowCount=4)
+[info]                                                             +- Exchange (41)
+[info]                                                                +- SortAggregate (40)
+[info]                                                                   +- * Sort (39)
+[info]                                                                      +- * Filter (38)
+[info]                                                                         +- Scan csv  (37)
+[info]                                  +- == Initial Plan ==
+[info]                                     Project (65)
+[info]                                     +- BroadcastHashJoin Inner BuildRight (64)
+[info]                                        :- Project (56)
+[info]                                        :  +- BroadcastHashJoin Inner BuildRight (55)
+[info]                                        :     :- Exchange (52)
+[info]                                        :     :  +- Filter (51)
+[info]                                        :     :     +- InMemoryTableScan (3)
+[info]                                        :     :           +- InMemoryRelation (4)
+[info]                                        :     :                 +- * Project (8)
+[info]                                        :     :                    +- * Project (7)
+[info]                                        :     :                       +- * Filter (6)
+[info]                                        :     :                          +- Scan csv  (5)
+[info]                                        :     +- BroadcastExchange (54)
+[info]                                        :        +- Filter (53)
+[info]                                        :           +- InMemoryTableScan (13)
+[info]                                        :                 +- InMemoryRelation (14)
+[info]                                        :                       +- AdaptiveSparkPlan (30)
+[info]                               +- == Final Plan ==
+[info]                                  ResultQueryStage (23)
+[info]                                  +- SortAggregate (22)
+[info]                                     +- * Sort (21)
+[info]                                        +- ShuffleQueryStage (20), Statistics(sizeInBytes=424.0 B, rowCount=5)
+[info]                                           +- Exchange (19)
+[info]                                              +- SortAggregate (18)
+[info]                                                 +- * Sort (17)
+[info]                                                    +- * Project (16)
+[info]                                                       +- Scan csv  (15)
+[info]                               +- == Initial Plan ==
+[info]                                  SortAggregate (29)
+[info]                                  +- Sort (28)
+[info]                                     +- Exchange (27)
+[info]                                        +- SortAggregate (26)
+[info]                                           +- Sort (25)
+[info]                                              +- Project (24)
+[info]                                                 +- Scan csv  (15)
+[info]                                        +- BroadcastExchange (63)
+[info]                                           +- SortAggregate (62)
+[info]                                              +- Sort (61)
+[info]                                                 +- Exchange (60)
+[info]                                                    +- SortAggregate (59)
+[info]                                                       +- Sort (58)
+[info]                                                          +- Filter (57)
+[info]                                                             +- Scan csv  (37)
+[info] (1) InMemoryTableScan
+[info] Output [6]: [customer_id#18, order_id#17, quantity#93, revenue#97, customer_name#63, region#64]
+[info] Arguments: [customer_id#18, order_id#17, quantity#93, revenue#97, customer_name#63, region#64]
+[info] (2) InMemoryRelation
+[info] Arguments: [customer_id#18, product_id#19, order_id#17, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392, customer_name#63, region#64], StorageLevel(disk, memory, deserialized, 1 replicas)
+[info] (3) InMemoryTableScan
+[info] Output [9]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97]
+[info] Arguments: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97], [isnotnull(product_id#19), isnotnull(customer_id#18)]
+[info] (4) InMemoryRelation
+[info] Arguments: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97], StorageLevel(disk, memory, deserialized, 1 replicas)
+[info] (5) Scan csv 
+[info] Output [8]: [order_id#17, customer_id#18, product_id#19, order_date#20, quantity#21, unit_price#22, payment_method#23, status#24]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/vishnupriya/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/input/orders.csv]
+[info] PushedFilters: [IsNotNull(quantity), IsNotNull(unit_price), IsNotNull(order_id), IsNotNull(customer_id), IsNotNull(product_id), IsNotNull(order_date), GreaterThan(quantity,0), GreaterThan(unit_price,0)]
+[info] ReadSchema: struct<order_id:string,customer_id:string,product_id:string,order_date:date,quantity:int,unit_price:int,payment_method:string,status:string>
+[info] (6) Filter [codegen id : 1]
+[info] Input [8]: [order_id#17, customer_id#18, product_id#19, order_date#20, quantity#21, unit_price#22, payment_method#23, status#24]
+[info] Condition : ((((((((isnotnull(quantity#21) AND isnotnull(unit_price#22)) AND isnotnull(order_id#17)) AND isnotnull(customer_id#18)) AND isnotnull(product_id#19)) AND isnotnull(order_date#20)) AND (quantity#21 > 0)) AND (unit_price#22 > 0)) AND (upper(trim(status#24, None)) = COMPLETED))
+[info] (7) Project [codegen id : 1]
+[info] Output [8]: [order_id#17, customer_id#18, product_id#19, order_date#20, quantity#21, cast(unit_price#22 as double) AS unit_price#94, upper(trim(payment_method#23, None)) AS payment_method#95, upper(trim(status#24, None)) AS status#96]
+[info] Input [8]: [order_id#17, customer_id#18, product_id#19, order_date#20, quantity#21, unit_price#22, payment_method#23, status#24]
+[info] (8) Project [codegen id : 1]
+[info] Output [9]: [order_id#17, customer_id#18, product_id#19, order_date#20, quantity#21, unit_price#94, payment_method#95, status#96, round((cast(quantity#21 as double) * unit_price#94), 2) AS revenue#97]
+[info] Input [8]: [order_id#17, customer_id#18, product_id#19, order_date#20, quantity#21, unit_price#94, payment_method#95, status#96]
+[info] (9) TableCacheQueryStage
+[info] Output [9]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97]
+[info] Arguments: 0
+[info] (10) Filter [codegen id : 2]
+[info] Input [9]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97]
+[info] Condition : (isnotnull(product_id#19) AND isnotnull(customer_id#18))
+[info] (11) Exchange
+[info] Input [9]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97]
+[info] Arguments: hashpartitioning(customer_id#18, 4), REPARTITION_BY_NUM, [plan_id=438]
+[info] (12) ShuffleQueryStage
+[info] Output [9]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97]
+[info] Arguments: 3
+[info] (13) InMemoryTableScan
+[info] Output [3]: [product_id#42, product_name#43, category#392]
+[info] Arguments: [product_id#42, product_name#43, category#392], [isnotnull(product_id#42)]
+[info] (14) InMemoryRelation
+[info] Arguments: [product_id#42, product_name#43, category#392], StorageLevel(disk, memory, deserialized, 1 replicas)
+[info] (15) Scan csv 
+[info] Output [3]: [product_id#42, product_name#43, category#44]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/vishnupriya/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/input/products.csv]
+[info] ReadSchema: struct<product_id:string,product_name:string,category:string>
+[info] (16) Project [codegen id : 1]
+[info] Output [3]: [product_id#42, product_name#43, UDF(category#44) AS category#392]
+[info] Input [3]: [product_id#42, product_name#43, category#44]
+[info] (17) Sort [codegen id : 1]
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (18) SortAggregate
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Keys [1]: [product_id#42]
+[info] Functions [2]: [partial_first(product_name#43, false), partial_first(category#392, false)]
+[info] Aggregate Attributes [4]: [first#400, valueSet#401, first#402, valueSet#403]
+[info] Results [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] (19) Exchange
+[info] Input [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] Arguments: hashpartitioning(product_id#42, 200), ENSURE_REQUIREMENTS, [plan_id=384]
+[info] (20) ShuffleQueryStage
+[info] Output [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] Arguments: 0
+[info] (21) Sort [codegen id : 2]
+[info] Input [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (22) SortAggregate
+[info] Input [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] Keys [1]: [product_id#42]
+[info] Functions [2]: [first(product_name#43, false), first(category#392, false)]
+[info] Aggregate Attributes [2]: [first(product_name#43)()#396, first(category#392)()#398]
+[info] Results [3]: [product_id#42, first(product_name#43)()#396 AS product_name#397, first(category#392)()#398 AS category#399]
+[info] (23) ResultQueryStage
+[info] Output [3]: [product_id#42, product_name#397, category#399]
+[info] Arguments: 1
+[info] (24) Project
+[info] Output [3]: [product_id#42, product_name#43, UDF(category#44) AS category#392]
+[info] Input [3]: [product_id#42, product_name#43, category#44]
+[info] (25) Sort
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (26) SortAggregate
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Keys [1]: [product_id#42]
+[info] Functions [2]: [partial_first(product_name#43, false), partial_first(category#392, false)]
+[info] Aggregate Attributes [4]: [first#400, valueSet#401, first#402, valueSet#403]
+[info] Results [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] (27) Exchange
+[info] Input [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] Arguments: hashpartitioning(product_id#42, 200), ENSURE_REQUIREMENTS, [plan_id=229]
+[info] (28) Sort
+[info] Input [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] Arguments: [product_id#42 ASC NULLS FIRST], false, 0
+[info] (29) SortAggregate
+[info] Input [5]: [product_id#42, first#404, valueSet#405, first#406, valueSet#407]
+[info] Keys [1]: [product_id#42]
+[info] Functions [2]: [first(product_name#43, false), first(category#392, false)]
+[info] Aggregate Attributes [2]: [first(product_name#43)()#396, first(category#392)()#398]
+[info] Results [3]: [product_id#42, first(product_name#43)()#396 AS product_name#397, first(category#392)()#398 AS category#399]
+[info] (30) AdaptiveSparkPlan
+[info] Output [3]: [product_id#42, product_name#397, category#399]
+[info] Arguments: isFinalPlan=true
+[info] (31) TableCacheQueryStage
+[info] Output [3]: [product_id#42, product_name#43, category#392]
+[info] Arguments: 1
+[info] (32) Filter [codegen id : 3]
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Condition : isnotnull(product_id#42)
+[info] (33) BroadcastExchange
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=484]
+[info] (34) BroadcastQueryStage
+[info] Output [3]: [product_id#42, product_name#43, category#392]
+[info] Arguments: 4
+[info] (35) BroadcastHashJoin [codegen id : 5]
+[info] Left keys [1]: [product_id#19]
+[info] Right keys [1]: [product_id#42]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (36) Project [codegen id : 5]
+[info] Output [11]: [product_id#19, order_id#17, customer_id#18, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392]
+[info] Input [12]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_id#42, product_name#43, category#392]
+[info] (37) Scan csv 
+[info] Output [3]: [customer_id#62, customer_name#63, region#64]
+[info] Batched: false
+[info] Location: InMemoryFileIndex [file:/home/vishnupriya/scala-spark-30-day-practice/Day-29-End-to-End-E-Commerce-Project/input/customers.csv]
+[info] PushedFilters: [IsNotNull(customer_id)]
+[info] ReadSchema: struct<customer_id:string,customer_name:string,region:string>
+[info] (38) Filter [codegen id : 1]
+[info] Input [3]: [customer_id#62, customer_name#63, region#64]
+[info] Condition : isnotnull(customer_id#62)
+[info] (39) Sort [codegen id : 1]
+[info] Input [3]: [customer_id#62, customer_name#63, region#64]
+[info] Arguments: [customer_id#62 ASC NULLS FIRST], false, 0
+[info] (40) SortAggregate
+[info] Input [3]: [customer_id#62, customer_name#63, region#64]
+[info] Keys [1]: [customer_id#62]
+[info] Functions [2]: [partial_first(customer_name#63, false), partial_first(region#64, false)]
+[info] Aggregate Attributes [4]: [first#608, valueSet#609, first#610, valueSet#611]
+[info] Results [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] (41) Exchange
+[info] Input [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Arguments: hashpartitioning(customer_id#62, 200), ENSURE_REQUIREMENTS, [plan_id=353]
+[info] (42) ShuffleQueryStage
+[info] Output [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Arguments: 2
+[info] (43) AQEShuffleRead
+[info] Input [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Arguments: coalesced
+[info] (44) Sort [codegen id : 4]
+[info] Input [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Arguments: [customer_id#62 ASC NULLS FIRST], false, 0
+[info] (45) SortAggregate
+[info] Input [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Keys [1]: [customer_id#62]
+[info] Functions [2]: [first(customer_name#63, false), first(region#64, false)]
+[info] Aggregate Attributes [2]: [first(customer_name#63)()#544, first(region#64)()#546]
+[info] Results [3]: [customer_id#62, first(customer_name#63)()#544 AS customer_name#545, first(region#64)()#546 AS region#547]
+[info] (46) BroadcastExchange
+[info] Input [3]: [customer_id#62, customer_name#545, region#547]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=522]
+[info] (47) BroadcastQueryStage
+[info] Output [3]: [customer_id#62, customer_name#545, region#547]
+[info] Arguments: 5
+[info] (48) BroadcastHashJoin [codegen id : 5]
+[info] Left keys [1]: [customer_id#18]
+[info] Right keys [1]: [customer_id#62]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (49) Project [codegen id : 5]
+[info] Output [13]: [customer_id#18, product_id#19, order_id#17, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392, customer_name#545, region#547]
+[info] Input [14]: [product_id#19, order_id#17, customer_id#18, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392, customer_id#62, customer_name#545, region#547]
+[info] (50) ResultQueryStage
+[info] Output [13]: [customer_id#18, product_id#19, order_id#17, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392, customer_name#545, region#547]
+[info] Arguments: 6
+[info] (51) Filter
+[info] Input [9]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97]
+[info] Condition : (isnotnull(product_id#19) AND isnotnull(customer_id#18))
+[info] (52) Exchange
+[info] Input [9]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97]
+[info] Arguments: hashpartitioning(customer_id#18, 4), REPARTITION_BY_NUM, [plan_id=266]
+[info] (53) Filter
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Condition : isnotnull(product_id#42)
+[info] (54) BroadcastExchange
+[info] Input [3]: [product_id#42, product_name#43, category#392]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=283]
+[info] (55) BroadcastHashJoin
+[info] Left keys [1]: [product_id#19]
+[info] Right keys [1]: [product_id#42]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (56) Project
+[info] Output [11]: [product_id#19, order_id#17, customer_id#18, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392]
+[info] Input [12]: [order_id#17, customer_id#18, product_id#19, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_id#42, product_name#43, category#392]
+[info] (57) Filter
+[info] Input [3]: [customer_id#62, customer_name#63, region#64]
+[info] Condition : isnotnull(customer_id#62)
+[info] (58) Sort
+[info] Input [3]: [customer_id#62, customer_name#63, region#64]
+[info] Arguments: [customer_id#62 ASC NULLS FIRST], false, 0
+[info] (59) SortAggregate
+[info] Input [3]: [customer_id#62, customer_name#63, region#64]
+[info] Keys [1]: [customer_id#62]
+[info] Functions [2]: [partial_first(customer_name#63, false), partial_first(region#64, false)]
+[info] Aggregate Attributes [4]: [first#608, valueSet#609, first#610, valueSet#611]
+[info] Results [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] (60) Exchange
+[info] Input [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Arguments: hashpartitioning(customer_id#62, 200), ENSURE_REQUIREMENTS, [plan_id=289]
+[info] (61) Sort
+[info] Input [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Arguments: [customer_id#62 ASC NULLS FIRST], false, 0
+[info] (62) SortAggregate
+[info] Input [5]: [customer_id#62, first#612, valueSet#613, first#614, valueSet#615]
+[info] Keys [1]: [customer_id#62]
+[info] Functions [2]: [first(customer_name#63, false), first(region#64, false)]
+[info] Aggregate Attributes [2]: [first(customer_name#63)()#544, first(region#64)()#546]
+[info] Results [3]: [customer_id#62, first(customer_name#63)()#544 AS customer_name#545, first(region#64)()#546 AS region#547]
+[info] (63) BroadcastExchange
+[info] Input [3]: [customer_id#62, customer_name#545, region#547]
+[info] Arguments: HashedRelationBroadcastMode(List(input[0, string, true]),false), [plan_id=293]
+[info] (64) BroadcastHashJoin
+[info] Left keys [1]: [customer_id#18]
+[info] Right keys [1]: [customer_id#62]
+[info] Join type: Inner
+[info] Join condition: None
+[info] (65) Project
+[info] Output [13]: [customer_id#18, product_id#19, order_id#17, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392, customer_name#545, region#547]
+[info] Input [14]: [product_id#19, order_id#17, customer_id#18, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392, customer_id#62, customer_name#545, region#547]
+[info] (66) AdaptiveSparkPlan
+[info] Output [13]: [customer_id#18, product_id#19, order_id#17, order_date#92, quantity#93, unit_price#94, payment_method#95, status#96, revenue#97, product_name#43, category#392, customer_name#545, region#547]
+[info] Arguments: isFinalPlan=true
+[info] (67) HashAggregate
+[info] Input [6]: [customer_id#18, order_id#17, quantity#93, revenue#97, customer_name#63, region#64]
+[info] Keys [4]: [customer_id#18, customer_name#63, region#64, order_id#17]
+[info] Functions [2]: [partial_sum(quantity#93), partial_sum(revenue#97)]
+[info] Aggregate Attributes [2]: [sum(quantity#93)#1398L, sum(revenue#97)#1399]
+[info] Results [6]: [customer_id#18, customer_name#63, region#64, order_id#17, sum#1602L, sum#1604]
+[info] (68) HashAggregate
+[info] Input [6]: [customer_id#18, customer_name#63, region#64, order_id#17, sum#1602L, sum#1604]
+[info] Keys [4]: [customer_id#18, customer_name#63, region#64, order_id#17]
+[info] Functions [2]: [merge_sum(quantity#93), merge_sum(revenue#97)]
+[info] Aggregate Attributes [2]: [sum(quantity#93)#1398L, sum(revenue#97)#1399]
+[info] Results [6]: [customer_id#18, customer_name#63, region#64, order_id#17, sum#1602L, sum#1604]
+[info] (69) HashAggregate
+[info] Input [6]: [customer_id#18, customer_name#63, region#64, order_id#17, sum#1602L, sum#1604]
+[info] Keys [3]: [customer_id#18, customer_name#63, region#64]
+[info] Functions [3]: [merge_sum(quantity#93), merge_sum(revenue#97), partial_count(distinct order_id#17)]
+[info] Aggregate Attributes [3]: [sum(quantity#93)#1398L, sum(revenue#97)#1399, count(order_id#17)#1397L]
+[info] Results [6]: [customer_id#18, customer_name#63, region#64, sum#1602L, sum#1604, count#1607L]
+[info] (70) HashAggregate
+[info] Input [6]: [customer_id#18, customer_name#63, region#64, sum#1602L, sum#1604, count#1607L]
+[info] Keys [3]: [customer_id#18, customer_name#63, region#64]
+[info] Functions [3]: [sum(quantity#93), sum(revenue#97), count(distinct order_id#17)]
+[info] Aggregate Attributes [3]: [sum(quantity#93)#1398L, sum(revenue#97)#1399, count(order_id#17)#1397L]
+[info] Results [6]: [customer_id#18, customer_name#63, region#64, count(order_id#17)#1397L AS order_count#1381L, sum(quantity#93)#1398L AS items#1382L, round(sum(revenue#97)#1399, 2) AS total_revenue#1383]
+[info] (71) Exchange
+[info] Input [6]: [customer_id#18, customer_name#63, region#64, order_count#1381L, items#1382L, total_revenue#1383]
+[info] Arguments: rangepartitioning(total_revenue#1383 DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=906]
+[info] (72) Sort
+[info] Input [6]: [customer_id#18, customer_name#63, region#64, order_count#1381L, items#1382L, total_revenue#1383]
+[info] Arguments: [total_revenue#1383 DESC NULLS LAST], true, 0
+[info] (73) AdaptiveSparkPlan
+[info] Output [6]: [customer_id#18, customer_name#63, region#64, order_count#1381L, items#1382L, total_revenue#1383]
+[info] Arguments: isFinalPlan=false
+[info] --- Pipeline Summary ---
+[info] Raw -> Clean -> Enrich -> Aggregate
+[info] RDD/Pair RDD: payment-method revenue
+[info] DataFrame: joins, customer/category aggregates, window ranking
+[info] UDF: legacy category normalization only
+[info] Persistence: cleanOrders, normalizedProducts, enriched
+[info] Partitioning: enriched.repartition(4, customer_id)
+[info] Shuffle points: Pair RDD reduceByKey, repartition, joins, groupBy, window
+[info] Spark SQL/DataFrame optimizer: Catalyst + physical plan inspection
+[success] Total time: 32 s, completed Sep 28, 2026, 4:49:26 AM
