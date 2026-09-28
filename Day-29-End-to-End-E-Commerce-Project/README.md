@@ -71,18 +71,18 @@ Important shuffle-producing or shuffle-prone operations are reduceByKey, reparti
 ## Expected Sample Results
 Completed-order revenue by payment method:
 
-    CARD -> ₹8300.00
+    CARD -> ₹7100.00
     CASH -> ₹800.00
-    UPI  -> ₹4900.00
+    UPI  -> ₹4600.00
 
-Total completed revenue: ₹14000.00
+Total completed revenue: ₹12500.00
 
 Customer revenue:
 
-    C001 -> ₹4800.00
-    C002 -> ₹2800.00
+    C001 -> ₹4600.00
+    C002 -> ₹3800.00
     C003 -> ₹1200.00
-    C004 -> ₹5200.00
+    C004 -> ₹2900.00
 
 The cancelled O004 order is excluded from revenue calculations.
 
