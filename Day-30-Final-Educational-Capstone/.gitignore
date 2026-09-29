@@ -1,0 +1,6 @@
+target/
+project/target/
+project/project/
+metastore_db/
+output/
+*.log
