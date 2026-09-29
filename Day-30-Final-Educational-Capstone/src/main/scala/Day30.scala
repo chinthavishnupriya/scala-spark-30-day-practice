@@ -103,7 +103,8 @@ object Day30 {
       .map(a => (a(0), 1))
 
     val runningCounts = events.updateStateByKey[Int] {
-      (values, previous) => Some(values.sum + previous.getOrElse(0))
+      (values: Seq[Int], previous: Option[Int]) =>
+        Some(values.sum + previous.getOrElse(0))
     }
 
     runningCounts.foreachRDD { (rdd, time) =>
