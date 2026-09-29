@@ -2,3 +2,8 @@ course_id,course_name,department,credits
 C01,Data Engineering,ECE,4
 C02,Internet of Things,ECE,4
 C03,Digital Electronics,ECE,3
+C04,Network Analysis,ECE,4
+C05,Embedded Systems,ECE,4
+C06,Python Programming,CSE,3
+C07,Database Systems,CSE,4
+C08,Cloud Computing,CSE,3
