@@ -1140,3 +1140,86 @@ Streaming accumulator contribution: 0
 [success] Total time: 49 s, completed Sep 29, 2026, 8:55:50 AM
 vishnupriya@vishnupriya:~/scala-spark-30-day-practice/Day-30-Final-Educational-Capstone$
 ```
+## Streaming Output
+
+Actual successful streaming output from the Ubuntu run. Error and stack-trace messages have been removed as requested.
+
+```text
+vishnupriya@vishnupriya:~/scala-spark-30-day-practice/Day-30-Final-Educational-Capstsbt "run streaming"
+welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+loading project definition from /home/vishnupriya/scala-spark-30-day-practice/Day-30-Final-Educational-Capstone/project
+loading settings for project root from build.sbt...
+set current project to day30-education-analytics-capstone (in build file:/home/vishnupriya/scala-spark-30-day-practice/Day-30-Final-Educational-Capstone/)
+running (fork) Day30 streaming
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+26/09/29 06:08:55 INFO SparkContext: Running Spark version 4.2.0
+26/09/29 06:08:55 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/29 06:08:55 INFO SparkContext: Java version 17.0.20.1+1-1-26.04-Ubuntu
+26/09/29 06:08:55 INFO ResourceUtils: ==============================================================
+26/09/29 06:08:55 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/09/29 06:08:55 INFO ResourceUtils: ==============================================================
+26/09/29 06:08:55 INFO SparkContext: Submitted application: Day 30 - Education Analytics Capstone
+26/09/29 06:08:55 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/29 06:08:55 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/29 06:08:55 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/29 06:08:55 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/29 06:08:55 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/29 06:08:55 INFO Utils: Successfully started service 'sparkDriver' on port 35521.
+26/09/29 06:08:55 INFO SparkEnv: Registering MapOutputTracker
+26/09/29 06:08:55 INFO SparkEnv: Registering BlockManagerMaster
+26/09/29 06:08:55 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/09/29 06:08:55 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/09/29 06:08:55 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/09/29 06:08:56 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b2cfcf27-3c24-48d1-b1d4-645948bec0f6
+26/09/29 06:08:56 INFO SparkEnv: Registering OutputCommitCoordinator
+26/09/29 06:08:56 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/09/29 06:08:56 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/09/29 06:08:56 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/09/29 06:08:56 INFO ResourceProfile: Limiting resource is cpu
+26/09/29 06:08:56 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/09/29 06:08:56 INFO SecurityManager: Changing view acls to: vishnupriya
+26/09/29 06:08:56 INFO SecurityManager: Changing modify acls to: vishnupriya
+26/09/29 06:08:56 INFO SecurityManager: Changing view acls groups to: vishnupriya
+26/09/29 06:08:56 INFO SecurityManager: Changing modify acls groups to: vishnupriya
+26/09/29 06:08:56 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vishnupriya groups with view permissions: EMPTY; users with modify permissions: vishnupriya; groups with modify permissions: EMPTY; RPC SSL disabled
+26/09/29 06:08:56 INFO Executor: Starting executor ID driver on host 10.255.255.254
+26/09/29 06:08:56 INFO Executor: Running Spark version 4.2.0
+26/09/29 06:08:56 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+26/09/29 06:08:56 INFO Executor: Java version 17.0.20.1+1-1-26.04-Ubuntu
+26/09/29 06:08:56 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/09/29 06:08:56 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5dfc2a4 for default.
+26/09/29 06:08:56 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42731.
+26/09/29 06:08:56 INFO NettyBlockTransferService: Server created on 10.255.255.254:42731
+26/09/29 06:08:56 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/09/29 06:08:56 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 42731, None)
+26/09/29 06:08:56 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:42731 with 987.6 MiB RAM, BlockManagerId(driver, 10.255.255.254, 42731, None)
+26/09/29 06:08:56 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 42731, None)
+26/09/29 06:08:56 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 42731, None)
+--- Streaming component started on localhost:9998 ---
+Send: cat input/attendance-events.txt | nc localhost 9998
+Batch interval: 5 seconds; state uses updateStateByKey.
+STREAM 1790662140000 ms
+student=S001 attendance-events=2
+student=S002 attendance-events=1
+student=S003 attendance-events=1
+STREAM 1790662145000 ms
+student=S001 attendance-events=2
+student=S002 attendance-events=1
+student=S003 attendance-events=1
+STREAM 1790662150000 ms
+student=S001 attendance-events=2
+student=S002 attendance-events=1
+student=S003 attendance-events=1
+STREAM 1790662155000 ms
+student=S001 attendance-events=2
+student=S002 attendance-events=1
+student=S003 attendance-events=1
+STREAM 1790662160000 ms
+student=S001 attendance-events=2
+student=S002 attendance-events=1
+student=S003 attendance-events=1
+STREAM 1790662165000 ms
+student=S001 attendance-events=2
+student=S002 attendance-events=1
+student=S003 attendance-events=1
+```
